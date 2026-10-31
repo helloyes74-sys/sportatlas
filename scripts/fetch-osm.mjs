@@ -8,7 +8,7 @@
 //
 // Ergebnis: app/data/geo/<type>/<id>.geojson  (ohne Höhen; die kommen mit add-elevation.mjs)
 
-import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { overpass, skiQuery, nordicQuery, routeQuery, toGeoJSON, skiKind } from "./lib/overpass.mjs";
@@ -39,11 +39,10 @@ for (const r of regions) {
     if (area.osm?.none) { process.stderr.write(`${area.type}/${area.id}: in OSM nicht erfasst (osm.none), übersprungen\n`); continue; }
     const out = path.join(DATA, "geo", area.type, `${area.id}.geojson`);
     const have = geoIndex[`${area.type}/${area.id}`];
-    // Überspringen, wenn frisch geladen – außer die Gebietsdatei wurde seit dem Laden geändert (neue
-    // osm-Angaben). Verglichen wird mit der im Index gemerkten Änderungszeit der Gebietsdatei, nicht mit
-    // der GeoJSON-Datei: die schreibt add-elevation später neu.
-    const areaMtime = (await stat(path.join(DATA, entry.file))).mtimeMs;
-    const areaChanged = have?.area_mtime ? have.area_mtime !== areaMtime : await stat(out).then((g) => areaMtime > g.mtimeMs).catch(() => false);
+    // Überspringen, wenn frisch geladen – außer die osm-Angaben oder die Bounding-Box der Gebietsdatei haben
+    // sich seit dem Laden geändert (Signatur im Index; Dateizeiten taugen nicht, z. B. nach einem git checkout)
+    const areaSig = JSON.stringify([area.osm || null, area.bbox || null]);
+    const areaChanged = have ? have.area_sig !== areaSig : false;
     if (have && have.features > 0 && !force && !ids.length && !areaChanged && (Date.now() - Date.parse(have.fetched)) < 7 * 864e5) { process.stderr.write(`${area.type}/${area.id}: schon vom ${have.fetched}, übersprungen (--force lädt neu)\n`); continue; }
     await mkdir(path.dirname(out), { recursive: true });
     process.stderr.write(`${area.type}/${area.id}: lade …\n`);
@@ -65,7 +64,7 @@ for (const r of regions) {
         continue;
       }
       await writeFile(out, JSON.stringify(fc));
-      geoIndex[`${area.type}/${area.id}`] = { file: `geo/${area.type}/${area.id}.geojson`, features: fc.features.length, fetched: fc.meta.fetched, area_mtime: areaMtime };
+      geoIndex[`${area.type}/${area.id}`] = { file: `geo/${area.type}/${area.id}.geojson`, features: fc.features.length, fetched: fc.meta.fetched, area_sig: areaSig };
       await mkdir(path.dirname(GEO_INDEX), { recursive: true });
       await writeFile(GEO_INDEX, JSON.stringify(geoIndex, null, 2));
       const kinds = fc.features.reduce((m, f) => ((m[f.properties.kind] = (m[f.properties.kind] || 0) + 1), m), {});

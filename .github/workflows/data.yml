@@ -1,0 +1,48 @@
+# Lädt wöchentlich die Linien aus OpenStreetMap nach, rechnet Höhenprofile neu und legt das Ergebnis
+# als Commit auf main ab – der Pages-Workflow veröffentlicht es dann. Kein Mac nötig.
+# Manuell starten: Actions → „Daten aktualisieren“ → Run workflow (mit Haken für „alles neu laden“).
+name: Daten aktualisieren
+
+on:
+  schedule:
+    - cron: "17 3 * * 2"   # dienstags 03:17 UTC, wenn die Overpass-Server ruhig sind
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Alle Gebiete neu laden (auch frische)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daten
+  cancel-in-progress: false
+
+jobs:
+  daten:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests
+        run: npm test
+      - name: Linien aus OpenStreetMap
+        run: node scripts/fetch-osm.mjs ${{ inputs.force && '--force' || '' }}
+      - name: Höhen und Profile
+        run: node scripts/add-elevation.mjs
+      - name: Stand im README
+        run: |
+          sed -i -E "s/^Stand: [0-9.]+/Stand: $(date -u +%d.%m.%Y)/" README.md
+      - name: Änderungen festschreiben
+        run: |
+          git config user.name "sportatlas-daten"
+          git config user.email "helloyes74-sys@users.noreply.github.com"
+          git add app/data/geo README.md
+          if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
+          git commit -m "Daten: OSM-Linien und Profile vom $(date -u +%d.%m.%Y)"
+          git push

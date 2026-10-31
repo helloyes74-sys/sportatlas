@@ -3,314 +3,372 @@
     "file": "geo/ski/gerlitzen.geojson",
     "features": 109,
     "fetched": "2026-10-31",
-    "area_mtime": 1793401691969.1628
+    "area_sig": "[{\"note\":\"Pisten, Lifte und Loipen werden per Overpass in dieser Bounding-Box geladen. Für ein Skigebiet mit OSM-Site-Relation kann stattdessen site_relation gesetzt werden.\",\"bbox\":[13.84,46.63,14,46.74],\"site_relation\":null},[13.84,46.63,14,46.74]]"
   },
   "ski/bad-kleinkirchheim": {
     "file": "geo/ski/bad-kleinkirchheim.geojson",
     "features": 222,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.655,46.71,13.945,46.91],\"site_relation\":null},[13.655,46.71,13.945,46.91]]"
   },
   "ski/katschberg": {
     "file": "geo/ski/katschberg.geojson",
     "features": 285,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.475,46.96,13.765,47.16],\"site_relation\":null},[13.475,46.96,13.765,47.16]]"
   },
   "ski/heiligenblut": {
     "file": "geo/ski/heiligenblut.geojson",
     "features": 88,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[12.695,46.94,12.985,47.14],\"site_relation\":null},[12.695,46.94,12.985,47.14]]"
   },
   "ski/turracher-hoehe": {
     "file": "geo/ski/turracher-hoehe.geojson",
     "features": 175,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.764,46.84,13.996,47],\"site_relation\":null},[13.764,46.84,13.996,47]]"
   },
   "ski/innerkrems": {
     "file": "geo/ski/innerkrems.geojson",
     "features": 49,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.599,46.895,13.801,47.035],\"site_relation\":null},[13.599,46.895,13.801,47.035]]"
   },
   "ski/klippitztoerl": {
     "file": "geo/ski/klippitztoerl.geojson",
     "features": 44,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[14.593,46.87,14.767,46.99],\"site_relation\":null},[14.593,46.87,14.767,46.99]]"
   },
   "ski/goldeck": {
     "file": "geo/ski/goldeck.geojson",
     "features": 55,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.359,46.69,13.561,46.83],\"site_relation\":null},[13.359,46.69,13.561,46.83]]"
   },
   "ski/weinebene": {
     "file": "geo/ski/weinebene.geojson",
     "features": 58,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[14.928,46.79,15.072,46.89],\"site_relation\":null},[14.928,46.79,15.072,46.89]]"
   },
   "ski/hochrindl": {
     "file": "geo/ski/hochrindl.geojson",
     "features": 9,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.998,46.85,14.142,46.95],\"site_relation\":null},[13.998,46.85,14.142,46.95]]"
   },
   "ski/koralpe": {
     "file": "geo/ski/koralpe.geojson",
     "features": 58,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[14.898,46.74,15.042,46.84],\"site_relation\":null},[14.898,46.74,15.042,46.84]]"
   },
   "ski/moelltaler-gletscher": {
     "file": "geo/ski/moelltaler-gletscher.geojson",
     "features": 8,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.018,46.93,13.162,47.03],\"site_relation\":null},[13.018,46.93,13.162,47.03]]"
   },
   "ski/dreilaendereck": {
     "file": "geo/ski/dreilaendereck.geojson",
     "features": 31,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.638,46.51,13.782,46.61],\"site_relation\":null},[13.638,46.51,13.782,46.61]]"
   },
   "ski/petzen": {
     "file": "geo/ski/petzen.geojson",
     "features": 26,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[14.688,46.47,14.832,46.57],\"site_relation\":null},[14.688,46.47,14.832,46.57]]"
   },
   "ski/ankogel": {
     "file": "geo/ski/ankogel.geojson",
     "features": 57,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.128,46.98,13.272,47.08],\"site_relation\":null},[13.128,46.98,13.272,47.08]]"
   },
   "ski/emberger-alm": {
     "file": "geo/ski/emberger-alm.geojson",
     "features": 25,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.112,46.74,13.228,46.82],\"site_relation\":null},[13.112,46.74,13.228,46.82]]"
   },
   "ski/koetschach-mauthen": {
     "file": "geo/ski/koetschach-mauthen.geojson",
     "features": 10,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[12.947,46.65,13.033,46.71],\"site_relation\":null},[12.947,46.65,13.033,46.71]]"
   },
   "ski/weissensee": {
     "file": "geo/ski/weissensee.geojson",
     "features": 36,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.287,46.68,13.373,46.74],\"site_relation\":null},[13.287,46.68,13.373,46.74]]"
   },
   "ski/weissbriach": {
     "file": "geo/ski/weissbriach.geojson",
     "features": 27,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.217,46.65,13.303,46.71],\"site_relation\":null},[13.217,46.65,13.303,46.71]]"
   },
   "ski/bodental": {
     "file": "geo/ski/bodental.geojson",
     "features": 2,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[14.151,46.45,14.209,46.49],\"site_relation\":null},[14.151,46.45,14.209,46.49]]"
   },
   "xc/weissensee-loipen": {
     "file": "geo/xc/weissensee-loipen.geojson",
     "features": 6,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.26,46.68,13.46,46.74],\"note\":\"Loipen: way[piste:type=nordic] in der Bounding-Box\"},[13.26,46.68,13.46,46.74]]"
   },
   "xc/nassfeld-langlauf": {
     "file": "geo/xc/nassfeld-langlauf.geojson",
     "features": 1,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.2,46.55,13.5,46.7],\"note\":\"Loipen: way[piste:type=nordic] in der Bounding-Box\"},[13.2,46.55,13.5,46.7]]"
   },
   "xc/bad-kleinkirchheim-loipen": {
     "file": "geo/xc/bad-kleinkirchheim-loipen.geojson",
     "features": 5,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.72,46.78,13.9,46.85],\"note\":\"Loipen: way[piste:type=nordic] in der Bounding-Box\"},[13.72,46.78,13.9,46.85]]"
   },
   "xc/turracher-hoehe-loipen": {
     "file": "geo/xc/turracher-hoehe-loipen.geojson",
     "features": 15,
-    "fetched": "2026-10-30"
+    "fetched": "2026-10-30",
+    "area_sig": "[{\"bbox\":[13.82,46.89,13.93,46.94],\"note\":\"Loipen: way[piste:type=nordic] in der Bounding-Box\"},[13.82,46.89,13.93,46.94]]"
   },
   "ski/nassfeld": {
     "file": "geo/ski/nassfeld.geojson",
     "features": 201,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.096,46.44,13.444,46.68],\"site_relation\":null},[13.096,46.44,13.444,46.68]]"
   },
   "bike/drauradweg-etappe-3": {
     "file": "geo/bike/drauradweg-etappe-3.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.48,46.6,13.86,46.8],\"route\":\"bicycle\",\"relation_ids\":[9733289],\"clip\":true,\"search\":\"Drauradweg R1\",\"note\":\"Drauradweg Teil 2 (Möllbrücke–Villach, Land Kärnten), auf die Etappe zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.48,46.6,13.86,46.8]]"
   },
   "bike/drauradweg-etappe-4": {
     "file": "geo/bike/drauradweg-etappe-4.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.84,46.5,14.32,46.62],\"route\":\"bicycle\",\"relation_ids\":[10103325],\"clip\":true,\"search\":\"Drauradweg R1\",\"note\":\"Drauradweg Teil 3 (Villach–Lavamünd, Land Kärnten), auf die Etappe zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.84,46.5,14.32,46.62]]"
   },
   "bike/drauradweg-etappe-5": {
     "file": "geo/bike/drauradweg-etappe-5.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14.28,46.52,14.95,46.66],\"route\":\"bicycle\",\"relation_ids\":[10103325],\"clip\":true,\"search\":\"Drauradweg R1\",\"note\":\"Drauradweg Teil 3 (Villach–Lavamünd, Land Kärnten), auf die Etappe zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[14.28,46.52,14.95,46.66]]"
   },
   "bike/glockner-radweg-moelltal": {
     "file": "geo/bike/glockner-radweg-moelltal.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[12.8,46.82,13.38,47.05],\"route\":\"bicycle\",\"relation_ids\":[1353074],\"search\":\"Glockner Radweg Mölltal R8\",\"note\":\"R8 Glockner-/Mölltalradweg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[12.8,46.82,13.38,47.05]]"
   },
   "bike/gailtalradweg": {
     "file": "geo/bike/gailtalradweg.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[12.95,46.55,13.9,46.7],\"route\":\"bicycle\",\"relation_ids\":[47952],\"search\":\"Gailtalradweg R3\",\"note\":\"R3 Gailtal Radweg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[12.95,46.55,13.9,46.7]]"
   },
   "bike/villacher-alpenstrasse": {
     "file": "geo/bike/villacher-alpenstrasse.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.66,46.57,13.84,46.62],\"route\":\"bicycle\",\"way_name\":\"Villacher Alpenstra(ss|ß)e\",\"search\":\"Villacher Alpenstraße\",\"note\":\"Straße nach Name (keine Routen-Relation). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.66,46.57,13.84,46.62]]"
   },
   "bike/gerlitzen-alpenstrasse": {
     "file": "geo/bike/gerlitzen-alpenstrasse.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.9,46.66,14,46.72],\"route\":\"bicycle\",\"relation_ids\":[16260407],\"search\":\"Gerlitzen Alpenstraße Panoramastraße\",\"note\":\"Gerlitzen Alpenstraße (lcn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.9,46.66,14,46.72]]"
   },
   "bike/grossglockner-heiligenblut-kfjh": {
     "file": "geo/bike/grossglockner-heiligenblut-kfjh.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[12.72,47.02,12.88,47.08],\"route\":\"bicycle\",\"way_name\":\"Gro(ss|ß)glockner.?Hochalpenstra(ss|ß)e\",\"search\":\"Großglockner Hochalpenstraße Glocknerstraße\",\"note\":\"Straße nach Name, Bounding-Box begrenzt auf die Südrampe. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[12.72,47.02,12.88,47.08]]"
   },
   "bike/nockalmstrasse-eisentalhoehe": {
     "file": "geo/bike/nockalmstrasse-eisentalhoehe.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.62,46.94,13.82,47],\"route\":\"bicycle\",\"way_name\":\"Nockalmstra(ss|ß)e\",\"search\":\"Nockalmstraße\",\"note\":\"Straße nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.62,46.94,13.82,47]]"
   },
   "bike/malta-hochalmstrasse": {
     "file": "geo/bike/malta-hochalmstrasse.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.3,46.99,13.52,47.09],\"route\":\"bicycle\",\"way_name\":\"Malta.?Hochalm\",\"search\":\"Malta Hochalmstraße Kölnbrein\",\"note\":\"Straße nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.3,46.99,13.52,47.09]]"
   },
   "bike/flow-country-trail-petzen": {
     "file": "geo/bike/flow-country-trail-petzen.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14.7,46.5,14.78,46.55],\"route\":\"mtb\",\"relation_ids\":[6482957],\"search\":\"Flow Country Trail Petzen\",\"note\":\"Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[14.7,46.5,14.78,46.55]]"
   },
   "bike/flow-country-trail-bad-kleinkirchheim": {
     "file": "geo/bike/flow-country-trail-bad-kleinkirchheim.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.76,46.79,13.83,46.83],\"route\":\"mtb\",\"relation_ids\":[16336786],\"search\":\"Flow Country Trail Bad Kleinkirchheim Kaiserburg\",\"note\":\"Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.76,46.79,13.83,46.83]]"
   },
   "hike/dobratsch-gipfelhaus": {
     "file": "geo/hike/dobratsch-gipfelhaus.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "stale"
   },
   "hike/gerlitzen-huettersteig": {
     "file": "geo/hike/gerlitzen-huettersteig.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.88,46.66,13.94,46.7],\"route\":\"hiking\",\"relation_ids\":[17708345],\"search\":\"Hüttersteig Gerlitzen Kanzelhöhe\",\"note\":\"Wanderweg 34A Annenheim Talstation → Ossiachberg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.88,46.66,13.94,46.7]]"
   },
   "hike/garnitzenklamm": {
     "file": "geo/hike/garnitzenklamm.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.34,46.57,13.4,46.63],\"route\":\"hiking\",\"relation_ids\":[15487964],\"search\":\"Garnitzenklamm Geotrail\",\"note\":\"Wanderweg 484 Garnitzenklamm zur Garnitzenalm (ÖAV Hermagor). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.34,46.57,13.4,46.63]]"
   },
   "hike/hochobir-eisenkappler-huette": {
     "file": "geo/hike/hochobir-eisenkappler-huette.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14.44,46.49,14.52,46.53],\"route\":\"hiking\",\"relation_ids\":[2922123],\"clip\":true,\"search\":\"Hochobir Eisenkappler Hütte\",\"note\":\"Wanderweg 623 (Eisenkappler Hütte – Hochobir), zugeschnitten; 625 ist der Talweg und bleibt weg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[14.44,46.49,14.52,46.53]]"
   },
   "hike/petzen-rundmarsch": {
     "file": "geo/hike/petzen-rundmarsch.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14.72,46.49,14.78,46.53],\"route\":\"hiking\",\"relation_ids\":[3046498],\"search\":\"Petzen Feistritzer Spitze Hochpetzen\",\"note\":\"Hochpetzensteig P4. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[14.72,46.49,14.78,46.53]]"
   },
   "hike/mittagskogel-rundtour": {
     "file": "geo/hike/mittagskogel-rundtour.geojson",
     "features": 2,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.91,46.49,13.99,46.55],\"route\":\"hiking\",\"relation_ids\":[3267398,3823790],\"search\":\"Mittagskogel Bertahütte\",\"note\":\"Mittagskogel-Normalweg 680 + Wanderweg 679 (ÖAV Villach). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.91,46.49,13.99,46.55]]"
   },
   "hike/pyramidenkogelweg-keutschach": {
     "file": "geo/hike/pyramidenkogelweg-keutschach.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14.11,46.58,14.19,46.63],\"route\":\"hiking\",\"relation_ids\":[20109881],\"search\":\"Pyramidenkogel Keutschach\",\"note\":\"W14 Pyramidenkogelweg Keutschach. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[14.11,46.58,14.19,46.63]]"
   },
   "hike/koralpe-panoramarunde": {
     "file": "geo/hike/koralpe-panoramarunde.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14.93,46.76,15.01,46.82],\"route\":\"hiking\",\"relation_ids\":[19935479],\"search\":\"Koralpe Speikkogel\",\"note\":\"Großer Panoramarundwanderweg 37. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[14.93,46.76,15.01,46.82]]"
   },
   "hike/mirnock-rundweg": {
     "file": "geo/hike/mirnock-rundweg.geojson",
     "features": 2,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.65,46.73,13.74,46.79],\"route\":\"hiking\",\"relation_ids\":[3922800,12659331],\"search\":\"Mirnock\",\"note\":\"Wanderwege 187 und 188 Döbriach – Mirnock. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.65,46.73,13.74,46.79]]"
   },
   "hike/granattor-weg-der-liebe": {
     "file": "geo/hike/granattor-weg-der-liebe.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.58,46.8,13.68,46.84],\"route\":\"hiking\",\"relation_ids\":[14639262],\"search\":\"Granattor Weg der Liebe Alexanderhütte\",\"note\":\"Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.58,46.8,13.68,46.84]]"
   },
   "hike/koenigstuhl-karlbad": {
     "file": "geo/hike/koenigstuhl-karlbad.geojson",
     "features": 2,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.74,46.93,13.82,46.97],\"route\":\"hiking\",\"relation_ids\":[3276922,6281337],\"clip\":true,\"search\":\"Königstuhl Karlbad Nockalm\",\"note\":\"Wanderwege 125 (Königstuhl) und 117 (Karlbad), zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.74,46.93,13.82,46.97]]"
   },
   "hike/gamsgrubenweg-pasterze": {
     "file": "geo/hike/gamsgrubenweg-pasterze.geojson",
     "features": 2,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[12.72,47.05,12.79,47.09],\"route\":\"hiking\",\"relation_ids\":[1951106,1951114],\"search\":\"Gamsgrubenweg Pasterze Gletscherweg\",\"note\":\"Gletscherweg Pasterze + Naturlehrweg Gamsgrube (Nationalpark). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[12.72,47.05,12.79,47.09]]"
   },
   "hike/raggaschlucht": {
     "file": "geo/hike/raggaschlucht.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.11,46.92,13.16,46.95],\"route\":\"hiking\",\"way_name\":\"Ragga\",\"search\":\"Raggaschlucht\",\"note\":\"Wege nach Name; keine Routen-Relation. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.11,46.92,13.16,46.95]]"
   },
   "hike/seebachtal-stappitzer-see": {
     "file": "geo/hike/seebachtal-stappitzer-see.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.15,46.98,13.23,47.02],\"route\":\"hiking\",\"relation_ids\":[1958331],\"search\":\"Seebachtal Stappitzer See Schwussnerhütte\",\"note\":\"Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.15,46.98,13.23,47.02]]"
   },
   "hike/wolayersee": {
     "file": "geo/hike/wolayersee.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[12.84,46.6,12.9,46.64],\"route\":\"hiking\",\"relation_ids\":[3315124],\"clip\":true,\"search\":\"Wolayersee Valentinalm\",\"note\":\"Wanderweg 438, zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[12.84,46.6,12.9,46.64]]"
   },
   "hike/zollnersee": {
     "file": "geo/hike/zollnersee.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[12.95,46.59,13.05,46.65],\"route\":\"hiking\",\"relation_ids\":[9788881],\"clip\":true,\"search\":\"Zollnersee Plöckenhaus\",\"note\":\"Via Alpina Stage 20 Zollnersee Hütte – Untere Valentinalm, zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[12.95,46.59,13.05,46.65]]"
   },
   "hike/doesental-blockgletscherweg": {
     "file": "geo/hike/doesental-blockgletscherweg.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.15,46.95,13.25,46.99],\"route\":\"hiking\",\"relation_ids\":[1958324],\"search\":\"Dösental Dösener See Blockgletscher\",\"note\":\"Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.15,46.95,13.25,46.99]]"
   },
   "hike/slow-trail-roemerschlucht": {
     "file": "geo/hike/slow-trail-roemerschlucht.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14,46.6,14.07,46.64],\"route\":\"hiking\",\"relation_ids\":[14434502],\"search\":\"Slow Trail Römerschlucht\",\"note\":\"Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[14,46.6,14.07,46.64]]"
   },
   "hike/slow-trail-schaukelweg": {
     "file": "geo/hike/slow-trail-schaukelweg.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14.16,46.58,14.22,46.62],\"route\":\"hiking\",\"relation_ids\":[5234372],\"search\":\"Slow Trail Schaukelweg Reifnitz\",\"note\":\"Sankt Margarethen Runde W16. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[14.16,46.58,14.22,46.62]]"
   },
   "hike/slow-trail-brahmsweg": {
     "file": "geo/hike/slow-trail-brahmsweg.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14.12,46.62,14.18,46.65],\"route\":\"hiking\",\"way_name\":\"Brahms\",\"search\":\"Slow Trail Brahmsweg Pörtschach\",\"note\":\"Wege nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[14.12,46.62,14.18,46.65]]"
   },
   "hike/slow-trail-bleistaetter-moor": {
     "file": "geo/hike/slow-trail-bleistaetter-moor.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.96,46.68,14.03,46.72],\"route\":\"hiking\",\"relation_ids\":[12326166],\"search\":\"Slow Trail Bleistätter Moor\",\"note\":\"OSM-Relation route=foot „Slow Trail durch das artenreiche Bleistätter Moor“ (distance 7,1 km). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex).\"},[13.96,46.68,14.03,46.72]]"
   },
   "bike/wurzenpass": {
     "file": "geo/bike/wurzenpass.geojson",
     "features": 1,
-    "fetched": "2026-10-31"
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[13.71,46.51,13.8,46.57],\"route\":\"bicycle\",\"way_ref\":\"B ?109\",\"search\":\"Wurzenpass\",\"note\":\"Straße B 109 (ref) oder Wege mit „Wurzenpass“ im Namen in der Bounding-Box. Wurzenpass Straße B 109 in der Bounding-Box. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\",\"way_name\":\"Wurzenpa(ss|ß)\"},[13.71,46.51,13.8,46.57]]"
   },
   "hike/falkert-roedresnock": {
     "file": "geo/hike/falkert-roedresnock.geojson",
     "features": 2,
     "fetched": "2026-10-31",
-    "area_mtime": 1793435920330.3857
+    "area_sig": "[{\"bbox\":[13.8,46.845,13.9,46.875],\"route\":\"hiking\",\"relation_ids\":[19381340,17192143],\"search\":\"Falkert Rödresnock Falkertsee\",\"note\":\"Lage aus den OSM-Linien korrigiert (Falkertsee bei 13,83/46,858). Wanderweg 1591 Falkertsee → Falkertscharte + 159 zum Falkert-Gipfel, zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.8,46.845,13.9,46.875]]"
   },
   "bike/woerthersee-rundfahrt": {
     "file": "geo/bike/woerthersee-rundfahrt.geojson",
     "features": 2,
     "fetched": "2026-10-31",
-    "area_mtime": 1793410445312.6338
+    "area_sig": "[{\"bbox\":[14.03,46.58,14.33,46.66],\"route\":\"bicycle\",\"relation_ids\":[1694591,15453688],\"search\":\"Wörthersee Rundfahrt Radweg\",\"note\":\"Relation reicht über die Seerunde hinaus (Zubringer), darum an der Bounding-Box abgeschnitten. R4 Wörthersee Radweg + R4D Südufer. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\",\"clip\":true},[14.03,46.58,14.33,46.66]]"
   },
   "bike/ossiacher-see-radweg": {
     "file": "geo/bike/ossiacher-see-radweg.geojson",
     "features": 1,
     "fetched": "2026-10-31",
-    "area_mtime": 1793410444999.1907
+    "area_sig": "[{\"bbox\":[13.88,46.64,14.08,46.7],\"route\":\"bicycle\",\"relation_ids\":[1165340],\"search\":\"Ossiacher See Radweg R2\",\"note\":\"Relation reicht über die Seerunde hinaus (Zubringer), darum an der Bounding-Box abgeschnitten. R2 Ossiacher See Radweg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\",\"clip\":true},[13.88,46.64,14.08,46.7]]"
   }
 }
