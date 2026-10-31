@@ -59,6 +59,8 @@ export function normalizeFeature(f) {
   }
   if (p.kind === "bike" && !p.grade_class && p.steepest_climb != null) p.grade_class = gradeClass(p.steepest_climb);
   // Anzeigename: OSM-Namen enthalten oft die Nummer schon ("Feuerbergabfahrt 20") – dann nicht doppelt zeigen
+  // Zusammengefasste Pisten (fetch-osm, consolidatePistes) bringen ihren Anzeigenamen schon mit
+  if (p.merged_ways) { if (p.display_name && p.ref && p.display_name.startsWith(p.ref + " ")) p.display_name = `${p.ref} · ${p.display_name.slice(p.ref.length + 1)}`; return f; }
   const name = p.name || p["piste:name"] || "";
   const ref = p.ref || p["piste:ref"] || "";
   p.display_name = name ? (ref && !name.includes(ref) ? `${ref} · ${name}` : name) : (ref ? `Nr. ${ref}` : "ohne Namen");

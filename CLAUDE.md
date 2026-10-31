@@ -127,7 +127,7 @@ tests/                 node:test
 
 - `keepConnected` (lines.mjs) behält nur Linien, die über Lifte/Pisten mit dem Gebietsmittelpunkt zusammenhängen
   (Nachbargebiete in derselben Box – Innerkrems neben Katschberg, Falkert neben Turrach – fliegen raus).
-- `consolidatePistes` macht aus OSM-Wegen Pisten des Pistenplans: gleiche Nummer/Name → eine Linie; kurze
+- `consolidatePistes` macht aus OSM-Wegen Pisten des Pistenplans (je Art: Pisten und Loipen getrennt): gleiche Nummer/Name → eine Linie; kurze
   namenlose Stücke (< 400 m), die genau eine Piste berühren, hängen an; der Rest wird je Schwierigkeit eine Linie
   „Verbindungswege“ (`connector: true`, dünn gezeichnet, am Listenende). Rein numerische Namen und
   „Skiroute 30 …“ gelten als Nummer; Namen wie „Verbindung …/Skiweg …“ zählen nicht als Pistenname.
@@ -135,13 +135,18 @@ tests/                 node:test
   Betreibers) hat Vorrang für Name und Schwierigkeit; das Detailblatt zeigt „x von y laut Pistenplan“ und listet
   fehlende Pisten („ohne Verlauf in OpenStreetMap“). Vorhanden für Gerlitzen, Bad Kleinkirchheim, Nassfeld,
   Katschberg, Turracher Höhe, Heiligenblut, Mölltaler Gletscher. Änderungen daran lösen einen Neuladen aus
-  (`area_sig`). Betreiber ohne brauchbare Liste: Goldeck (Zertifikatsfehler), Klippitz, Petzen (nur interaktiver Plan).
+  (`area_sig`, enthält auch `center` und `SHAPE_VERSION`). Teilen sich zwei Gruppen eine Nummer, bekommt nur die mit
+  passendem Namen den Pistenplan-Eintrag. `data.js` lässt `display_name` zusammengefasster Pisten (`merged_ways`) in Ruhe.
+  Betreiber ohne brauchbare Liste: Goldeck (Zertifikatsfehler), Klippitz, Petzen (nur interaktiver Plan).
+- Datenläufe nur noch am Mac (`Daten laden.command`, Terminal hat Netz; die Claude-Shell am Mac nicht). GitHub-Repo ist privat
+  und dient als Sicherung; `data.yml`/`pages.yml` sind deaktiviert.
 
 ## Oberfläche
 
 - Start: `introFlight` (von oben, flach, dann Schrägansicht; Berührung bricht ab). `snapshot` liest das Canvas im
   nächsten `render` (kein preserveDrawingBuffer) und legt Titel und Namensnennung darüber → Knopf „Bild“.
-- `snowline`: Raster-Ebene aus den Terrarium-Kacheln (`raster-color`), weißlich ab 1800 m – Schattierung, kein Schneebericht.
+- `snowline`: `color-relief`-Ebene (MapLibre 5.6, lokal in `app/vendor`) auf `demShade`, weißlich ab 1800 m – Schattierung, kein
+  Schneebericht. `raster-color` gibt es in MapLibre nicht (bricht den ganzen Stil).
 - Sektorname = Talstation des tiefsten Lifts (`sectors.js`), sonst längste Piste.
 - Detailblatt: Reiter (`.tabs`, sticky) springen zu `#sec-lines`, `#snow`, `#wx`, `#sec-notes`. Am Handy größere Kennzahlen.
 - Preise: `prices.season` ≠ laufende Saison → UI zeigt das Saisonkürzel mit („Tageskarte 2025/26“).

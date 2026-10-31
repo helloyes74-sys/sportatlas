@@ -25,7 +25,6 @@ export function baseStyle() {
       dem: { type: "raster-dem", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], encoding: "terrarium", tileSize: 256, maxzoom: 14, attribution: 'Gelände: <a href="https://registry.opendata.aws/terrain-tiles/">Terrain Tiles</a>' },
       // zweite Quelle für die Schummerung (MapLibre rät von einer gemeinsamen Quelle für Terrain und Hillshade ab)
       demShade: { type: "raster-dem", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], encoding: "terrarium", tileSize: 256, maxzoom: 14 },
-      demTint: { type: "raster", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], tileSize: 256, maxzoom: 14, attribution: "Gelände: Terrain Tiles (Mapzen/AWS)" },
     },
     sky: { "sky-color": "#0a0d10", "horizon-color": "#0a0d10", "fog-color": "#0a0d10", "fog-ground-blend": .6, "horizon-fog-blend": .9, "sky-horizon-blend": 1, "atmosphere-blend": 0 },
     layers: [
@@ -33,7 +32,8 @@ export function baseStyle() {
       { id: "hillshade", type: "hillshade", source: "demShade", paint: { "hillshade-exaggeration": .6, "hillshade-shadow-color": "#04060a", "hillshade-highlight-color": "#56636f", "hillshade-accent-color": "#1a2229", "hillshade-illumination-direction": 325 } },
       // Höhenzonen aus denselben Geländekacheln: oberhalb der Waldgrenze hellt das Relief kühl-weißlich auf (Schnee, Fels),
       // Täler bleiben dunkel. raster-color-mix dekodiert Terrarium (R*256 + G + B/256 - 32768) zu Metern.
-      { id: "snowline", type: "raster", source: "demTint", paint: { "raster-color-mix": [256, 1, 1 / 256, -32768], "raster-color-range": [0, 4000], "raster-color": ["interpolate", ["linear"], ["raster-value"], 0, "rgba(0,0,0,0)", 1500, "rgba(0,0,0,0)", 1800, "rgba(190,205,220,0.10)", 2200, "rgba(220,232,245,0.24)", 2800, "rgba(245,250,255,0.38)", 3500, "rgba(255,255,255,0.46)"], "raster-resampling": "linear", "raster-fade-duration": 300 } },
+      // Schneeschattierung: color-relief (MapLibre ≥ 5.6) färbt nach Geländehöhe – weißlich ab 1800 m, kein Schneebericht
+      { id: "snowline", type: "color-relief", source: "demShade", paint: { "color-relief-color": ["interpolate", ["linear"], ["elevation"], 0, "rgba(0,0,0,0)", 1500, "rgba(0,0,0,0)", 1800, "rgba(190,205,220,0.10)", 2200, "rgba(220,232,245,0.24)", 2800, "rgba(245,250,255,0.38)", 3500, "rgba(255,255,255,0.46)"], "color-relief-opacity": 1 } },
       { id: "landcover-ice", type: "fill", source: "omt", "source-layer": "landcover", filter: ["==", ["get", "class"], "ice"], paint: { "fill-color": "#cfd8df", "fill-opacity": .55 } },
       { id: "water", type: "fill", source: "omt", "source-layer": "water", paint: { "fill-color": "#0c1b26" } },
       { id: "waterway", type: "line", source: "omt", "source-layer": "waterway", paint: { "line-color": "#143040", "line-width": ["interpolate", ["linear"], ["zoom"], 8, .4, 14, 1.6] } },
@@ -112,7 +112,7 @@ function addDataLayers(map) {
   map.addLayer({ id: "piste-area", type: "fill", source: "geo", filter: ["all", ["==", ["get", "kind"], "piste"], ["==", ["geometry-type"], "Polygon"]], paint: { "fill-color": matchExpr("difficulty", COLORS.piste, "#9aa7b0"), "fill-opacity": .22 } });
   // Pisten: Kontur (schwarz bekommt Weiß), dann Linie
   const lineFilter = (kind) => ["all", ["==", ["get", "kind"], kind], ["match", ["geometry-type"], ["LineString", "MultiLineString"], true, false]];
-  map.addLayer({ id: "piste-casing", type: "line", source: "geo", filter: lineFilter("piste"), layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": ["match", ["get", "difficulty"], ["advanced", "expert"], "#f2f5f7", "#05080b"], "line-width": ["interpolate", ["linear"], ["zoom"], 11, 3.5, 15, 8], "line-opacity": .85 } });
+  map.addLayer({ id: "piste-casing", type: "line", source: "geo", filter: ["all", lineFilter("piste"), ["!", ["to-boolean", ["get", "connector"]]]], layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": ["match", ["get", "difficulty"], ["advanced", "expert"], "#f2f5f7", "#05080b"], "line-width": ["interpolate", ["linear"], ["zoom"], 11, 3.5, 15, 8], "line-opacity": .85 } });
   // line-dasharray ist nicht datengetrieben, darum eigene Ebenen für gestrichelte Varianten
   const notFreeride = ["all", lineFilter("piste"), ["!=", ["get", "difficulty"], "freeride"]];
   const freeride = ["all", lineFilter("piste"), ["==", ["get", "difficulty"], "freeride"]];
@@ -136,7 +136,7 @@ function addDataLayers(map) {
   map.addLayer({ id: "lift-drag", type: "line", source: "geo", filter: liftType(DRAG, true), paint: { "line-color": "#aab6c0", "line-width": 1.2, "line-dasharray": [.6, 1.2], "line-opacity": .95 } });
   map.addLayer({ id: "lift-pylon", type: "symbol", source: "geo", filter: lineFilter("lift"), layout: { "symbol-placement": "line", "symbol-spacing": 60, "icon-image": "pylon", "icon-size": 1, "icon-allow-overlap": true }, paint: {} });
   // Beschriftung entlang der Linien
-  map.addLayer({ id: "geo-label", type: "symbol", source: "geo", minzoom: 12, filter: ["match", ["geometry-type"], ["LineString", "MultiLineString"], true, false], layout: { "symbol-placement": "line", "text-field": ["coalesce", ["get", "display_name"], ["get", "name"], ["get", "ref"], ""], "text-font": ["Noto Sans Regular"], "text-size": 10.5, "text-letter-spacing": .04, "symbol-spacing": 400 }, paint: { "text-color": "#e9eef2", "text-halo-color": "#0a0d10", "text-halo-width": 1.5 } });
+  map.addLayer({ id: "geo-label", type: "symbol", source: "geo", minzoom: 12, filter: ["all", ["match", ["geometry-type"], ["LineString", "MultiLineString"], true, false], ["!", ["to-boolean", ["get", "connector"]]]], layout: { "symbol-placement": "line", "text-field": ["coalesce", ["get", "display_name"], ["get", "name"], ["get", "ref"], ""], "text-font": ["Noto Sans Regular"], "text-size": 10.5, "text-letter-spacing": .04, "symbol-spacing": 400 }, paint: { "text-color": "#e9eef2", "text-halo-color": "#0a0d10", "text-halo-width": 1.5 } });
   // Auswahl: Glühen im UI-Rot
   map.addLayer({ id: "sel-glow", type: "line", source: "sel", layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": COLORS.accent, "line-width": 14, "line-opacity": .28, "line-blur": 6 } });
   map.addLayer({ id: "sel-line", type: "line", source: "sel", layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": "#fff", "line-width": 1.2, "line-opacity": .9 } });

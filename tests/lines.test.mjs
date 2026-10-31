@@ -147,3 +147,35 @@ test("keepConnected: Nachbargebiet ohne Verbindung fliegt raus, Lücke bis 600 m
   const out = keepConnected(feats, [13.005, 46.705]);
   assert.deepEqual(out.map((f) => f.properties.osm_id), [1, 2, 3, 6]);
 });
+
+test("consolidatePistes: Loipen und Pisten bleiben getrennt, keine doppelten osm_ids, Nummer nur einmal aus dem Pistenplan", () => {
+  const xc = (id, coords, props) => way(id, coords, { kind: "xc", ...props });
+  const feats = [
+    way(1, L(13.0, 13.01), { ref: "23", name: "Schwarzseeabfahrt", "piste:difficulty": "intermediate" }),
+    xc(2, L(13.01, 13.015), { name: "Schwarzsee Loipe", "piste:grooming": "classic" }), // berührt Piste 23, ist aber Loipe
+    way(3, L(13.3, 13.31), { ref: "10", name: "Petersbründl-Trainingspiste" }),      // gleiche Nummer, 23 km weiter
+    way(4, L(13.0, 13.012, 46.72), { ref: "10", name: "Freibergpiste Süd" }),
+    way(5, [[13.5, 46.7], [13.502, 46.7]], {}),                                        // T-Stück an 6
+    way(6, L(13.5, 13.505), {}),
+    way(7, [[13.5, 46.7], [13.5, 46.702]], {}),
+  ];
+  const out = consolidatePistes(feats, { kinds: ["piste", "xc"], official: [{ ref: "10", name: "Freibergpiste Süd", difficulty: "intermediate" }] });
+  const names = out.map((f) => f.properties.display_name);
+  assert.ok(names.includes("Schwarzsee Loipe"), names.join(", "));
+  assert.equal(out.find((f) => f.properties.display_name === "23 Schwarzseeabfahrt").properties.merged_ways, 1);
+  assert.equal(out.filter((f) => f.properties.official).length, 1);
+  assert.equal(out.find((f) => f.properties.official).properties.name, "Freibergpiste Süd");
+  assert.ok(names.includes("10 Petersbründl-Trainingspiste"));
+  const ids = out.flatMap((f) => f.properties.osm_ids);
+  assert.equal(new Set(ids).size, ids.length, "jeder Weg genau einmal: " + ids.join(","));
+});
+
+test("keepConnected: Startgruppe braucht einen Lift, auch wenn eine Loipe näher am Mittelpunkt liegt", () => {
+  const lift = (id, a, b) => ({ type: "Feature", id: `way/${id}`, properties: { osm_type: "way", osm_id: id, kind: "lift", aerialway: "chair_lift" }, geometry: { type: "LineString", coordinates: [a, b] } });
+  const out = keepConnected([
+    way(1, L(13.0, 13.003, 46.75), { kind: "xc" }),          // Loipe nahe am (ungefähren) Mittelpunkt
+    lift(2, [13.05, 46.70], [13.06, 46.71]),                 // Skigebiet 5 km weiter
+    way(3, L(13.06, 13.07, 46.71), { ref: "1" }),
+  ], [13.0, 46.748]);
+  assert.deepEqual(out.map((f) => f.properties.osm_id), [2, 3]);
+});

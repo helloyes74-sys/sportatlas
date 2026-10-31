@@ -159,9 +159,9 @@ function featureList(a, feats, selected, hikeMode) {
     const pistes = feats.filter((f) => f.properties.kind === "piste" && f.geometry.type !== "Polygon");
     const groups = ["novice", "easy", "intermediate", "advanced", "expert", "freeride", "unknown"];
     const official = a.pistes_official?.items || [];
-    const have = new Set(pistes.map((f) => String(f.properties.ref || "").toLowerCase()).filter(Boolean));
+    const have = new Set(pistes.map((f) => String(f.properties.ref || "").toLowerCase().replace(/^0+(?=\d)/, "")).filter(Boolean));
     const haveNames = new Set(pistes.map((f) => String(f.properties.name || "").toLowerCase()).filter(Boolean));
-    const missing = official.filter((o) => (o.ref ? !have.has(String(o.ref).toLowerCase()) : !haveNames.has(o.name.toLowerCase())));
+    const missing = official.filter((o) => (o.ref ? !have.has(String(o.ref).toLowerCase().replace(/^0+(?=\d)/, "")) : !!o.name && !haveNames.has(o.name.toLowerCase())));
     const real = pistes.filter((f) => !f.properties.connector).length;
     out.push(`<section><h3><span>Pisten</span><span>${official.length ? `${official.length - missing.length} von ${official.length} laut Pistenplan` : `${real} Linien`}</span></h3>`);
     for (const g of groups) {

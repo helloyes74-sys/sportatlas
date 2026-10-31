@@ -44,7 +44,7 @@ for (const r of regions) {
     // SHAPE_VERSION hochzählen, wenn sich die Aufbereitung (keepConnected, consolidatePistes) ändert: dann werden
     // alle Ski- und Loipengebiete beim nächsten Lauf neu geladen
     const SHAPE_VERSION = area.type === "ski" || area.type === "xc" ? 2 : 1;
-    const areaSig = JSON.stringify([area.osm || null, area.bbox || null, area.pistes_official?.items || null, SHAPE_VERSION]);
+    const areaSig = JSON.stringify([area.osm || null, area.bbox || null, area.center || null, area.pistes_official?.items || null, SHAPE_VERSION]);
     const areaChanged = have ? have.area_sig !== areaSig : false;
     if (have && have.features > 0 && !force && !ids.length && !areaChanged && (Date.now() - Date.parse(have.fetched)) < 7 * 864e5) { process.stderr.write(`${area.type}/${area.id}: schon vom ${have.fetched}, übersprungen (--force lädt neu)\n`); continue; }
     await mkdir(path.dirname(out), { recursive: true });
