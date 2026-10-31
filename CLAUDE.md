@@ -127,4 +127,4 @@ tests/                 node:test
    (Relationen „Alpe Adria Trail Exx“), neue Hütten-/Almwanderungen.
 2. Test am iPhone (Online-Version). Profile glätten (Medianfilter), Malta-Hochalmstraße hat noch eine 46-%-Spitze.
 3. Routen ohne OSM-Verlauf (`osm.none`) bleiben mit Kennzahlen; Weinebene/Weissbriach ohne Schneebericht-Link.
-4. Online: https://helloyes74-sys.github.io/sportatlas-/ – `pages.yml` veröffentlicht, `data.yml` aktualisiert wöchentlich.
+4. **Nicht öffentlich** (seit 31.10.2026): `pages.yml` veröffentlicht nur `offline/` (leere Seite, löscht alte SW-Caches). Nicht ohne Rückfrage bei Thomas wieder auf `app` stellen. `data.yml` aktualisiert weiter wöchentlich.
