@@ -7,7 +7,7 @@ Wanderwege mit Gehzeit. Privates Projekt von Thomas, zunächst fürs eigene Hand
 ## Befehle
 
 ```
-npm run dev                       # http://localhost:5173 (statischer Server ohne Abhängigkeiten)
+npm run dev                       # http://localhost:5173, nur dieser Rechner (SPORTATLAS_LAN=1 gibt fürs WLAN frei – nur auf Wunsch von Thomas)
 npm test                          # Unit-Tests (node:test), müssen vor jedem Commit grün sein
 npm run fetch -- gerlitzen        # OSM-Linien eines Gebiets laden (Overpass) → app/data/geo/
 npm run elevation -- gerlitzen    # Höhen anreichern (Geländekacheln) + Profile berechnen

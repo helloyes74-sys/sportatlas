@@ -9,6 +9,6 @@ if ! command -v node >/dev/null 2>&1; then
   open "https://nodejs.org/de/download"
   read -r -p "Enter zum Schließen"; exit 1
 fi
-echo "Node $(node -v) gefunden. Sportatlas läuft unter http://localhost:5173"
+echo "Node $(node -v) gefunden. Sportatlas läuft unter http://localhost:5173 – nur auf diesem Mac."
 ( sleep 1.5; open "http://localhost:5173" ) &
 node scripts/serve.mjs 5173
