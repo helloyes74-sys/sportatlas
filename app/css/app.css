@@ -138,6 +138,10 @@ body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-display
 .feat .nm { font-weight: 600; font-stretch: 90%; font-size: 13px; }
 .feat .mt { font: 500 10.5px var(--f-data); color: var(--muted); text-align: right; white-space: nowrap; }
 .feat .mt.l { text-align: left; }
+.feat.connector .nm { color: var(--muted); font-weight: 500; }
+.feat.missing { cursor: default; opacity: .6; }
+.feat.missing .sw { opacity: .5; }
+.feat.connector .sw { opacity: .55; height: 3px; }
 .grp { font: 500 10px var(--f-data); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 8px 0 2px 8px; }
 .flag { display: inline-block; font: 500 9px var(--f-data); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent-soft); padding: 0 4px; margin-left: 6px; vertical-align: 1px; }
 

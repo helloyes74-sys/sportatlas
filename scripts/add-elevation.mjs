@@ -86,6 +86,7 @@ try {
  *  wie die Linie kommt (Drauradweg flussabwärts). */
 function orientFor(area, f) {
   if (f.properties.orient) return f.properties.orient;
+  if (f.properties.kind === "piste") return "downhill"; // Pisten vom Berg ins Tal lesen
   if (!area) return null;
   if (area.type === "hike") return "uphill";
   if (area.type === "bike" && /anstieg|pass/i.test(area.kind || "")) return "uphill";

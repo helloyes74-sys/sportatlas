@@ -4,10 +4,10 @@
   "name": "Weinebene",
   "region": "Koralpe",
   "center": [
-    15,
-    46.84
+    15.009,
+    46.838
   ],
-  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "center_note": "aus den OSM-Liften (Gösler, Brandrücken, Weinofen) bestimmt",
   "bbox": [
     14.928,
     46.79,

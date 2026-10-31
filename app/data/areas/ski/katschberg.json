@@ -62,11 +62,227 @@
     {
       "label": "schneehoehen.de – Katschberg Preise Winter 2026/27",
       "url": "https://www.schneehoehen.de/skigebiete/preise/katschberg-aineck"
+    },
+    {
+      "label": "Katschbergbahnen – Live vom Berg (Pisten & Lifte im Detail) (Pistenliste: Nummern, Namen, Schwierigkeit)",
+      "url": "https://www.katschi.at/live-vom-berg"
     }
   ],
   "updated": "2026-10-31",
   "elevation": {
     "base_m": 1066,
     "top_m": 2220
+  },
+  "pistes_official": {
+    "source": "Katschbergbahnen – Live vom Berg (Pisten & Lifte im Detail)",
+    "url": "https://www.katschi.at/live-vom-berg",
+    "updated": "2026-10-31",
+    "items": [
+      {
+        "name": "Übungshang Tellerlift",
+        "difficulty": "easy",
+        "ref": "1"
+      },
+      {
+        "name": "Übungshang Königswiese",
+        "difficulty": "easy",
+        "ref": "2"
+      },
+      {
+        "name": "Katschis Kinderwelt",
+        "difficulty": "easy",
+        "ref": "2a"
+      },
+      {
+        "name": "Tschaneckpiste",
+        "difficulty": "advanced",
+        "ref": "3"
+      },
+      {
+        "name": "Bärenwiesenpiste",
+        "difficulty": "intermediate",
+        "ref": "3a"
+      },
+      {
+        "name": "Sonnalmpiste Nord",
+        "difficulty": "intermediate",
+        "ref": "4"
+      },
+      {
+        "name": "Kalkmulde",
+        "difficulty": "intermediate",
+        "ref": "4a"
+      },
+      {
+        "name": "Sonnalmpiste Süd",
+        "difficulty": "intermediate",
+        "ref": "5"
+      },
+      {
+        "name": "Sonnalmpiste Süd",
+        "difficulty": "intermediate",
+        "ref": "5a"
+      },
+      {
+        "name": "Gamskogelpiste Nord",
+        "difficulty": "intermediate",
+        "ref": "6"
+      },
+      {
+        "name": "Gamskogelpiste Süd",
+        "difficulty": "intermediate",
+        "ref": "7"
+      },
+      {
+        "name": "Trainingspiste Katschberg",
+        "difficulty": "intermediate",
+        "ref": "7a"
+      },
+      {
+        "name": "Tschaneck – Königswiese",
+        "difficulty": "intermediate",
+        "ref": "8"
+      },
+      {
+        "name": "Tschaneck – Gamskogel",
+        "difficulty": "intermediate",
+        "ref": "8a"
+      },
+      {
+        "name": "Freibergpiste Nord",
+        "difficulty": "intermediate",
+        "ref": "9"
+      },
+      {
+        "name": "Gamskogel – Freiberg",
+        "difficulty": "intermediate",
+        "ref": "9a"
+      },
+      {
+        "name": "Freibergpiste Süd",
+        "difficulty": "intermediate",
+        "ref": "10"
+      },
+      {
+        "name": "Abfahrt vom Aineck",
+        "difficulty": "intermediate",
+        "ref": "11"
+      },
+      {
+        "name": "Direttissima I",
+        "difficulty": "advanced",
+        "ref": "11a"
+      },
+      {
+        "name": "Direttissima II",
+        "difficulty": "advanced",
+        "ref": "11b"
+      },
+      {
+        "name": "Sonnleiten Nord",
+        "difficulty": "intermediate",
+        "ref": "12"
+      },
+      {
+        "name": "Gamskogel – Sonnleiten",
+        "difficulty": "intermediate",
+        "ref": "12a"
+      },
+      {
+        "name": "Sonnleiten Süd",
+        "difficulty": "intermediate",
+        "ref": "14"
+      },
+      {
+        "name": "Trainingspiste",
+        "difficulty": "advanced",
+        "ref": "T"
+      },
+      {
+        "name": "Übungshang Aineck I",
+        "difficulty": "easy",
+        "ref": "19"
+      },
+      {
+        "name": "Übungshang Aineck II",
+        "difficulty": "easy",
+        "ref": "19a"
+      },
+      {
+        "name": "Familienabfahrt",
+        "difficulty": "easy",
+        "ref": "20"
+      },
+      {
+        "name": "Nordabfahrt",
+        "difficulty": "advanced",
+        "ref": "21"
+      },
+      {
+        "name": "Schwaigabfahrt",
+        "difficulty": "intermediate",
+        "ref": "22"
+      },
+      {
+        "name": "Wildparkabfahrt",
+        "difficulty": "advanced",
+        "ref": "23"
+      },
+      {
+        "name": "Branntweinerabfahrt",
+        "difficulty": "easy",
+        "ref": "24"
+      },
+      {
+        "name": "Branntweiner Übungshang",
+        "difficulty": "easy",
+        "ref": "24a"
+      },
+      {
+        "name": "Almenabfahrt",
+        "difficulty": "intermediate",
+        "ref": "25"
+      },
+      {
+        "name": "Sandrieserabfahrt",
+        "difficulty": "intermediate",
+        "ref": "26"
+      },
+      {
+        "name": "Hochfeldabfahrt",
+        "difficulty": "intermediate",
+        "ref": "27"
+      },
+      {
+        "name": "Karabfahrt",
+        "difficulty": "intermediate",
+        "ref": "28"
+      },
+      {
+        "name": "Kar-Steilhang",
+        "difficulty": "advanced",
+        "ref": "28a"
+      },
+      {
+        "name": "Snowbowl",
+        "difficulty": "intermediate",
+        "ref": "29"
+      },
+      {
+        "name": "Snowbowl",
+        "difficulty": "intermediate",
+        "ref": "30"
+      },
+      {
+        "name": "A1 Piste",
+        "difficulty": "intermediate",
+        "ref": "A1"
+      },
+      {
+        "name": "S1 Piste",
+        "difficulty": "intermediate",
+        "ref": "S1"
+      }
+    ]
   }
 }

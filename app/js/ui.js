@@ -151,20 +151,30 @@ function featureList(a, feats, selected, hikeMode) {
       : "Noch keine Geodaten für dieses Gebiet."} Zum Nachladen am Mac „Daten laden.command“ doppelklicken (entspricht <code>npm run fetch -- ${esc(a.id)}</code> und <code>npm run elevation -- ${esc(a.id)}</code>).</p></section>`;
   }
   const selId = selected?.properties?.osm_id;
-  const row = (f, c, cls, left, right) => `<button class="feat" data-feat="${f.properties.osm_id}" aria-pressed="${f.properties.osm_id === selId}" style="--c:${c}"><span class="sw ${cls}"></span><span><span class="nm">${esc(f.properties.display_name || f.properties.name || "ohne Namen")}</span><br><span class="mt l">${left}</span></span><span class="mt">${right}</span></button>`;
+  const row = (f, c, cls, left, right) => `<button class="feat${f.properties.connector ? " connector" : ""}" data-feat="${f.properties.osm_id}" aria-pressed="${f.properties.osm_id === selId}" style="--c:${c}"><span class="sw ${cls}"></span><span><span class="nm">${esc(f.properties.display_name || f.properties.name || "ohne Namen")}</span><br><span class="mt l">${left}</span></span><span class="mt">${right}</span></button>`;
   const km = (f) => (f.properties.length_m ? fmtKm(f.properties.length_m) : "");
-  const sortLen = (x, y) => (y.properties.length_m || 0) - (x.properties.length_m || 0);
+  const sortLen = (x, y) => (!!x.properties.connector - !!y.properties.connector) || (y.properties.length_m || 0) - (x.properties.length_m || 0);
   const out = [];
   if (a.type === "ski") {
     const pistes = feats.filter((f) => f.properties.kind === "piste" && f.geometry.type !== "Polygon");
     const groups = ["novice", "easy", "intermediate", "advanced", "expert", "freeride", "unknown"];
-    out.push(`<section><h3><span>Pisten</span><span>${pistes.length} Linien</span></h3>`);
+    const official = a.pistes_official?.items || [];
+    const have = new Set(pistes.map((f) => String(f.properties.ref || "").toLowerCase()).filter(Boolean));
+    const haveNames = new Set(pistes.map((f) => String(f.properties.name || "").toLowerCase()).filter(Boolean));
+    const missing = official.filter((o) => (o.ref ? !have.has(String(o.ref).toLowerCase()) : !haveNames.has(o.name.toLowerCase())));
+    const real = pistes.filter((f) => !f.properties.connector).length;
+    out.push(`<section><h3><span>Pisten</span><span>${official.length ? `${official.length - missing.length} von ${official.length} laut Pistenplan` : `${real} Linien`}</span></h3>`);
     for (const g of groups) {
       const ps = pistes.filter((f) => (f.properties.difficulty || "unknown") === g).sort(sortLen);
       if (!ps.length) continue;
       out.push(`<div class="grp">${DIFF[g]}</div>`);
-      for (const f of ps) out.push(row(f, COLORS.piste[g], g === "advanced" || g === "expert" ? "black" : g === "freeride" ? "dash" : "", `${f.properties.top_m != null ? `${f.properties.top_m} → ${f.properties.bottom_m} m` : DIFF[g]}${f.properties.lit === "yes" ? '<span class="flag">Flutlicht</span>' : ""}`, `${km(f)}${f.properties.max_descent_grade ? `<br>max ${f.properties.max_descent_grade} %` : ""}`));
+      for (const f of ps) out.push(row(f, COLORS.piste[g], g === "advanced" || g === "expert" ? "black" : g === "freeride" ? "dash" : "", `${f.properties.connector ? `${f.properties.merged_ways} Stücke, Einstiege und Querungen` : f.properties.top_m != null ? `${f.properties.top_m} → ${f.properties.bottom_m} m` : DIFF[g]}${f.properties.lit === "yes" ? '<span class="flag">Flutlicht</span>' : ""}`, `${km(f)}${f.properties.max_descent_grade ? `<br>max ${f.properties.max_descent_grade} %` : ""}`));
     }
+    if (missing.length) {
+      out.push(`<div class="grp">Im Pistenplan, aber ohne Verlauf in OpenStreetMap</div>`);
+      for (const o of missing) out.push(`<div class="feat missing" style="--c:${COLORS.piste[o.difficulty] || "#9aa7b0"}"><span class="sw ${o.difficulty === "advanced" || o.difficulty === "expert" ? "black" : o.difficulty === "freeride" ? "dash" : ""}"></span><span><span class="nm">${o.ref ? esc(o.ref) + " " : ""}${esc(o.name)}</span><br><span class="mt l">${DIFF[o.difficulty] || ""}</span></span><span class="mt">${o.length_m ? fmtKm(o.length_m) : ""}</span></div>`);
+    }
+    if (a.pistes_official) out.push(`<p class="wx-note">Pistenplan: <a href="${esc(a.pistes_official.url)}" target="_blank" rel="noopener" style="color:inherit">${esc(a.pistes_official.source)}</a>, Stand ${esc(a.pistes_official.updated)}. Verlauf aus OpenStreetMap; Nummern, Namen und Schwierigkeit nach Pistenplan.</p>`);
     out.push("</section>");
     const lifts = feats.filter((f) => f.properties.kind === "lift").sort(sortLen);
     if (lifts.length) {

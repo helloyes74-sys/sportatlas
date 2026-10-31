@@ -123,6 +123,20 @@ tests/                 node:test
 - `smoothElevations` in `geo.js` glättet vor dem Profil (Median 5, dann Mittel 3, symmetrisches Fenster am Rand);
   ein 80-m-Ausreißer des Höhenmodells bleibt als ±7 m übrig statt ±60 %.
 
+## Pisten und Loipen zusammenfassen
+
+- `keepConnected` (lines.mjs) behält nur Linien, die über Lifte/Pisten mit dem Gebietsmittelpunkt zusammenhängen
+  (Nachbargebiete in derselben Box – Innerkrems neben Katschberg, Falkert neben Turrach – fliegen raus).
+- `consolidatePistes` macht aus OSM-Wegen Pisten des Pistenplans: gleiche Nummer/Name → eine Linie; kurze
+  namenlose Stücke (< 400 m), die genau eine Piste berühren, hängen an; der Rest wird je Schwierigkeit eine Linie
+  „Verbindungswege“ (`connector: true`, dünn gezeichnet, am Listenende). Rein numerische Namen und
+  „Skiroute 30 …“ gelten als Nummer; Namen wie „Verbindung …/Skiweg …“ zählen nicht als Pistenname.
+- `pistes_official` in der Gebietsdatei (Nummer, Name, Schwierigkeit, Länge aus der Pisten-/Statusliste des
+  Betreibers) hat Vorrang für Name und Schwierigkeit; das Detailblatt zeigt „x von y laut Pistenplan“ und listet
+  fehlende Pisten („ohne Verlauf in OpenStreetMap“). Vorhanden für Gerlitzen, Bad Kleinkirchheim, Nassfeld,
+  Katschberg, Turracher Höhe, Heiligenblut, Mölltaler Gletscher. Änderungen daran lösen einen Neuladen aus
+  (`area_sig`). Betreiber ohne brauchbare Liste: Goldeck (Zertifikatsfehler), Klippitz, Petzen (nur interaktiver Plan).
+
 ## Oberfläche
 
 - Start: `introFlight` (von oben, flach, dann Schrägansicht; Berührung bricht ab). `snapshot` liest das Canvas im

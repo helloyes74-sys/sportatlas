@@ -85,3 +85,65 @@ test("orderParts beginnt am abgelegenen Routenende und reiht Teilstücke der Nä
 test("orderParts lässt ein einzelnes Teilstück unverändert", () => {
   assert.deepEqual(orderParts([[[0, 0], [1, 1]]]), [[[0, 0], [1, 1]]]);
 });
+
+import { consolidatePistes, pisteIdent } from "../scripts/lib/lines.mjs";
+
+const way = (id, coords, props) => ({ type: "Feature", id: `way/${id}`, properties: { osm_type: "way", osm_id: id, kind: "piste", ...props }, geometry: { type: "LineString", coordinates: coords } });
+const L = (x0, x1, y = 46.7) => Array.from({ length: Math.round(Math.abs(x1 - x0) / 0.001) + 1 }, (_, i) => [x0 + Math.sign(x1 - x0) * i * 0.001, y]); // 0,001° ≈ 76 m
+
+test("pisteIdent: Nummer aus Namen lösen", () => {
+  assert.deepEqual(pisteIdent({ name: "18 - Märchenwald" }), { ref: "18", name: "Märchenwald" });
+  assert.deepEqual(pisteIdent({ ref: "35", name: "35 - Direttissima" }), { ref: "35", name: "Direttissima" });
+  assert.deepEqual(pisteIdent({ name: "9" }), { ref: "9", name: "" });
+  assert.deepEqual(pisteIdent({ ref: "1", name: "Kaiserburgabfahrt" }), { ref: "1", name: "Kaiserburgabfahrt" });
+});
+
+test("consolidatePistes: gleiche Nummer wird eine Piste, kurze namenlose Stücke hängen an", () => {
+  const feats = [
+    way(1, L(13.0, 13.01), { ref: "7", name: "Strohsackabfahrt", "piste:difficulty": "intermediate" }),
+    way(2, L(13.01, 13.02), { ref: "7", name: "Strohsackabfahrt", "piste:difficulty": "intermediate", lit: "yes" }),
+    way(3, L(13.02, 13.022), { "piste:difficulty": "easy" }),                 // kurzer Ausläufer an Piste 7
+    way(4, L(13.1, 13.11), { name: "Kaiserburgabfahrt", "piste:difficulty": "intermediate" }),
+    way(5, L(13.11, 13.12), { ref: "1", name: "Kaiserburgabfahrt", "piste:difficulty": "intermediate" }),
+    way(6, L(13.5, 13.503), { "piste:difficulty": "easy" }),                 // frei, kurz → Verbindungswege
+    way(7, L(13.6, 13.61), { "piste:difficulty": "advanced" }),              // frei, 760 m → eigene Piste
+    { type: "Feature", id: "way/8", properties: { osm_type: "way", osm_id: 8, kind: "lift", aerialway: "chair_lift" }, geometry: { type: "LineString", coordinates: L(13.0, 13.02, 46.71) } },
+  ];
+  const out = consolidatePistes(feats);
+  const pistes = out.filter((f) => f.properties.kind === "piste");
+  const byName = Object.fromEntries(pistes.map((f) => [f.properties.display_name, f]));
+  assert.equal(out.filter((f) => f.properties.kind === "lift").length, 1, "Lift bleibt");
+  assert.ok(byName["7 Strohsackabfahrt"], Object.keys(byName).join(", "));
+  assert.equal(byName["7 Strohsackabfahrt"].properties.merged_ways, 3);
+  assert.equal(byName["7 Strohsackabfahrt"].geometry.type, "LineString", "verkettet");
+  assert.equal(byName["7 Strohsackabfahrt"].properties.lit, "yes");
+  assert.equal(byName["7 Strohsackabfahrt"].properties["piste:difficulty"], "intermediate");
+  assert.equal(byName["1 Kaiserburgabfahrt"].properties.merged_ways, 2, "Nur-Name geht in Nummern-Gruppe auf");
+  assert.ok(byName["Verbindungswege"]?.properties.connector);
+  assert.equal(byName["Piste ohne Namen"].properties["piste:difficulty"], "advanced");
+  assert.equal(pistes.length, 4);
+});
+
+test("consolidatePistes: gleiche Nummer weit entfernt bleibt getrennt", () => {
+  const out = consolidatePistes([
+    way(1, L(13.0, 13.01), { ref: "3", "piste:difficulty": "easy" }),
+    way(2, L(13.3, 13.31), { ref: "3", "piste:difficulty": "easy" }), // 23 km weiter
+  ]);
+  assert.equal(out.length, 2);
+  assert.ok(out.every((f) => f.properties.display_name === "Piste 3"));
+});
+
+import { keepConnected } from "../scripts/lib/lines.mjs";
+test("keepConnected: Nachbargebiet ohne Verbindung fliegt raus, Lücke bis 600 m bleibt", () => {
+  const lift = (id, a, b) => ({ type: "Feature", id: `way/${id}`, properties: { osm_type: "way", osm_id: id, kind: "lift", aerialway: "chair_lift" }, geometry: { type: "LineString", coordinates: [a, b] } });
+  const feats = [
+    lift(1, [13.0, 46.7], [13.01, 46.71]),               // Hauptgebiet
+    way(2, L(13.01, 13.02, 46.71), { ref: "1" }),       // berührt Lift 1
+    way(3, L(13.025, 13.03, 46.71), { ref: "2" }),      // 380 m Lücke → bleibt
+    lift(4, [13.3, 46.7], [13.31, 46.71]),              // 23 km weiter: anderes Gebiet
+    way(5, L(13.31, 13.32, 46.71), { ref: "1" }),
+    { type: "Feature", id: "way/6", properties: { osm_type: "way", osm_id: 6, kind: "piste" }, geometry: { type: "Polygon", coordinates: [[[13.3, 46.7], [13.31, 46.7], [13.31, 46.71], [13.3, 46.7]]] } },
+  ];
+  const out = keepConnected(feats, [13.005, 46.705]);
+  assert.deepEqual(out.map((f) => f.properties.osm_id), [1, 2, 3, 6]);
+});

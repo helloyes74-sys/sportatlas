@@ -18,8 +18,8 @@
     "total": 43
   },
   "season": {
-    "from": "2026-11-27",
-    "to": "2027-04-11",
+    "from": "2026-11-28",
+    "to": "2027-04-18",
     "hours": "09:00–16:00"
   },
   "prices": {
@@ -62,11 +62,197 @@
     {
       "label": "schneehoehen.de – Turracher Höhe (Preis, Saison 2026/27)",
       "url": "https://www.schneehoehen.de/skigebiete/info/turracher-hoehe"
+    },
+    {
+      "label": "Bergbahnen Turracher Höhe – Bahnen & Pisten (Pistenliste: Nummern, Namen, Schwierigkeit)",
+      "url": "https://www.turracherhoehe.at/de/winter/bahnen-und-pisten"
     }
   ],
   "updated": "2026-10-31",
   "elevation": {
     "base_m": 1400,
     "top_m": 2205
+  },
+  "pistes_official": {
+    "source": "Bergbahnen Turracher Höhe – Bahnen & Pisten",
+    "url": "https://www.turracherhoehe.at/de/winter/bahnen-und-pisten",
+    "updated": "2026-10-31",
+    "items": [
+      {
+        "name": "Kornockabfahrt",
+        "difficulty": "intermediate",
+        "ref": "1"
+      },
+      {
+        "name": "Hirschkogelabfahrt",
+        "difficulty": "intermediate",
+        "ref": "2"
+      },
+      {
+        "name": "Pauliabfahrt",
+        "difficulty": "intermediate",
+        "ref": "3"
+      },
+      {
+        "name": "MAPAKI Familienabfahrt",
+        "difficulty": "intermediate",
+        "ref": "4"
+      },
+      {
+        "name": "Engländerabfahrt",
+        "difficulty": "intermediate",
+        "ref": "5"
+      },
+      {
+        "name": "Übungswiesenabfahrt links",
+        "difficulty": "intermediate",
+        "ref": "6"
+      },
+      {
+        "name": "Übungswiesenabfahrt rechts",
+        "difficulty": "easy",
+        "ref": "7"
+      },
+      {
+        "name": "Alibi für Panoramabahn",
+        "difficulty": "easy",
+        "ref": "8"
+      },
+      {
+        "name": "Abfahrt Hüttenexpress",
+        "difficulty": "intermediate",
+        "ref": "9"
+      },
+      {
+        "name": "Kornock Steilhang",
+        "difficulty": "freeride",
+        "ref": "10"
+      },
+      {
+        "name": "Pauli Steilhang",
+        "difficulty": "freeride",
+        "ref": "11"
+      },
+      {
+        "name": "Panoramaabfahrt",
+        "difficulty": "intermediate",
+        "ref": "12"
+      },
+      {
+        "name": "Ländereckabfahrt",
+        "difficulty": "easy",
+        "ref": "13"
+      },
+      {
+        "name": "Schafalmabfahrt",
+        "difficulty": "intermediate",
+        "ref": "14"
+      },
+      {
+        "name": "Schafnase",
+        "difficulty": "advanced",
+        "ref": "15"
+      },
+      {
+        "name": "Schafkopfabfahrt",
+        "difficulty": "intermediate",
+        "ref": "16"
+      },
+      {
+        "name": "Lampelabfahrt",
+        "difficulty": "easy",
+        "ref": "17"
+      },
+      {
+        "name": "Märchenwaldabfahrt",
+        "difficulty": "easy",
+        "ref": "18"
+      },
+      {
+        "name": "Zirbenwaldabfahrt",
+        "difficulty": "intermediate",
+        "ref": "19"
+      },
+      {
+        "name": "FIS-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "20"
+      },
+      {
+        "name": "Eisenhutabfahrt",
+        "difficulty": "intermediate",
+        "ref": "21"
+      },
+      {
+        "name": "Seitensprung",
+        "difficulty": "intermediate",
+        "ref": "22"
+      },
+      {
+        "name": "Schwarzseeabfahrt",
+        "difficulty": "intermediate",
+        "ref": "23"
+      },
+      {
+        "name": "Weitentalabfahrt",
+        "difficulty": "intermediate",
+        "ref": "24"
+      },
+      {
+        "name": "Abfahrt Sonnenbahn",
+        "difficulty": "intermediate",
+        "ref": "25"
+      },
+      {
+        "name": "Wildkopfabfahrt",
+        "difficulty": "easy",
+        "ref": "26"
+      },
+      {
+        "name": "Skiweg zum Wildkopflift",
+        "difficulty": "easy",
+        "ref": "27"
+      },
+      {
+        "name": "Skiweg zur Zirbenwaldbahn",
+        "difficulty": "easy",
+        "ref": "28"
+      },
+      {
+        "name": "Skiweg zur Turrachbahn",
+        "difficulty": "easy",
+        "ref": "31"
+      },
+      {
+        "name": "Skiweg zur Sonnenbahn",
+        "difficulty": "easy",
+        "ref": "32"
+      },
+      {
+        "name": "Ski-Rodelweg",
+        "difficulty": "easy",
+        "ref": "33"
+      },
+      {
+        "name": "Adrenalin",
+        "difficulty": "freeride",
+        "ref": "34"
+      },
+      {
+        "name": "Direttissima",
+        "difficulty": "advanced",
+        "ref": "35"
+      },
+      {
+        "name": "Alibi für Seitensprung",
+        "difficulty": "easy",
+        "ref": "36"
+      },
+      {
+        "name": "Alibi für FIS-Abfahrt",
+        "difficulty": "easy",
+        "ref": "37"
+      }
+    ]
   }
 }

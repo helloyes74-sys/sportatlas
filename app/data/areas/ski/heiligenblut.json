@@ -63,11 +63,112 @@
     {
       "label": "schneehoehen.de – Heiligenblut Preise 2026/27",
       "url": "https://www.schneehoehen.de/skigebiete/preise/heiligenblut-grossglockner"
+    },
+    {
+      "label": "Heiligenblut – Pisten-Info Skigebiet Großglockner/Heiligenblut (Pistenliste: Nummern, Namen, Schwierigkeit)",
+      "url": "https://heiligenblut.at/winter/skigebiet-grossglockner-heiligenblut/"
     }
   ],
   "updated": "2026-10-31",
   "elevation": {
     "base_m": 1301,
     "top_m": 2902
+  },
+  "pistes_official": {
+    "source": "Heiligenblut – Pisten-Info Skigebiet Großglockner/Heiligenblut",
+    "url": "https://heiligenblut.at/winter/skigebiet-grossglockner-heiligenblut/",
+    "updated": "2026-10-31",
+    "items": [
+      {
+        "name": "Fallbichlabfahrt",
+        "difficulty": "intermediate",
+        "ref": "1"
+      },
+      {
+        "name": "Fallbichlabfahrt Variante",
+        "difficulty": "advanced",
+        "ref": "1a"
+      },
+      {
+        "name": "Tauernabfahrt",
+        "difficulty": "easy",
+        "ref": "2"
+      },
+      {
+        "name": "Tauernabfahrt Sonnalm",
+        "difficulty": "intermediate",
+        "ref": "2a"
+      },
+      {
+        "name": "Seppenalmabfahrt",
+        "difficulty": "intermediate",
+        "ref": "3"
+      },
+      {
+        "name": "Schareckabfahrt",
+        "difficulty": "intermediate",
+        "ref": "4"
+      },
+      {
+        "name": "Kärntnerabfahrt",
+        "difficulty": "easy",
+        "ref": "5"
+      },
+      {
+        "name": "Kärntnerabfahrt Variante",
+        "difficulty": "intermediate",
+        "ref": "5a"
+      },
+      {
+        "name": "Viehbühelabfahrt",
+        "difficulty": "easy",
+        "ref": "8"
+      },
+      {
+        "name": "Talabfahrt",
+        "difficulty": "intermediate",
+        "ref": "10"
+      },
+      {
+        "name": "Wiesenabfahrt",
+        "difficulty": "easy",
+        "ref": "11"
+      },
+      {
+        "name": "Gratabfahrt",
+        "difficulty": "intermediate",
+        "ref": "11a"
+      },
+      {
+        "name": "Muldenabfahrt",
+        "difficulty": "intermediate",
+        "ref": "12"
+      },
+      {
+        "name": "Skiroute Kasereck",
+        "difficulty": "freeride",
+        "length_m": 3800
+      },
+      {
+        "name": "Skiroute Fleisstal",
+        "difficulty": "freeride",
+        "length_m": 3800
+      },
+      {
+        "name": "Skiroute Hochfleiss",
+        "difficulty": "freeride",
+        "length_m": 1800
+      },
+      {
+        "name": "Skiroute Schareck",
+        "difficulty": "freeride",
+        "length_m": 1000
+      },
+      {
+        "name": "Skiroute Hochtor",
+        "difficulty": "freeride",
+        "length_m": 1100
+      }
+    ]
   }
 }

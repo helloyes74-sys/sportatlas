@@ -7,11 +7,11 @@
     14.18,
     46.47
   ],
-  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "center_note": "Box nach Osten erweitert (OSM-Pisten lagen am Rand); Mittelpunkt ungefähr, bitte prüfen",
   "bbox": [
-    14.151,
-    46.45,
-    14.209,
+    14.15,
+    46.44,
+    14.24,
     46.49
   ],
   "pistes_km": {
@@ -33,9 +33,9 @@
   ],
   "osm": {
     "bbox": [
-      14.151,
-      46.45,
-      14.209,
+      14.15,
+      46.44,
+      14.24,
       46.49
     ],
     "site_relation": null

@@ -65,11 +65,203 @@
     {
       "label": "Bad Kleinkirchheimer Bergbahnen – Preise und Betriebszeiten 2026/27",
       "url": "https://www.badkleinkirchheim.com/en/skiing-area/prices-operating-hours/"
+    },
+    {
+      "label": "Bad Kleinkirchheimer Bergbahnen – Pisten & Anlagen (Pistenliste: Nummern, Namen, Schwierigkeit)",
+      "url": "https://www.badkleinkirchheim.com/skigebiet/pisten-anlagen/"
     }
   ],
   "updated": "2026-10-31",
   "elevation": {
     "base_m": 1087,
     "top_m": 2055
+  },
+  "pistes_official": {
+    "source": "Bad Kleinkirchheimer Bergbahnen – Pisten & Anlagen",
+    "url": "https://www.badkleinkirchheim.com/skigebiet/pisten-anlagen/",
+    "updated": "2026-10-31",
+    "items": [
+      {
+        "name": "Kaiserburgabfahrt",
+        "difficulty": "intermediate",
+        "ref": "1"
+      },
+      {
+        "name": "Talabfahrt Kaiserburg",
+        "difficulty": "easy",
+        "ref": "1T"
+      },
+      {
+        "name": "Muldenabfahrt",
+        "difficulty": "intermediate",
+        "ref": "2"
+      },
+      {
+        "name": "Verbindung Kaiserburgabfahrt",
+        "difficulty": "freeride",
+        "ref": "2a"
+      },
+      {
+        "name": "Muldenabfahrt",
+        "difficulty": "advanced",
+        "ref": "3"
+      },
+      {
+        "name": "Buckelpiste Hirschsprung",
+        "difficulty": "advanced",
+        "ref": "4"
+      },
+      {
+        "name": "Hirschsprungabfahrt",
+        "difficulty": "intermediate",
+        "ref": "5"
+      },
+      {
+        "name": "FIS K70 – Skiroute",
+        "difficulty": "freeride",
+        "ref": "6"
+      },
+      {
+        "name": "Strohsackabfahrt",
+        "difficulty": "intermediate",
+        "ref": "7"
+      },
+      {
+        "name": "Weltcupabfahrt",
+        "difficulty": "advanced",
+        "ref": "8"
+      },
+      {
+        "name": "Sonnenhang",
+        "difficulty": "intermediate",
+        "ref": "9"
+      },
+      {
+        "name": "Maibrunn-Weltcupabfahrt",
+        "difficulty": "intermediate",
+        "ref": "10"
+      },
+      {
+        "name": "Maibrunnabfahrt",
+        "difficulty": "intermediate",
+        "ref": "11"
+      },
+      {
+        "name": "Verbindung Sonnwiesen",
+        "difficulty": "easy",
+        "ref": "12"
+      },
+      {
+        "name": "Sonnwiesen II",
+        "difficulty": "intermediate",
+        "ref": "13"
+      },
+      {
+        "name": "Talabfahrt Sonnwiesen",
+        "difficulty": "intermediate",
+        "ref": "13T"
+      },
+      {
+        "name": "Thermenabfahrt",
+        "difficulty": "intermediate",
+        "ref": "14"
+      },
+      {
+        "name": "Panoramaabfahrt",
+        "difficulty": "easy",
+        "ref": "15"
+      },
+      {
+        "name": "Priedröfabfahrt",
+        "difficulty": "intermediate",
+        "ref": "16"
+      },
+      {
+        "name": "Priedröf Skiroute",
+        "difficulty": "freeride",
+        "ref": "17"
+      },
+      {
+        "name": "Höhenabfahrt",
+        "difficulty": "easy",
+        "ref": "18"
+      },
+      {
+        "name": "Wiesernockabfahrt",
+        "difficulty": "intermediate",
+        "ref": "19"
+      },
+      {
+        "name": "Seenabfahrt",
+        "difficulty": "intermediate",
+        "ref": "20"
+      },
+      {
+        "name": "Radentheiner Streif",
+        "difficulty": "advanced",
+        "ref": "21"
+      },
+      {
+        "name": "Rosennockabfahrt",
+        "difficulty": "intermediate",
+        "ref": "22"
+      },
+      {
+        "name": "Verbindung Rosennockabfahrt",
+        "difficulty": "freeride",
+        "ref": "22a"
+      },
+      {
+        "name": "Schartenabfahrt",
+        "difficulty": "intermediate",
+        "ref": "23"
+      },
+      {
+        "name": "Spitzeckabfahrt",
+        "difficulty": "intermediate",
+        "ref": "24"
+      },
+      {
+        "name": "Mallnockabfahrt",
+        "difficulty": "intermediate",
+        "ref": "25"
+      },
+      {
+        "name": "Nock IN-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "26"
+      },
+      {
+        "name": "Brunnachabfahrt",
+        "difficulty": "intermediate",
+        "ref": "27"
+      },
+      {
+        "name": "Langalmabfahrt",
+        "difficulty": "intermediate",
+        "ref": "28"
+      },
+      {
+        "name": "Verbindung Langalmabfahrt",
+        "difficulty": "freeride",
+        "ref": "29"
+      },
+      {
+        "name": "Übungshang Bach",
+        "difficulty": "easy"
+      },
+      {
+        "name": "Übungshang Star",
+        "difficulty": "easy"
+      },
+      {
+        "name": "Übungshang Sonnleiten",
+        "difficulty": "easy"
+      },
+      {
+        "name": "Übungshang St. Oswald",
+        "difficulty": "easy"
+      }
+    ]
   }
 }

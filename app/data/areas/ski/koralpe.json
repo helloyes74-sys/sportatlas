@@ -4,10 +4,10 @@
   "name": "Koralpe",
   "region": "Lavanttal",
   "center": [
-    14.97,
-    46.79
+    14.945,
+    46.806
   ],
-  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "center_note": "aus den OSM-Liften (Burgstallofen, Raiffeisen, Hipfl) bestimmt",
   "bbox": [
     14.898,
     46.74,

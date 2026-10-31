@@ -4,15 +4,15 @@
   "name": "Mölltaler Gletscher",
   "region": "Flattach",
   "center": [
-    13.09,
-    46.98
+    13.02,
+    47.012
   ],
-  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "center_note": "Gletscherbereich (Schwarzkopfbahn) laut OSM; alte Box schnitt das Skigebiet im Westen ab",
   "bbox": [
-    13.018,
-    46.93,
-    13.162,
-    47.03
+    12.94,
+    46.95,
+    13.11,
+    47.05
   ],
   "pistes_km": {
     "total": 17.4
@@ -33,10 +33,10 @@
   ],
   "osm": {
     "bbox": [
-      13.018,
-      46.93,
-      13.162,
-      47.03
+      12.94,
+      46.95,
+      13.11,
+      47.05
     ],
     "site_relation": null
   },
@@ -62,11 +62,122 @@
     {
       "label": "schneehoehen.de – Mölltaler Gletscher (Preis, Saison 2026/27)",
       "url": "https://www.schneehoehen.de/skigebiete/info/moelltaler-gletscher"
+    },
+    {
+      "label": "Mölltaler Gletscher – Geöffnete Anlagen & Pisten (Pistenliste: Nummern, Namen, Schwierigkeit)",
+      "url": "https://www.moelltaler-gletscher.at/gletscher/geoeffnete-anlagen-pisten"
     }
   ],
   "updated": "2026-10-31",
   "elevation": {
     "base_m": 2108,
     "top_m": 3122
+  },
+  "pistes_official": {
+    "source": "Mölltaler Gletscher – Geöffnete Anlagen & Pisten",
+    "url": "https://www.moelltaler-gletscher.at/gletscher/geoeffnete-anlagen-pisten",
+    "updated": "2026-10-31",
+    "items": [
+      {
+        "name": "Schareck 1",
+        "difficulty": "advanced",
+        "ref": "1",
+        "length_m": 2000
+      },
+      {
+        "name": "Schareck 2",
+        "difficulty": "intermediate",
+        "ref": "2",
+        "length_m": 2000
+      },
+      {
+        "name": "Schareck 3",
+        "difficulty": "intermediate",
+        "ref": "3",
+        "length_m": 2500
+      },
+      {
+        "name": "Schareck 4",
+        "difficulty": "advanced",
+        "ref": "4",
+        "length_m": 2500
+      },
+      {
+        "name": "Wurtenboden 1",
+        "difficulty": "intermediate",
+        "ref": "5",
+        "length_m": 1500
+      },
+      {
+        "name": "Wurtenboden 2",
+        "difficulty": "intermediate",
+        "ref": "6",
+        "length_m": 2000
+      },
+      {
+        "name": "Wurten Trainingspisten",
+        "difficulty": "intermediate",
+        "ref": "7",
+        "length_m": 2000
+      },
+      {
+        "name": "Wurten Restaurant",
+        "difficulty": "intermediate",
+        "ref": "8",
+        "length_m": 1500
+      },
+      {
+        "name": "Eissee Familienabfahrt",
+        "difficulty": "easy",
+        "ref": "9",
+        "length_m": 4000
+      },
+      {
+        "name": "Eissee-FIS",
+        "difficulty": "advanced",
+        "ref": "10",
+        "length_m": 2500
+      },
+      {
+        "name": "Stübelesee Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "11",
+        "length_m": 2000
+      },
+      {
+        "name": "Weissee Abfahrt",
+        "difficulty": "easy",
+        "ref": "12",
+        "length_m": 2000
+      },
+      {
+        "name": "Alteck Racing Piste",
+        "difficulty": "advanced",
+        "ref": "13",
+        "length_m": 2500
+      },
+      {
+        "name": "Alteck 1",
+        "difficulty": "intermediate",
+        "ref": "14",
+        "length_m": 3500
+      },
+      {
+        "name": "Alteck 2",
+        "difficulty": "intermediate",
+        "ref": "15",
+        "length_m": 3000
+      },
+      {
+        "name": "Anfängergelände",
+        "difficulty": "easy",
+        "ref": "16",
+        "length_m": 200
+      }
+    ]
+  },
+  "status": {
+    "state": "closed",
+    "text": "Derzeit Betriebspause – Winterstart 2026/27 je nach Schneelage (Betreiber, 31.10.2026)"
   }
 }

@@ -12,7 +12,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { overpass, skiQuery, nordicQuery, routeQuery, toGeoJSON, skiKind } from "./lib/overpass.mjs";
-import { shapeRoute } from "./lib/lines.mjs";
+import { shapeRoute, consolidatePistes, keepConnected } from "./lib/lines.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(ROOT, "app", "data");
@@ -41,7 +41,7 @@ for (const r of regions) {
     const have = geoIndex[`${area.type}/${area.id}`];
     // Überspringen, wenn frisch geladen – außer die osm-Angaben oder die Bounding-Box der Gebietsdatei haben
     // sich seit dem Laden geändert (Signatur im Index; Dateizeiten taugen nicht, z. B. nach einem git checkout)
-    const areaSig = JSON.stringify([area.osm || null, area.bbox || null]);
+    const areaSig = JSON.stringify([area.osm || null, area.bbox || null, area.pistes_official?.items || null]);
     const areaChanged = have ? have.area_sig !== areaSig : false;
     if (have && have.features > 0 && !force && !ids.length && !areaChanged && (Date.now() - Date.parse(have.fetched)) < 7 * 864e5) { process.stderr.write(`${area.type}/${area.id}: schon vom ${have.fetched}, übersprungen (--force lädt neu)\n`); continue; }
     await mkdir(path.dirname(out), { recursive: true });
@@ -54,6 +54,14 @@ for (const r of regions) {
       const osm = await overpass(query);
       let fc = toGeoJSON(osm, kindOf);
       if (area.type === "bike" || area.type === "hike") fc = shapeRoute(fc, area);
+      // OSM zerlegt Pisten und Loipen in viele Wege: zu Pisten des Pistenplans zusammenfassen,
+      // namenlose Verbindungsstücke anhängen oder zu einer Linie „Verbindungswege“ zusammenlegen
+      const official = area.pistes_official?.items || [];
+      // Nachbargebiete in derselben Bounding-Box (Innerkrems neben Katschberg, Falkert neben Turrach) hängen
+      // nicht mit den eigenen Liften zusammen und fliegen raus
+      if (area.type === "ski") fc.features = keepConnected(fc.features, area.center);
+      if (area.type === "ski") fc.features = consolidatePistes(fc.features, { kinds: ["piste", "xc"], official });
+      if (area.type === "xc") fc.features = consolidatePistes(fc.features, { kinds: ["xc"], connectorLabel: "Verbindungsloipen", official });
       fc.meta = { area: area.id, type: area.type, fetched: new Date().toISOString().slice(0, 10), source: "OpenStreetMap-Mitwirkende, ODbL", features: fc.features.length };
       if (!fc.features.length) {
         process.stderr.write(`  0 Objekte: osm-Angaben (relation_ids, way_name, relation_name) oder Bounding-Box prüfen (${path.relative(ROOT, path.join(DATA, entry.file))}); „Routen prüfen.command“ listet Kandidaten\n`);

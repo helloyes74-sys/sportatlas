@@ -85,7 +85,252 @@
     {
       "label": "Bergbahnen Gerlitzen Alpe – Skiticketpreise 2026/27",
       "url": "https://www.gerlitzen.com/de/preise"
+    },
+    {
+      "label": "Bergbahnen Gerlitzen Alpe – Pistenliste (Nummern, Namen, Schwierigkeit, Längen)",
+      "url": "https://www.gerlitzen.com/de/pisten"
     }
   ],
-  "updated": "2026-10-31"
+  "updated": "2026-10-31",
+  "pistes_official": {
+    "source": "Bergbahnen Gerlitzen Alpe – Geöffnete Pisten",
+    "url": "https://www.gerlitzen.com/de/pisten",
+    "updated": "2026-10-31",
+    "items": [
+      {
+        "ref": "1",
+        "name": "Gipfelabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 3100
+      },
+      {
+        "ref": "2",
+        "name": "Panoramaabfahrt",
+        "difficulty": "advanced",
+        "length_m": 3000
+      },
+      {
+        "ref": "3",
+        "name": "Pöllingerabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 650
+      },
+      {
+        "ref": "4",
+        "name": "Sonnenarenaabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 1200
+      },
+      {
+        "ref": "5a",
+        "name": "Moserabfahrt",
+        "difficulty": "easy",
+        "length_m": 600
+      },
+      {
+        "ref": "5b",
+        "name": "Rennstrecke",
+        "difficulty": "easy",
+        "length_m": 600
+      },
+      {
+        "ref": "6",
+        "name": "Walderlebnis Umfahrung Kanzelhöhe",
+        "difficulty": "novice",
+        "length_m": 1800
+      },
+      {
+        "ref": "7",
+        "name": "Pacheinerabfahrt",
+        "difficulty": "advanced",
+        "length_m": 1500
+      },
+      {
+        "ref": "8",
+        "name": "Pacheiner Familienabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 1600
+      },
+      {
+        "ref": "9",
+        "name": "Gegendtalerabfahrt",
+        "difficulty": "advanced",
+        "length_m": 1600
+      },
+      {
+        "ref": "10",
+        "name": "Neugartenabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 2000
+      },
+      {
+        "ref": "11",
+        "name": "Neugarten Hobbyrennstrecke",
+        "difficulty": "intermediate",
+        "length_m": 2100
+      },
+      {
+        "ref": "12",
+        "name": "Neugarten Speed Abfahrt",
+        "difficulty": "intermediate",
+        "length_m": 2100
+      },
+      {
+        "ref": "13",
+        "name": "Klösterleabfahrt II",
+        "difficulty": "intermediate",
+        "length_m": 3000
+      },
+      {
+        "ref": "14",
+        "name": "Kanonenrohrabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 3100
+      },
+      {
+        "ref": "15",
+        "name": "Klösterle West Abfahrt",
+        "difficulty": "intermediate",
+        "length_m": 3600
+      },
+      {
+        "ref": "15a",
+        "name": "Umfahrung Steilhang Klösterle West A",
+        "difficulty": "novice",
+        "length_m": 550
+      },
+      {
+        "ref": "15b",
+        "name": "Umfahrung Steilhang Klösterle West B",
+        "difficulty": "novice",
+        "length_m": 450
+      },
+      {
+        "ref": "16",
+        "name": "Klösterleabfahrt I",
+        "difficulty": "intermediate",
+        "length_m": 3200
+      },
+      {
+        "ref": "17",
+        "name": "Wörthersee Familienabfahrt",
+        "difficulty": "easy",
+        "length_m": 1700
+      },
+      {
+        "ref": "18",
+        "name": "Wörtherseeabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 1600
+      },
+      {
+        "ref": "19",
+        "name": "Ossiacher See Abfahrt",
+        "difficulty": "intermediate",
+        "length_m": 1400
+      },
+      {
+        "ref": "20",
+        "name": "Feuerbergabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 1300
+      },
+      {
+        "ref": "21",
+        "name": "Finsterbach-Naturschneeabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 1200
+      },
+      {
+        "ref": "22a",
+        "name": "Finsterbach Direttissima",
+        "difficulty": "intermediate",
+        "length_m": 900
+      },
+      {
+        "ref": "22b",
+        "name": "Turmabfahrt",
+        "difficulty": "advanced",
+        "length_m": 900
+      },
+      {
+        "ref": "23",
+        "name": "Schönfeldabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 3300
+      },
+      {
+        "ref": "24",
+        "name": "Birkenhofabfahrt",
+        "difficulty": "intermediate",
+        "length_m": 1900
+      },
+      {
+        "ref": "25a",
+        "name": "Klösterle Übungsabfahrten",
+        "difficulty": "easy",
+        "length_m": 250
+      },
+      {
+        "ref": "25b",
+        "name": "Klösterle Übungsabfahrten",
+        "difficulty": "easy",
+        "length_m": 250
+      },
+      {
+        "ref": "26",
+        "name": "Lodron Beginners Area",
+        "difficulty": "easy",
+        "length_m": 300
+      },
+      {
+        "ref": "27a",
+        "name": "Sonnenlift Übungsabfahrten",
+        "difficulty": "easy",
+        "length_m": 300
+      },
+      {
+        "ref": "27b",
+        "name": "Kanzelhöheabfahrt",
+        "difficulty": "easy",
+        "length_m": 650
+      },
+      {
+        "ref": "28",
+        "name": "Alpenroseabfahrt",
+        "difficulty": "easy",
+        "length_m": 1200
+      },
+      {
+        "ref": "29",
+        "name": "Talabfahrt Bodensdorf",
+        "difficulty": "freeride",
+        "length_m": 9000
+      },
+      {
+        "ref": "30",
+        "name": "Rock'n'Roll",
+        "difficulty": "freeride",
+        "length_m": 1400
+      },
+      {
+        "ref": "31",
+        "name": "Stifterboden Skiroute",
+        "difficulty": "freeride",
+        "length_m": 1200
+      },
+      {
+        "ref": "32",
+        "name": "Skiweg Pöllingerbahn - Pacheinerlift",
+        "difficulty": "freeride",
+        "length_m": 500
+      },
+      {
+        "ref": "33",
+        "name": "Verbindungsweg Wörthersee 6er-Family-Jet - Pöllingersiedlung - Mittelstation",
+        "difficulty": "freeride",
+        "length_m": 2400
+      }
+    ]
+  }
 }

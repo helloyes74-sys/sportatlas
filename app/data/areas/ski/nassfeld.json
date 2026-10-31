@@ -62,11 +62,262 @@
     {
       "label": "schneehoehen.de – Nassfeld Preise Hauptsaison 2026/27",
       "url": "https://www.schneehoehen.de/skigebiete/preise/nassfeld-pressegger-see"
+    },
+    {
+      "label": "Nassfeld – Pisten im Überblick (Pistenliste: Nummern, Namen, Schwierigkeit)",
+      "url": "https://www.nassfeld.at/de/Winter-World/Sun-Ski-World/Skigebiet-Nassfeld/Pisten"
     }
   ],
   "updated": "2026-10-31",
   "elevation": {
     "base_m": 600,
     "top_m": 2002
+  },
+  "pistes_official": {
+    "source": "Nassfeld – Pisten im Überblick",
+    "url": "https://www.nassfeld.at/de/Winter-World/Sun-Ski-World/Skigebiet-Nassfeld/Pisten",
+    "updated": "2026-10-31",
+    "items": [
+      {
+        "name": "FIS-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "1",
+        "length_m": 3600
+      },
+      {
+        "name": "Wulfenia-Abfahrt",
+        "difficulty": "easy",
+        "ref": "2",
+        "length_m": 1100
+      },
+      {
+        "name": "Märchenwiesen Abfahrt",
+        "difficulty": "easy",
+        "ref": "2a",
+        "length_m": 900
+      },
+      {
+        "name": "Watschiger-Alm-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "3",
+        "length_m": 1100
+      },
+      {
+        "name": "Familien-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "4",
+        "length_m": 3400
+      },
+      {
+        "name": "Felsenköpfel-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "6",
+        "length_m": 400
+      },
+      {
+        "name": "Garnitzen-Alm-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "7",
+        "length_m": 1600
+      },
+      {
+        "name": "Pontebbana",
+        "difficulty": "intermediate",
+        "ref": "8",
+        "length_m": 1500
+      },
+      {
+        "name": "Krone-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "9",
+        "length_m": 1400
+      },
+      {
+        "name": "Kanonenrohr-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "21",
+        "length_m": 1800
+      },
+      {
+        "name": "Übungswiese Nassfeld",
+        "difficulty": "easy",
+        "ref": "22",
+        "length_m": 350
+      },
+      {
+        "name": "Lärchenboden-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "23",
+        "length_m": 2600
+      },
+      {
+        "name": "Verbindungsabfahrt Lärchenboden",
+        "difficulty": "intermediate",
+        "ref": "24",
+        "length_m": 800
+      },
+      {
+        "name": "Schwefelbodenabfahrt",
+        "difficulty": "intermediate",
+        "ref": "25",
+        "length_m": 1500
+      },
+      {
+        "name": "Dreierliftabfahrt",
+        "difficulty": "intermediate",
+        "ref": "27",
+        "length_m": 2100
+      },
+      {
+        "name": "Strohsack-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "28",
+        "length_m": 600
+      },
+      {
+        "name": "Skiweg Lärchenboden",
+        "difficulty": "easy",
+        "ref": "29",
+        "length_m": 700
+      },
+      {
+        "name": "Tröglabfahrt",
+        "difficulty": "intermediate",
+        "ref": "40",
+        "length_m": 3300
+      },
+      {
+        "name": "Millennium-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "45",
+        "length_m": 850
+      },
+      {
+        "name": "Skiweg Tressdorfer Alm",
+        "difficulty": "easy",
+        "ref": "46",
+        "length_m": 1500
+      },
+      {
+        "name": "Tressdorfer-Alm-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "50",
+        "length_m": 3500
+      },
+      {
+        "name": "Leitern-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "51",
+        "length_m": 3050
+      },
+      {
+        "name": "Eggerboden-Übungsgelände",
+        "difficulty": "easy",
+        "ref": "53",
+        "length_m": 300
+      },
+      {
+        "name": "Tressdorfer-Alm-Übungswiese",
+        "difficulty": "easy",
+        "ref": "55",
+        "length_m": 400
+      },
+      {
+        "name": "Tressdorfer-Alm-Übungsgelände I",
+        "difficulty": "easy",
+        "ref": "56",
+        "length_m": 400
+      },
+      {
+        "name": "Tressdorfer-Alm-Übungsgelände II",
+        "difficulty": "easy",
+        "ref": "57",
+        "length_m": 360
+      },
+      {
+        "name": "Kammabfahrt",
+        "difficulty": "intermediate",
+        "ref": "60",
+        "length_m": 2700
+      },
+      {
+        "name": "Hohe-Höhe-Buckelpiste",
+        "difficulty": "intermediate",
+        "ref": "62",
+        "length_m": 1300
+      },
+      {
+        "name": "Scheibelbodenabfahrt",
+        "difficulty": "intermediate",
+        "ref": "63",
+        "length_m": 2400
+      },
+      {
+        "name": "Skiweg Lockstanalm",
+        "difficulty": "easy",
+        "ref": "64",
+        "length_m": 2050
+      },
+      {
+        "name": "Sattelabfahrt",
+        "difficulty": "intermediate",
+        "ref": "65",
+        "length_m": 2100
+      },
+      {
+        "name": "Skiweg Sattelabfahrt",
+        "difficulty": "easy",
+        "ref": "66",
+        "length_m": 700
+      },
+      {
+        "name": "Trainingsstrecke",
+        "difficulty": "intermediate",
+        "ref": "67",
+        "length_m": 1050
+      },
+      {
+        "name": "Schnittlauchkofel-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "70",
+        "length_m": 3700
+      },
+      {
+        "name": "Skiweg Rastl",
+        "difficulty": "easy",
+        "ref": "71",
+        "length_m": 2300
+      },
+      {
+        "name": "Trogkofelabfahrt",
+        "difficulty": "advanced",
+        "ref": "75",
+        "length_m": 2100
+      },
+      {
+        "name": "Zweikofel-Abfahrt",
+        "difficulty": "intermediate",
+        "ref": "77",
+        "length_m": 3200
+      },
+      {
+        "name": "Skiweg Zweikofel",
+        "difficulty": "easy",
+        "ref": "78",
+        "length_m": 1500
+      },
+      {
+        "name": "Carnia – Abschnitt 1",
+        "difficulty": "intermediate",
+        "ref": "80",
+        "length_m": 5400
+      },
+      {
+        "name": "Carnia – Abschnitt 2",
+        "difficulty": "intermediate",
+        "ref": "81",
+        "length_m": 2200
+      }
+    ]
   }
 }

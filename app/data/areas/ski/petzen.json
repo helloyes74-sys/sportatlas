@@ -20,7 +20,8 @@
   "season": {
     "from": "2026-12-05",
     "to": "2027-03-14",
-    "hours": "09:00–16:00"
+    "hours": "09:00–16:00",
+    "note": "Wochenendbetrieb 5./6. und 12./13.12., täglich ab 19.12.2026; Verlängerung bis 29.03.2027 je nach Wetter"
   },
   "prices": {
     "season": "2026/27",
@@ -62,6 +63,10 @@
     {
       "label": "schneehoehen.de – Petzen Preise Hauptsaison 2026/27",
       "url": "https://www.schneehoehen.de/skigebiete/preise/petzen"
+    },
+    {
+      "label": "Petzen Bergbahnen – Betriebszeiten Wintersaison 2026/27",
+      "url": "https://www.petzen.net/winterbetrieb/pisten-lifte"
     }
   ],
   "updated": "2026-10-31",
