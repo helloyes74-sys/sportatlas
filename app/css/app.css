@@ -204,3 +204,13 @@ body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-display
   .stats b { font-size: 13px; }
 }
 
+
+/* Alle Sportarten: Überbegriffe und Orte im Umkreis */
+.cat-group { display: grid; gap: 2px; }
+.cat-group + .cat-group { margin-top: 8px; }
+.cat-head { font: 500 9.5px var(--f-data); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 4px 10px 2px; padding-bottom: 4px; border-bottom: 1px solid var(--panel-line); }
+.item.cat[data-far="true"] .nm, .item.cat[data-far="true"] .kv b { color: var(--muted); }
+.back { all: unset; cursor: pointer; font: 500 11px var(--f-data); color: var(--muted); padding: 4px 10px 6px; }
+.back:hover { color: var(--ink); }
+.hint { font: 500 10.5px var(--f-data); color: var(--muted); }
+body[data-view="catalog"] #legend, body[data-view="spots"] #legend { display: none; }

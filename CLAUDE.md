@@ -13,6 +13,8 @@ npm run fetch -- gerlitzen        # OSM-Linien eines Gebiets laden (Overpass) �
 npm run elevation -- gerlitzen    # Höhen anreichern (Geländekacheln) + Profile berechnen
 node scripts/probe-routes.mjs     # OSM-Routen-Relationen je Rad-/Wanderroute auflisten → Routen-Check.txt
 npm run data                      # beides für alle Gebiete (dauert, Fair-Use-Pausen eingebaut)
+node scripts/fetch-sportorte.mjs  # alle Sportorte Kärntens aus OSM → data/sportorte-raw/ und App-Datei (Workflow „Sportorte laden“)
+node scripts/build-sportorte.mjs  # nur die App-Datei app/data/sportorte/kaernten.json neu bauen (ohne Netz)
 ```
 
 Es gibt keinen Build-Schritt und keine npm-Abhängigkeiten. Die App ist reines ES-Modul-JavaScript,
@@ -80,6 +82,16 @@ tests/                 node:test
 - Alles muss bei 390 px Breite funktionieren: Listen und Detailblatt liegen unten als Blätter mit Griff
   (`.grab`), Berühren der Karte klappt sie auf den Kopf zusammen (`.collapsed`). Die Zielhöhe steht in der
   CSS-Variable `--sheet-h`, die `map.js` für den freien Kartenausschnitt liest.
+
+## Alle Sportarten und Orte im Umkreis
+
+- Startseite `#alle`: Liste aller Sportarten nach Überbegriff (`CATALOG` in `scripts/lib/sports.mjs`). Ski, Langlauf,
+  Rad, Wandern verweisen auf die bestehenden Bereiche (`route`), alle anderen auf `#ort/<sport>`.
+- `#ort/<sport>` zeigt nur Orte im Umkreis des Standorts (Chips 10–50 km, Standard 20 km, „ganz Kärnten“);
+  `#ort/<sport>/<id>` das Detailblatt. Render-Funktionen in `app/js/spots.js`.
+- Ausgelassen (Wunsch Thomas): Fußball, Tischtennis, Pferd, Kanu/Kajak, Sprungschanzen, alles ohne Katalog-Eintrag.
+  Benachbarte Plätze einer Sportart werden zu einem Ort zusammengefasst (`merge_m`, Tennis 180 m), `courts` zählt sie.
+- OSM ist bei Trendsportarten dünn (Padel 4 Orte). Fehlende Orte in OSM eintragen, nicht von Hand in die App-Datei.
 
 ## Kamera
 

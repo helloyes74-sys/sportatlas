@@ -79,3 +79,8 @@ export const fmtKm = (m) => (m / 1000).toLocaleString("de-AT", { minimumFraction
 export const fmtNum = (n, d = 0) => (n == null ? "–" : n.toLocaleString("de-AT", { minimumFractionDigits: d, maximumFractionDigits: d }));
 export const fmtEur = (n) => (n == null ? "–" : "€ " + fmtNum(n, n % 1 ? 2 : 0));
 export const fmtTime = (min) => (min == null ? "–" : `${Math.floor(min / 60)}:${String(min % 60).padStart(2, "0")} h`);
+
+/** Sportorte aus OSM mit Katalog der Sportarten (schreibt build-sportorte.mjs); null, wenn die Datei fehlt. */
+export async function loadSpots(id) {
+  try { return await getJSON(`sportorte/${id}.json`); } catch (e) { if (e.status === 404) return null; throw e; }
+}

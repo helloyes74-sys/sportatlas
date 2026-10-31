@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { sportsOf, groupOf, summarize } from "../scripts/lib/sports.mjs";
+import { sportsOf, catalogSport, buildPlaces, catalogFor } from "../scripts/lib/sports.mjs";
 
 test("sportsOf trennt Mehrfachwerte und nimmt leisure als Ersatz", () => {
   assert.deepEqual(sportsOf({ sport: "tennis;Padel" }), ["tennis", "padel"]);
@@ -8,15 +8,32 @@ test("sportsOf trennt Mehrfachwerte und nimmt leisure als Ersatz", () => {
   assert.deepEqual(sportsOf({ leisure: "park" }), []);
 });
 
-test("groupOf ordnet zu, Unbekanntes kommt in Sonstiges", () => {
-  assert.equal(groupOf("padel"), "Schlägersport");
-  assert.equal(groupOf("golf_course"), "Golf");
-  assert.equal(groupOf("quidditch"), "Sonstiges");
+test("Katalog: Golf und Minigolf getrennt, Ausgelassenes ist null", () => {
+  assert.equal(catalogSport("golf_course"), "golf");
+  assert.equal(catalogSport("miniature_golf"), "minigolf");
+  for (const v of ["soccer", "table_tennis", "equestrian", "canoe", "ski_jumping", "summer_toboggan"]) assert.equal(catalogSport(v), null, v);
 });
 
-test("summarize zählt einen Ort je Gruppe nur einmal", () => {
-  const s = summarize([{ sports: ["tennis", "padel"] }, { sports: ["padel"] }, { sports: ["soccer"] }]);
-  assert.equal(s["Schlägersport"].total, 2);
-  assert.equal(s["Schlägersport"].sports.padel, 2);
-  assert.equal(s["Ballsport im Team"].total, 1);
+test("buildPlaces fasst die Courts eines Tennisclubs zusammen", () => {
+  const court = (i, lon, name) => ({ id: "w" + i, lon, lat: 46.62, sports: ["tennis"], ...(name ? { name } : {}) });
+  const places = buildPlaces([
+    court(1, 14.3000, "TC Klagenfurt"), court(2, 14.3005), court(3, 14.3010, "TC Klagenfurt"),
+    court(4, 14.4000), // gut 7 km weiter: eigener Ort
+    { id: "n9", lon: 14.3, lat: 46.62, sports: ["soccer"] },
+  ]);
+  assert.equal(places.length, 2);
+  const club = places.find((p) => p.name === "TC Klagenfurt");
+  assert.equal(club.courts, 3);
+  assert.equal(club.s, "tennis");
+});
+
+test("Kilometertafeln eines Laufs sind keine Orte", () => {
+  assert.equal(buildPlaces([{ id: "n1", lon: 14, lat: 46, sports: ["running"], name: "KM 3 (Draurad Marathon)" }]).length, 0);
+});
+
+test("catalogFor behält Routen-Sportarten und zählt Orte", () => {
+  const cat = catalogFor([{ s: "padel" }, { s: "padel" }]);
+  const winter = cat.find((g) => g.group === "Winter");
+  assert.deepEqual(winter.sports.map((s) => s.id), ["ski", "xc"]);
+  assert.equal(cat.find((g) => g.group === "Schlägersport").sports[0].count, 2);
 });

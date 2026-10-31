@@ -161,7 +161,7 @@ export function setHere(map, lngLat) {
 }
 
 export function setAreaMarkers(map, areas) {
-  const fc = { type: "FeatureCollection", features: areas.map((a) => ({ type: "Feature", properties: { id: a.id, type: a.type, name: a.name, color: COLORS.sport[a.type], size: a.pistes_km?.total || a.loipen_km?.total || a.length_km || 6 }, geometry: { type: "Point", coordinates: a.center } })) };
+  const fc = { type: "FeatureCollection", features: areas.map((a) => ({ type: "Feature", properties: { id: a.id, type: a.type, name: a.name, color: a.color || COLORS.sport[a.type], size: a.size ?? (a.pistes_km?.total || a.loipen_km?.total || a.length_km || 6) }, geometry: { type: "Point", coordinates: a.center } })) };
   whenReady(map, () => map.getSource("areas").setData(fc));
 }
 
