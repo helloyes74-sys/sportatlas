@@ -1,0 +1,37 @@
+# Lädt alle Sportorte (sport=*, Sport-leisure=*) eines Bundeslandes aus OpenStreetMap,
+# teilt sie nach Sportart ein und legt app/data/sportorte/ als Commit ab. Manuell und monatlich.
+name: Sportorte laden
+
+on:
+  schedule:
+    - cron: "41 3 1 * *"   # am 1. jedes Monats
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sportorte
+  cancel-in-progress: false
+
+jobs:
+  sportorte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests
+        run: npm test
+      - name: Sportorte aus OpenStreetMap
+        run: node scripts/fetch-sportorte.mjs kaernten
+      - name: Änderungen festschreiben
+        run: |
+          git config user.name "sportatlas-daten"
+          git config user.email "helloyes74-sys@users.noreply.github.com"
+          git add app/data/sportorte
+          if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
+          git commit -m "Sportorte aus OSM vom $(date -u +%d.%m.%Y)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 10; done; exit 1
