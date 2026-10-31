@@ -45,4 +45,5 @@ jobs:
           git add app/data/geo README.md
           if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
           git commit -m "Daten: OSM-Linien und Profile vom $(date -u +%d.%m.%Y)"
-          git push
+          # main kann sich während des langen Laufs bewegt haben: vor dem Push nachziehen
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 10; done; exit 1
