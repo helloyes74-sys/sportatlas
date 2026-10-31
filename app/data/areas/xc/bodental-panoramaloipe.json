@@ -1,0 +1,44 @@
+{
+  "id": "bodental-panoramaloipe",
+  "type": "xc",
+  "name": "Panoramaloipe Bodental",
+  "region": "Ferlach / Carnica-Region Rosental",
+  "center": [
+    14.19,
+    46.47
+  ],
+  "bbox": [
+    14.13,
+    46.45,
+    14.25,
+    46.49
+  ],
+  "loipen_km": {
+    "total": 10
+  },
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "10 km im Hochtal unter dem Vertatscha-Massiv, Ausgangspunkt der Märchenwiese"
+  ],
+  "osm": {
+    "bbox": [
+      14.13,
+      46.45,
+      14.25,
+      46.49
+    ],
+    "note": "Loipen: way/relation piste:type=nordic in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufgebiete in Kärnten",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufgebiete/"
+    },
+    {
+      "label": "Winterzauber Rosental",
+      "url": "https://www.woerthersee.com/rosental/winterzauber"
+    }
+  ],
+  "center_note": "ungefähr – prüfen, sobald Loipen aus OSM da sind",
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-01",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 1: Kaiser-Franz-Josefs-Höhe – Heiligenblut",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 13.1,
+  "duration_min": 330,
+  "ascent_m": 290,
+  "difficulty": 2,
+  "start": "Kaiser-Franz-Josefs-Höhe",
+  "end": "Heiligenblut",
+  "center": [
+    12.8,
+    47.06
+  ],
+  "bbox": [
+    12.73,
+    47.02,
+    12.86,
+    47.09
+  ],
+  "osm": {
+    "bbox": [
+      12.73,
+      47.02,
+      12.86,
+      47.09
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E01$",
+    "search": "Alpe Adria Trail E01",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 1 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 1",
+      "url": "https://www.bergwelten.com/t/w/17338"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

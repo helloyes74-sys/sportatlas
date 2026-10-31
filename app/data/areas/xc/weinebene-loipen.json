@@ -1,0 +1,44 @@
+{
+  "id": "weinebene-loipen",
+  "type": "xc",
+  "name": "Loipen Weinebene",
+  "region": "Lavanttal / Koralpe",
+  "center": [
+    15,
+    46.84
+  ],
+  "bbox": [
+    14.95,
+    46.81,
+    15.05,
+    46.87
+  ],
+  "loipen_km": {
+    "total": 15
+  },
+  "technique": "klassisch",
+  "highlights": [
+    "15 km doppelt gespurte Loipen auf 1.600 m neben dem Skigebiet"
+  ],
+  "osm": {
+    "bbox": [
+      14.95,
+      46.81,
+      15.05,
+      46.87
+    ],
+    "note": "Loipen: way/relation piste:type=nordic in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufgebiete in Kärnten",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufgebiete/"
+    },
+    {
+      "label": "Region Lavanttal – Winter",
+      "url": "https://www.region-lavanttal.at/de/erleben/winter/"
+    }
+  ],
+  "center_note": "ungefähr – prüfen, sobald Loipen aus OSM da sind",
+  "updated": "2026-10-31"
+}

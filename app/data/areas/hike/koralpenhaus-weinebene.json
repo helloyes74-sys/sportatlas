@@ -1,0 +1,47 @@
+{
+  "id": "koralpenhaus-weinebene",
+  "type": "hike",
+  "name": "Koralpenhaus von der Weinebene",
+  "kind": "Höhenwanderung",
+  "region": "Lavanttal / Koralpe",
+  "length_km": 8.9,
+  "duration_min": 180,
+  "ascent_m": 515,
+  "descent_m": 214,
+  "top_m": 2140,
+  "difficulty": 2,
+  "start": "Wanderparkplatz Weinebene",
+  "end": "Koralpenhaus (1.966 m); Rückweg gleich oder Rundtour über den Kamm",
+  "center": [
+    14.98,
+    46.82
+  ],
+  "bbox": [
+    14.94,
+    46.78,
+    15.02,
+    46.86
+  ],
+  "osm": {
+    "bbox": [
+      14.94,
+      46.78,
+      15.02,
+      46.86
+    ],
+    "route": "hiking",
+    "relation_name": "Koralpenhaus|Koralm",
+    "search": "Koralpenhaus von der Weinebene",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Am Koralm-Kamm über Hühnerstütze und Großen Speikkogel zum Koralpenhaus"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Wanderung zum Koralpenhaus von der Weinebene",
+      "url": "https://www.bergwelten.com/t/w/35692"
+    }
+  ],
+  "updated": "2026-10-31"
+}

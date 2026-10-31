@@ -1,0 +1,46 @@
+{
+  "id": "kruckenspitz-hochrindl",
+  "type": "hike",
+  "name": "Ursulaquelle und Kruckenspitz (Hochrindl)",
+  "kind": "Gipfelwanderung",
+  "region": "Hochrindl / Nockberge",
+  "length_km": 7,
+  "duration_min": 180,
+  "ascent_m": 402,
+  "top_m": 1886,
+  "difficulty": 2,
+  "start": "Hochrindl",
+  "round_trip": true,
+  "center": [
+    13.98,
+    46.86
+  ],
+  "bbox": [
+    13.94,
+    46.84,
+    14.02,
+    46.89
+  ],
+  "osm": {
+    "bbox": [
+      13.94,
+      46.84,
+      14.02,
+      46.89
+    ],
+    "route": "hiking",
+    "relation_name": "Kruckenspitz|Ursulaquelle",
+    "search": "Ursulaquelle und Kruckenspitz (Hochrindl)",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Über die Ursulaquelle auf den Kruckenspitz, weiter Blick über die Gurktaler Alpen"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Ursulaquelle und Kruckenspitz",
+      "url": "https://www.bergwelten.com/t/w/22580"
+    }
+  ],
+  "updated": "2026-10-31"
+}

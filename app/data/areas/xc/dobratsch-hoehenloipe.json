@@ -1,0 +1,41 @@
+{
+  "id": "dobratsch-hoehenloipe",
+  "type": "xc",
+  "name": "Höhenloipe Dobratsch (Rosstratte)",
+  "region": "Villach / Naturpark Dobratsch",
+  "center": [
+    13.7,
+    46.595
+  ],
+  "bbox": [
+    13.66,
+    46.58,
+    13.74,
+    46.61
+  ],
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Höhenloipe auf 1.400–1.800 m am Ende der Villacher Alpenstraße, schneesicher mit Blick auf die Julischen Alpen"
+  ],
+  "osm": {
+    "bbox": [
+      13.66,
+      46.58,
+      13.74,
+      46.61
+    ],
+    "note": "Loipen: way/relation piste:type=nordic in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufgebiete in Kärnten",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufgebiete/"
+    },
+    {
+      "label": "Region Villach – Langlaufen",
+      "url": "https://www.visitvillach.at/de/langlaufen.html"
+    }
+  ],
+  "center_note": "ungefähr – prüfen, sobald Loipen aus OSM da sind",
+  "updated": "2026-10-31"
+}

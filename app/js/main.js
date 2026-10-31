@@ -91,7 +91,7 @@ function areasOfSport() {
   list = applyFilters(list, filterGroups(state.sport, state.region.areas), state.filters[state.sport] || {});
   // Nähe: nach Luftlinie vom Standort; sonst Skigebiete und Loipen nach Größe, Routen nach Art und Name
   if (state.near && state.here) return list.sort((a, b) => distanceKm(state.here, a) - distanceKm(state.here, b));
-  if (state.sport === "bike" || state.sport === "hike") return list.sort((a, b) => (a.kind || "").localeCompare(b.kind || "", "de") || a.name.localeCompare(b.name, "de"));
+  if (state.sport === "bike" || state.sport === "hike") return list.sort((a, b) => (a.kind || "").localeCompare(b.kind || "", "de") || a.name.localeCompare(b.name, "de", { numeric: true }));
   return list.sort((a, b) => (b.pistes_km?.total || b.loipen_km?.total || 0) - (a.pistes_km?.total || a.loipen_km?.total || 0));
 }
 function renderFilterBar() {

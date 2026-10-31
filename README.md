@@ -11,7 +11,7 @@ Voraussetzung: [Node.js](https://nodejs.org) ab Version 20. Keine weiteren Insta
 npm run dev
 ```
 
-Dann <http://localhost:5173> öffnen. Am Mac geht es auch per Doppelklick auf „Sportatlas starten.command“ und „Daten laden.command“. Die App zeigt sofort alle 73 Gebiete und Routen mit Stammdaten (Pistenkilometer,
+Dann <http://localhost:5173> öffnen. Am Mac geht es auch per Doppelklick auf „Sportatlas starten.command“ und „Daten laden.command“. Die App zeigt sofort alle 109 Gebiete und Routen mit Stammdaten (Pistenkilometer,
 Preise, Saison, Höhen; bei Routen Länge, Gehzeit, Höhenmeter, Start und Ziel aus der verlinkten Tourenbeschreibung). Die Linien auf der Karte (Pisten, Lifte, Routen) kommen aus OpenStreetMap und werden
 einmalig geladen:
 
@@ -64,4 +64,4 @@ npm test          # Unit-Tests
 
 Alles Weitere steht in `CLAUDE.md` (Aufbau, Datenregeln, Stil, nächste Schritte).
 
-Stand: 31.10.2026 – Rad- und Wanderrouten als Tagestouren (30 Wanderungen, 15 Radtouren), Filterchips, Sortierung nach Standort, GPX-Export und Teilen-Link; Stammdaten Ski Saison 2026/27.
+Stand: 31.10.2026 – 22 Skigebiete (mit Schneelage, Webcams, Höhen), 14 Loipengebiete, 15 Radtouren, 58 Wanderungen (inkl. 22 Alpe-Adria-Trail-Etappen); Filter, Standort, GPX, Teilen; wöchentliche Datenaktualisierung per GitHub Actions.

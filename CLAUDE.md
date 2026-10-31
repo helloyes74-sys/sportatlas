@@ -108,9 +108,10 @@ tests/                 node:test
 - Relationen liefern keine Tags ihrer Mitglieder (`out geom`), darum dort keine Tunnelerkennung.
 - `Profile rechnen.command` rechnet nur das neu, ohne Overpass.
 
-## Nächste Schritte (Stand 31.10.2026, vormittags)
+## Nächste Schritte (Stand 31.10.2026, mittags)
 
-1. `Daten laden.command` einmal laufen lassen (Dobratsch-Gipfelweg 291, Simonhöhe mit neuer Box; Profile neu).
-2. Test am iPhone (Safari, „Zum Home-Bildschirm“): Blätter, Tipp-Treffer, Sektorflüge.
-3. Routen ohne OSM-Verlauf (`osm.none`): Wangenitzsee, Tscheppaschlucht, 6 Slow Trails – Kennzahlen bleiben.
-4. Veröffentlicht auf GitHub Pages: https://helloyes74-sys.github.io/sportatlas-/ (Workflow .github/workflows/pages.yml lädt app/ bei jedem Push hoch). Später: weitere Bundesländer.
+1. Nach dem nächsten Datenlauf prüfen: Loipen der 8 neuen Gebiete (Bounding-Boxen `center_note`), Alpe-Adria-Trail-Etappen
+   (Relationen „Alpe Adria Trail Exx“), neue Hütten-/Almwanderungen.
+2. Test am iPhone (Online-Version). Profile glätten (Medianfilter), Malta-Hochalmstraße hat noch eine 46-%-Spitze.
+3. Routen ohne OSM-Verlauf (`osm.none`) bleiben mit Kennzahlen; Weinebene/Weissbriach ohne Schneebericht-Link.
+4. Online: https://helloyes74-sys.github.io/sportatlas-/ – `pages.yml` veröffentlicht, `data.yml` aktualisiert wöchentlich.

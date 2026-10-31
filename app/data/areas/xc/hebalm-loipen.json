@@ -1,0 +1,44 @@
+{
+  "id": "hebalm-loipen",
+  "type": "xc",
+  "name": "Langlaufzentrum Hebalm",
+  "region": "Lavanttal / Koralpe",
+  "center": [
+    14.98,
+    46.93
+  ],
+  "bbox": [
+    14.93,
+    46.9,
+    15.03,
+    46.96
+  ],
+  "loipen_km": {
+    "total": 12
+  },
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Fünf Runden mit zusammen 12 km auf rund 1.400 m (Hebalm-, Kampelekogel-, Walddom-Runde)"
+  ],
+  "osm": {
+    "bbox": [
+      14.93,
+      46.9,
+      15.03,
+      46.96
+    ],
+    "note": "Loipen: way/relation piste:type=nordic in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufgebiete in Kärnten",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufgebiete/"
+    },
+    {
+      "label": "Region Lavanttal – Winter",
+      "url": "https://www.region-lavanttal.at/de/erleben/winter/"
+    }
+  ],
+  "center_note": "ungefähr – prüfen, sobald Loipen aus OSM da sind",
+  "updated": "2026-10-31"
+}

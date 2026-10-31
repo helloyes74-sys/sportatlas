@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-21",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 21: Velden am Wörther See – Faaker See",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 21.2,
+  "duration_min": 705,
+  "ascent_m": 724,
+  "difficulty": 2,
+  "start": "Velden am Wörther See",
+  "end": "Faaker See",
+  "center": [
+    13.98,
+    46.59
+  ],
+  "bbox": [
+    13.9,
+    46.55,
+    14.06,
+    46.63
+  ],
+  "osm": {
+    "bbox": [
+      13.9,
+      46.55,
+      14.06,
+      46.63
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E21$",
+    "search": "Alpe Adria Trail E21",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 21 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 21",
+      "url": "https://www.bergwelten.com/t/w/10963"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

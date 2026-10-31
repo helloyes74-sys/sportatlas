@@ -1,0 +1,44 @@
+{
+  "id": "oberdrautal-loipen",
+  "type": "xc",
+  "name": "Loipennetz Oberdrautal",
+  "region": "Dellach – Greifenburg – Berg im Drautal",
+  "center": [
+    13.08,
+    46.73
+  ],
+  "bbox": [
+    12.95,
+    46.7,
+    13.3,
+    46.77
+  ],
+  "loipen_km": {
+    "total": 130
+  },
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "130 km zusammenhängende Loipen entlang der Drau, flach und familientauglich"
+  ],
+  "osm": {
+    "bbox": [
+      12.95,
+      46.7,
+      13.3,
+      46.77
+    ],
+    "note": "Loipen: way/relation piste:type=nordic in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufgebiete in Kärnten",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufgebiete/"
+    },
+    {
+      "label": "Nationalpark Hohe Tauern – Langlaufen",
+      "url": "https://nationalpark-hohetauern.at/winter/langlaufen/"
+    }
+  ],
+  "center_note": "ungefähr – prüfen, sobald Loipen aus OSM da sind",
+  "updated": "2026-10-31"
+}

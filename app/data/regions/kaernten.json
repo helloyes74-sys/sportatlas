@@ -193,6 +193,54 @@
       "file": "areas/xc/villacher-alpenarena.json"
     },
     {
+      "id": "mallnitz-loipen",
+      "type": "xc",
+      "name": "Loipen Mallnitz (Nationalpark Hohe Tauern)",
+      "file": "areas/xc/mallnitz-loipen.json"
+    },
+    {
+      "id": "oberdrautal-loipen",
+      "type": "xc",
+      "name": "Loipennetz Oberdrautal",
+      "file": "areas/xc/oberdrautal-loipen.json"
+    },
+    {
+      "id": "lesachtal-loipen",
+      "type": "xc",
+      "name": "Loipen Lesachtal",
+      "file": "areas/xc/lesachtal-loipen.json"
+    },
+    {
+      "id": "katschberg-poellatal",
+      "type": "xc",
+      "name": "Pöllatal-Loipe (Katschberg)",
+      "file": "areas/xc/katschberg-poellatal.json"
+    },
+    {
+      "id": "dobratsch-hoehenloipe",
+      "type": "xc",
+      "name": "Höhenloipe Dobratsch (Rosstratte)",
+      "file": "areas/xc/dobratsch-hoehenloipe.json"
+    },
+    {
+      "id": "hebalm-loipen",
+      "type": "xc",
+      "name": "Langlaufzentrum Hebalm",
+      "file": "areas/xc/hebalm-loipen.json"
+    },
+    {
+      "id": "weinebene-loipen",
+      "type": "xc",
+      "name": "Loipen Weinebene",
+      "file": "areas/xc/weinebene-loipen.json"
+    },
+    {
+      "id": "bodental-panoramaloipe",
+      "type": "xc",
+      "name": "Panoramaloipe Bodental",
+      "file": "areas/xc/bodental-panoramaloipe.json"
+    },
+    {
       "id": "woerthersee-rundfahrt",
       "type": "bike",
       "name": "Wörthersee-Rundfahrt",
@@ -461,6 +509,174 @@
       "type": "hike",
       "name": "Slow Trail Bleistätter Moor",
       "file": "areas/hike/slow-trail-bleistaetter-moor.json"
+    },
+    {
+      "id": "kruckenspitz-hochrindl",
+      "type": "hike",
+      "name": "Ursulaquelle und Kruckenspitz (Hochrindl)",
+      "file": "areas/hike/kruckenspitz-hochrindl.json"
+    },
+    {
+      "id": "barbaraweg-turrach",
+      "type": "hike",
+      "name": "Barbaraweg – Auf den Spuren des Bergbaus",
+      "file": "areas/hike/barbaraweg-turrach.json"
+    },
+    {
+      "id": "gradensee-nossberger-huette",
+      "type": "hike",
+      "name": "Adolf-Nossberger-Hütte und Gradensee von Putschall",
+      "file": "areas/hike/gradensee-nossberger-huette.json"
+    },
+    {
+      "id": "reisseckhuette-muehldorf",
+      "type": "hike",
+      "name": "Reisseckhütte und Großer Mühldorfer See",
+      "file": "areas/hike/reisseckhuette-muehldorf.json"
+    },
+    {
+      "id": "egger-alm-nassfeld",
+      "type": "hike",
+      "name": "Egger Alm vom Nassfeld",
+      "file": "areas/hike/egger-alm-nassfeld.json"
+    },
+    {
+      "id": "koralpenhaus-weinebene",
+      "type": "hike",
+      "name": "Koralpenhaus von der Weinebene",
+      "file": "areas/hike/koralpenhaus-weinebene.json"
+    },
+    {
+      "id": "aat-etappe-01",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 1: Kaiser-Franz-Josefs-Höhe – Heiligenblut",
+      "file": "areas/hike/aat-etappe-01.json"
+    },
+    {
+      "id": "aat-etappe-02",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 2: Heiligenblut – Döllach",
+      "file": "areas/hike/aat-etappe-02.json"
+    },
+    {
+      "id": "aat-etappe-03",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 3: Döllach – Marterle",
+      "file": "areas/hike/aat-etappe-03.json"
+    },
+    {
+      "id": "aat-etappe-04",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 4: Marterle – Stall",
+      "file": "areas/hike/aat-etappe-04.json"
+    },
+    {
+      "id": "aat-etappe-05",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 5: Stall – Innerfragant",
+      "file": "areas/hike/aat-etappe-05.json"
+    },
+    {
+      "id": "aat-etappe-06",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 6: Innerfragant – Mallnitz",
+      "file": "areas/hike/aat-etappe-06.json"
+    },
+    {
+      "id": "aat-etappe-07",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 7: Mallnitz – Obervellach",
+      "file": "areas/hike/aat-etappe-07.json"
+    },
+    {
+      "id": "aat-etappe-08",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 8: Obervellach – Danielsberg",
+      "file": "areas/hike/aat-etappe-08.json"
+    },
+    {
+      "id": "aat-etappe-09",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 9: Danielsberg – Hühnersberg",
+      "file": "areas/hike/aat-etappe-09.json"
+    },
+    {
+      "id": "aat-etappe-10",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 10: Hühnersberg – Gmünd",
+      "file": "areas/hike/aat-etappe-10.json"
+    },
+    {
+      "id": "aat-etappe-11",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 11: Gmünd – Seeboden am Millstätter See",
+      "file": "areas/hike/aat-etappe-11.json"
+    },
+    {
+      "id": "aat-etappe-12",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 12: Seeboden – Millstätter Alpe",
+      "file": "areas/hike/aat-etappe-12.json"
+    },
+    {
+      "id": "aat-etappe-13",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 13: Millstätter Alpe – Döbriach",
+      "file": "areas/hike/aat-etappe-13.json"
+    },
+    {
+      "id": "aat-etappe-14",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 14: Döbriach – Langalmtal",
+      "file": "areas/hike/aat-etappe-14.json"
+    },
+    {
+      "id": "aat-etappe-15",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 15: Langalmtal – Falkerthaus / Lärchenhütte",
+      "file": "areas/hike/aat-etappe-15.json"
+    },
+    {
+      "id": "aat-etappe-16",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 16: Falkerthaus / Lärchenhütte – Bad Kleinkirchheim",
+      "file": "areas/hike/aat-etappe-16.json"
+    },
+    {
+      "id": "aat-etappe-17",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 17: Bad Kleinkirchheim – Arriach",
+      "file": "areas/hike/aat-etappe-17.json"
+    },
+    {
+      "id": "aat-etappe-18",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 18: Arriach – Gerlitzen Alpe",
+      "file": "areas/hike/aat-etappe-18.json"
+    },
+    {
+      "id": "aat-etappe-19",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 19: Gerlitzen Alpe – Ossiach",
+      "file": "areas/hike/aat-etappe-19.json"
+    },
+    {
+      "id": "aat-etappe-20",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 20: Ossiach – Velden am Wörther See",
+      "file": "areas/hike/aat-etappe-20.json"
+    },
+    {
+      "id": "aat-etappe-21",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 21: Velden am Wörther See – Faaker See",
+      "file": "areas/hike/aat-etappe-21.json"
+    },
+    {
+      "id": "aat-etappe-22",
+      "type": "hike",
+      "name": "Alpe-Adria-Trail Etappe 22: Faaker See / Baumgartnerhöhe – Kranjska Gora (SLO)",
+      "file": "areas/hike/aat-etappe-22.json"
     }
   ],
   "updated": "2026-10-31"

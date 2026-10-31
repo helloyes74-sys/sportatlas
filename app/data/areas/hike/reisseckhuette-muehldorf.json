@@ -1,0 +1,46 @@
+{
+  "id": "reisseckhuette-muehldorf",
+  "type": "hike",
+  "name": "Reisseckhütte und Großer Mühldorfer See",
+  "kind": "Hüttenwanderung",
+  "region": "Mühldorf / Reißeckgruppe",
+  "length_km": 9.9,
+  "duration_min": 350,
+  "ascent_m": 1659,
+  "top_m": 2287,
+  "difficulty": 3,
+  "start": "Mühldorf im Mölltal",
+  "end": "Reisseckhütte (2.287 m), zurück am selben Weg",
+  "center": [
+    13.31,
+    46.9
+  ],
+  "bbox": [
+    13.26,
+    46.85,
+    13.36,
+    46.95
+  ],
+  "osm": {
+    "bbox": [
+      13.26,
+      46.85,
+      13.36,
+      46.95
+    ],
+    "route": "hiking",
+    "relation_name": "Rei(ss|ß)eck|M[üu]hldorfer See",
+    "search": "Reisseckhütte und Großer Mühldorfer See",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Lange, steile Tour zu den Mühldorfer Seen der Reißeckgruppe – Kondition gefragt"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Wanderung zur Reisseckhütte von Mühldorf",
+      "url": "https://www.bergwelten.com/t/w/36188"
+    }
+  ],
+  "updated": "2026-10-31"
+}

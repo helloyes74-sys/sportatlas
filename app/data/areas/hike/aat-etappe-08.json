@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-08",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 8: Obervellach – Danielsberg",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 12.9,
+  "duration_min": 345,
+  "ascent_m": 810,
+  "difficulty": 2,
+  "start": "Obervellach",
+  "end": "Danielsberg",
+  "center": [
+    13.27,
+    46.91
+  ],
+  "bbox": [
+    13.18,
+    46.87,
+    13.34,
+    46.95
+  ],
+  "osm": {
+    "bbox": [
+      13.18,
+      46.87,
+      13.34,
+      46.95
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E08$",
+    "search": "Alpe Adria Trail E08",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 8 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 8",
+      "url": "https://www.bergwelten.com/t/w/17347"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

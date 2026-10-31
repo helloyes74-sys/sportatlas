@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-17",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 17: Bad Kleinkirchheim – Arriach",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 17.8,
+  "duration_min": 435,
+  "ascent_m": 1210,
+  "difficulty": 2,
+  "start": "Bad Kleinkirchheim",
+  "end": "Arriach",
+  "center": [
+    13.83,
+    46.78
+  ],
+  "bbox": [
+    13.76,
+    46.72,
+    13.9,
+    46.83
+  ],
+  "osm": {
+    "bbox": [
+      13.76,
+      46.72,
+      13.9,
+      46.83
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E17$",
+    "search": "Alpe Adria Trail E17",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 17 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 17",
+      "url": "https://www.bergwelten.com/t/w/17357"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

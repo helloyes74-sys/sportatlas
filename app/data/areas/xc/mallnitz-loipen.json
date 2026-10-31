@@ -1,0 +1,41 @@
+{
+  "id": "mallnitz-loipen",
+  "type": "xc",
+  "name": "Loipen Mallnitz (Nationalpark Hohe Tauern)",
+  "region": "Mallnitz / Mölltal",
+  "center": [
+    13.17,
+    46.99
+  ],
+  "bbox": [
+    13.12,
+    46.96,
+    13.24,
+    47.02
+  ],
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Tauerntal- und Seebachtal-Loipen auf rund 1.200 m, schneesicher; Teil der über 200 km langen Nationalpark-Loipen"
+  ],
+  "osm": {
+    "bbox": [
+      13.12,
+      46.96,
+      13.24,
+      47.02
+    ],
+    "note": "Loipen: way/relation piste:type=nordic in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufgebiete in Kärnten",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufgebiete/"
+    },
+    {
+      "label": "Nationalpark Hohe Tauern – Langlaufen",
+      "url": "https://nationalpark-hohetauern.at/winter/langlaufen/"
+    }
+  ],
+  "center_note": "ungefähr – prüfen, sobald Loipen aus OSM da sind",
+  "updated": "2026-10-31"
+}

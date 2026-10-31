@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-05",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 5: Stall – Innerfragant",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 17.7,
+  "duration_min": 465,
+  "ascent_m": 1260,
+  "difficulty": 2,
+  "start": "Stall",
+  "end": "Innerfragant",
+  "center": [
+    13.1,
+    46.91
+  ],
+  "bbox": [
+    13.02,
+    46.87,
+    13.18,
+    46.95
+  ],
+  "osm": {
+    "bbox": [
+      13.02,
+      46.87,
+      13.18,
+      46.95
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E05$",
+    "search": "Alpe Adria Trail E05",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 5 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 5",
+      "url": "https://www.bergwelten.com/t/w/17344"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

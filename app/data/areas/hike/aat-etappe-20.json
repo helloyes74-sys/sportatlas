@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-20",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 20: Ossiach – Velden am Wörther See",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 16.9,
+  "duration_min": 375,
+  "ascent_m": 585,
+  "difficulty": 2,
+  "start": "Ossiach",
+  "end": "Velden am Wörther See",
+  "center": [
+    14,
+    46.65
+  ],
+  "bbox": [
+    13.95,
+    46.6,
+    14.07,
+    46.7
+  ],
+  "osm": {
+    "bbox": [
+      13.95,
+      46.6,
+      14.07,
+      46.7
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E20$",
+    "search": "Alpe Adria Trail E20",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 20 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 20",
+      "url": "https://www.bergwelten.com/t/w/10962"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

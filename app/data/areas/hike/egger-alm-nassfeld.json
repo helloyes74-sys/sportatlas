@@ -1,0 +1,46 @@
+{
+  "id": "egger-alm-nassfeld",
+  "type": "hike",
+  "name": "Egger Alm vom Nassfeld",
+  "kind": "Almwanderung",
+  "region": "Nassfeld / Karnische Alpen",
+  "length_km": 13.1,
+  "duration_min": 260,
+  "ascent_m": 551,
+  "top_m": 1650,
+  "difficulty": 1,
+  "start": "Nassfeld (Sonnenalpe)",
+  "end": "Egger Alm und Eggeralmsee, zurück am selben Weg oder Rundweg",
+  "center": [
+    13.33,
+    46.57
+  ],
+  "bbox": [
+    13.25,
+    46.54,
+    13.42,
+    46.6
+  ],
+  "osm": {
+    "bbox": [
+      13.25,
+      46.54,
+      13.42,
+      46.6
+    ],
+    "route": "hiking",
+    "relation_name": "Egger ?Alm",
+    "search": "Egger Alm vom Nassfeld",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Weite Almflächen am Karnischen Kamm, Eggeralmsee, Almdorf mit Käse aus eigener Erzeugung"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Wanderung zur Egger Alm vom Nassfeld",
+      "url": "https://www.bergwelten.com/t/w/23922"
+    }
+  ],
+  "updated": "2026-10-31"
+}

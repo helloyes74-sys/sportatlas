@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-02",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 2: Heiligenblut – Döllach",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 11.8,
+  "duration_min": 285,
+  "ascent_m": 490,
+  "difficulty": 2,
+  "start": "Heiligenblut",
+  "end": "Döllach",
+  "center": [
+    12.86,
+    47
+  ],
+  "bbox": [
+    12.82,
+    46.96,
+    12.92,
+    47.05
+  ],
+  "osm": {
+    "bbox": [
+      12.82,
+      46.96,
+      12.92,
+      47.05
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E02$",
+    "search": "Alpe Adria Trail E02",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 2 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 2",
+      "url": "https://www.bergwelten.com/t/w/17341"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "lesachtal-loipen",
+  "type": "xc",
+  "name": "Loipen Lesachtal",
+  "region": "Maria Luggau – Liesing – Kötschach",
+  "center": [
+    12.78,
+    46.7
+  ],
+  "bbox": [
+    12.6,
+    46.67,
+    12.95,
+    46.73
+  ],
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Höhenloipen im Lesachtal, dem höchstgelegenen Seitental Kärntens"
+  ],
+  "osm": {
+    "bbox": [
+      12.6,
+      46.67,
+      12.95,
+      46.73
+    ],
+    "note": "Loipen: way/relation piste:type=nordic in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufgebiete in Kärnten",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufgebiete/"
+    },
+    {
+      "label": "Lesachtal – Langlaufen",
+      "url": "http://www.lesachtal.com/de/winter/aktiv/langlaufen/wissenswertes.html"
+    }
+  ],
+  "center_note": "ungefähr – prüfen, sobald Loipen aus OSM da sind",
+  "updated": "2026-10-31"
+}

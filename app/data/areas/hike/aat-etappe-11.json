@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-11",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 11: Gmünd – Seeboden am Millstätter See",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 14.8,
+  "duration_min": 270,
+  "ascent_m": 270,
+  "difficulty": 2,
+  "start": "Gmünd",
+  "end": "Seeboden am Millstätter See",
+  "center": [
+    13.52,
+    46.86
+  ],
+  "bbox": [
+    13.46,
+    46.8,
+    13.58,
+    46.92
+  ],
+  "osm": {
+    "bbox": [
+      13.46,
+      46.8,
+      13.58,
+      46.92
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E11$",
+    "search": "Alpe Adria Trail E11",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 11 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 11",
+      "url": "https://www.bergwelten.com/t/w/17351"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-06",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 6: Innerfragant – Mallnitz",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 22.4,
+  "duration_min": 495,
+  "ascent_m": 1130,
+  "difficulty": 2,
+  "start": "Innerfragant",
+  "end": "Mallnitz",
+  "center": [
+    13.16,
+    46.96
+  ],
+  "bbox": [
+    13.1,
+    46.92,
+    13.22,
+    47.01
+  ],
+  "osm": {
+    "bbox": [
+      13.1,
+      46.92,
+      13.22,
+      47.01
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E06$",
+    "search": "Alpe Adria Trail E06",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 6 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 6",
+      "url": "https://www.bergwelten.com/t/w/17345"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "barbaraweg-turrach",
+  "type": "hike",
+  "name": "Barbaraweg – Auf den Spuren des Bergbaus",
+  "kind": "Themenweg",
+  "region": "Turracher Höhe / Nockberge",
+  "length_km": 4.2,
+  "duration_min": 120,
+  "ascent_m": 344,
+  "top_m": 2000,
+  "difficulty": 1,
+  "start": "Turracher Höhe",
+  "round_trip": true,
+  "center": [
+    13.87,
+    46.92
+  ],
+  "bbox": [
+    13.84,
+    46.9,
+    13.91,
+    46.94
+  ],
+  "osm": {
+    "bbox": [
+      13.84,
+      46.9,
+      13.91,
+      46.94
+    ],
+    "route": "hiking",
+    "relation_name": "Barbaraweg",
+    "search": "Barbaraweg – Auf den Spuren des Bergbaus",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Bergbau-Themenweg oberhalb des Turracher Sees, leicht und familientauglich"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Barbaraweg – Auf den Spuren des Bergbaus",
+      "url": "https://www.bergwelten.com/t/w/22421"
+    }
+  ],
+  "updated": "2026-10-31"
+}

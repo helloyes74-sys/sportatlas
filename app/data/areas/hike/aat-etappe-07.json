@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-07",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 7: Mallnitz – Obervellach",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 17.8,
+  "duration_min": 330,
+  "ascent_m": 200,
+  "difficulty": 2,
+  "start": "Mallnitz",
+  "end": "Obervellach",
+  "center": [
+    13.19,
+    46.96
+  ],
+  "bbox": [
+    13.14,
+    46.92,
+    13.24,
+    47
+  ],
+  "osm": {
+    "bbox": [
+      13.14,
+      46.92,
+      13.24,
+      47
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E07$",
+    "search": "Alpe Adria Trail E07",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 7 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 7",
+      "url": "https://www.bergwelten.com/t/w/17346"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

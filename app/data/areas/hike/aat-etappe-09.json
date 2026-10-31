@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-09",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 9: Danielsberg – Hühnersberg",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 19.7,
+  "duration_min": 375,
+  "ascent_m": 720,
+  "difficulty": 2,
+  "start": "Danielsberg",
+  "end": "Hühnersberg",
+  "center": [
+    13.38,
+    46.86
+  ],
+  "bbox": [
+    13.3,
+    46.8,
+    13.46,
+    46.91
+  ],
+  "osm": {
+    "bbox": [
+      13.3,
+      46.8,
+      13.46,
+      46.91
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E09$",
+    "search": "Alpe Adria Trail E09",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 9 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 9",
+      "url": "https://www.bergwelten.com/t/w/17348"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

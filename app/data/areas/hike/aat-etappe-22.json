@@ -1,0 +1,49 @@
+{
+  "id": "aat-etappe-22",
+  "type": "hike",
+  "name": "Alpe-Adria-Trail Etappe 22: Faaker See / Baumgartnerhöhe – Kranjska Gora (SLO)",
+  "kind": "Weitwanderweg-Etappe",
+  "region": "Alpe-Adria-Trail (Kärnten)",
+  "length_km": 21.4,
+  "duration_min": 455,
+  "ascent_m": 1140,
+  "difficulty": 2,
+  "start": "Faaker See / Baumgartnerhöhe",
+  "end": "Kranjska Gora (SLO)",
+  "center": [
+    13.87,
+    46.53
+  ],
+  "bbox": [
+    13.78,
+    46.48,
+    13.96,
+    46.6
+  ],
+  "osm": {
+    "bbox": [
+      13.78,
+      46.48,
+      13.96,
+      46.6
+    ],
+    "route": "hiking",
+    "relation_name": "^Alpe.?Adria.?Trail.?E22$",
+    "search": "Alpe Adria Trail E22",
+    "note": "OSM-Relation „Alpe Adria Trail Exx“ (iwn). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Etappe 22 von 37 des Alpe-Adria-Trails vom Großglockner nach Muggia; Gepäcktransport buchbar"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Alpe-Adria-Trail Etappe 22",
+      "url": "https://www.bergwelten.com/t/w/13221"
+    },
+    {
+      "label": "Bergwelten – Weitwandern am Alpe-Adria-Trail (Etappenübersicht)",
+      "url": "https://www.bergwelten.com/a/vom-gletscher-zum-meer-der-alpe-adria-trail"
+    }
+  ],
+  "updated": "2026-10-31"
+}

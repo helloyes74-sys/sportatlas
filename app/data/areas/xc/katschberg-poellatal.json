@@ -1,0 +1,44 @@
+{
+  "id": "katschberg-poellatal",
+  "type": "xc",
+  "name": "Pöllatal-Loipe (Katschberg)",
+  "region": "Rennweg / Lieser-Maltatal",
+  "center": [
+    13.64,
+    47.03
+  ],
+  "bbox": [
+    13.58,
+    47,
+    13.72,
+    47.06
+  ],
+  "loipen_km": {
+    "total": 8
+  },
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Rund 8 km hin und zurück ins autofreie Pöllatal bis zur Gamskogelhütte"
+  ],
+  "osm": {
+    "bbox": [
+      13.58,
+      47,
+      13.72,
+      47.06
+    ],
+    "note": "Loipen: way/relation piste:type=nordic in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufgebiete in Kärnten",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufgebiete/"
+    },
+    {
+      "label": "Katschberg – Winter aktiv",
+      "url": "https://www.katschberg.at/de/winteraktiv.html#langlaufen"
+    }
+  ],
+  "center_note": "ungefähr – prüfen, sobald Loipen aus OSM da sind",
+  "updated": "2026-10-31"
+}

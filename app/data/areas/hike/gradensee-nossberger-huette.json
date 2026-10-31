@@ -1,0 +1,46 @@
+{
+  "id": "gradensee-nossberger-huette",
+  "type": "hike",
+  "name": "Adolf-Nossberger-Hütte und Gradensee von Putschall",
+  "kind": "Hüttenwanderung",
+  "region": "Großkirchheim / Schobergruppe",
+  "length_km": 5.7,
+  "duration_min": 180,
+  "ascent_m": 931,
+  "top_m": 2488,
+  "difficulty": 2,
+  "start": "Putschall (Großkirchheim)",
+  "end": "Adolf-Nossberger-Hütte (2.488 m) am Gradensee, zurück am selben Weg",
+  "center": [
+    12.86,
+    46.99
+  ],
+  "bbox": [
+    12.8,
+    46.96,
+    12.91,
+    47.01
+  ],
+  "osm": {
+    "bbox": [
+      12.8,
+      46.96,
+      12.91,
+      47.01
+    ],
+    "route": "hiking",
+    "relation_name": "Nossberger|Gradental|Gradensee",
+    "search": "Adolf-Nossberger-Hütte und Gradensee von Putschall",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab."
+  },
+  "highlights": [
+    "Steil durchs Gradental zu Gradensee und Hütte unter der Hochschober-Gruppe"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Wanderung zur Adolf Nossberger Hütte von Putschall",
+      "url": "https://www.bergwelten.com/t/w/4232"
+    }
+  ],
+  "updated": "2026-10-31"
+}
