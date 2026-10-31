@@ -148,6 +148,18 @@ function addDataLayers(map) {
 }
 
 /** Übersichtsmarker für die Gebiete einer Sportart. */
+/** Eigener Standort als pulsierender Punkt. */
+export function setHere(map, lngLat) {
+  whenReady(map, () => {
+    if (!map.getSource("here")) {
+      map.addSource("here", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+      map.addLayer({ id: "here-halo", type: "circle", source: "here", paint: { "circle-radius": 14, "circle-color": COLORS.accent, "circle-opacity": .18 } });
+      map.addLayer({ id: "here-dot", type: "circle", source: "here", paint: { "circle-radius": 5, "circle-color": "#fff", "circle-stroke-color": COLORS.accent, "circle-stroke-width": 2 } });
+    }
+    map.getSource("here").setData({ type: "FeatureCollection", features: lngLat ? [{ type: "Feature", geometry: { type: "Point", coordinates: lngLat }, properties: {} }] : [] });
+  });
+}
+
 export function setAreaMarkers(map, areas) {
   const fc = { type: "FeatureCollection", features: areas.map((a) => ({ type: "Feature", properties: { id: a.id, type: a.type, name: a.name, color: COLORS.sport[a.type], size: a.pistes_km?.total || a.loipen_km?.total || a.length_km || 6 }, geometry: { type: "Point", coordinates: a.center } })) };
   whenReady(map, () => map.getSource("areas").setData(fc));

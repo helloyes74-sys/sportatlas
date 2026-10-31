@@ -2,16 +2,18 @@
 /* global maplibregl */
 
 import { loadRegion, loadGeo } from "./data.js";
-import { createMap, setAreaMarkers, setGeo, setSelection, setHikeColorMode, flyToBbox, flyToRegion, setFocus, flyToSector, startTour, stopTour, tourRunning, INTERACTIVE_LAYERS, COLORS, narrow } from "./map.js";
+import { createMap, setHere, setAreaMarkers, setGeo, setSelection, setHikeColorMode, flyToBbox, flyToRegion, setFocus, flyToSector, startTour, stopTour, tourRunning, INTERACTIVE_LAYERS, COLORS, narrow } from "./map.js";
 import { computeSectors } from "./sectors.js";
 import { favorites, notes } from "./favorites.js";
+import { filterGroups, applyFilters, renderFilters, distanceKm } from "./filters.js";
+import { toGPX, downloadText } from "./gpx.js";
 import { renderSports, renderList, renderLegend, renderDetail, renderWeather, sportLabel } from "./ui.js";
 import { drawProfile } from "./profile.js";
 import { forecast } from "./weather.js";
 import { bbox, flatCoords } from "./geo.js";
 
 const $ = (s) => document.querySelector(s);
-const state = { region: null, sport: "ski", area: null, geo: null, feature: null, hikeMode: "difficulty", query: "", onlyFavs: false, sectors: [], activeSector: null };
+const state = { region: null, sport: "ski", area: null, geo: null, feature: null, hikeMode: "difficulty", query: "", onlyFavs: false, sectors: [], activeSector: null, filters: {}, here: null, near: false, locating: false };
 const store = {
   get(k, d) { try { const v = localStorage.getItem("sportatlas:" + k); return v ? JSON.parse(v) : d; } catch { return d; } },
   set(k, v) { try { localStorage.setItem("sportatlas:" + k, JSON.stringify(v)); } catch { /* privat / voll */ } },
@@ -69,6 +71,7 @@ async function applyRoute() {
   store.set("sport", state.sport);
   const area = areaId ? state.region.areas.find((a) => a.id === areaId && a.type === state.sport) : null;
   renderSportsBar();
+  renderFilterBar();
   renderAreaList();
   renderLegendBar();
   if (area) await openArea(area);
@@ -84,14 +87,36 @@ function renderSportsBar() {
 }
 function areasOfSport() {
   const q = state.query.trim().toLowerCase();
-  const list = state.region.areas.filter((a) => a.type === state.sport && (!q || `${a.name} ${a.region || ""} ${a.kind || ""} ${(a.highlights || []).join(" ")}`.toLowerCase().includes(q)));
-  // Skigebiete und Loipen nach Größe, Routen nach Art und Name (eine 4-km-Klamm neben einer 90-km-Etappe sagt nichts)
+  let list = state.region.areas.filter((a) => a.type === state.sport && (!q || `${a.name} ${a.region || ""} ${a.kind || ""} ${(a.highlights || []).join(" ")}`.toLowerCase().includes(q)));
+  list = applyFilters(list, filterGroups(state.sport, state.region.areas), state.filters[state.sport] || {});
+  // Nähe: nach Luftlinie vom Standort; sonst Skigebiete und Loipen nach Größe, Routen nach Art und Name
+  if (state.near && state.here) return list.sort((a, b) => distanceKm(state.here, a) - distanceKm(state.here, b));
   if (state.sport === "bike" || state.sport === "hike") return list.sort((a, b) => (a.kind || "").localeCompare(b.kind || "", "de") || a.name.localeCompare(b.name, "de"));
   return list.sort((a, b) => (b.pistes_km?.total || b.loipen_km?.total || 0) - (a.pistes_km?.total || a.loipen_km?.total || 0));
 }
+function renderFilterBar() {
+  $("#filters").innerHTML = renderFilters(filterGroups(state.sport, state.region.areas), state.filters[state.sport] || {}, { here: state.here, near: state.near, locating: state.locating });
+}
+/** Standort abfragen (einmal je Sitzung) und die Liste nach Entfernung sortieren. */
+function toggleNear() {
+  if (state.near) { state.near = false; renderFilterBar(); renderAreaList(); return; }
+  if (state.here) { state.near = true; renderFilterBar(); renderAreaList(); return; }
+  if (!navigator.geolocation) { toast("Dieses Gerät gibt keinen Standort frei."); return; }
+  state.locating = true; renderFilterBar();
+  navigator.geolocation.getCurrentPosition((pos) => {
+    state.here = [pos.coords.longitude, pos.coords.latitude]; state.locating = false; state.near = true;
+    if (map) setHere(map, state.here);
+    renderFilterBar(); renderAreaList();
+    toast(`Standort gefunden (±${Math.round(pos.coords.accuracy)} m) – Liste nach Entfernung sortiert`);
+  }, (err) => {
+    state.locating = false; renderFilterBar();
+    toast(err.code === 1 ? "Standort nicht freigegeben – in den Browser-Einstellungen erlauben." : "Standort konnte nicht ermittelt werden.");
+  }, { enableHighAccuracy: false, timeout: 12000, maximumAge: 300000 });
+}
 function renderAreaList() {
   const list = areasOfSport();
-  $("#list").innerHTML = renderList(list, state.area?.id, { onlyFavs: state.onlyFavs });
+  const distances = state.here ? Object.fromEntries(list.map((a) => [a.id, distanceKm(state.here, a)])) : null;
+  $("#list").innerHTML = renderList(list, state.area?.id, { onlyFavs: state.onlyFavs, distances });
   $("#favFilter").setAttribute("aria-pressed", state.onlyFavs);
   const shown = state.onlyFavs ? $("#list").querySelectorAll(".item").length : list.length;
   $("#count").textContent = `${shown} ${state.sport === "ski" ? "Gebiete" : state.sport === "xc" ? "Loipen" : "Routen"}`;
@@ -187,6 +212,20 @@ document.addEventListener("click", (e) => {
   const sc = e.target.closest("[data-sector]"); if (sc) { onSector(sc.dataset.sector); return; }
   if (e.target.closest("#favBtn") && state.area) { favorites.toggle(state.area.id); renderDetailPanel(); renderAreaList(); return; }
   if (e.target.closest("#favFilter")) { state.onlyFavs = !state.onlyFavs; renderAreaList(); return; }
+  const fc = e.target.closest("[data-filter]"); if (fc) {
+    const cur = (state.filters[state.sport] ||= {}); const set = (cur[fc.dataset.filter] ||= new Set());
+    set.has(fc.dataset.option) ? set.delete(fc.dataset.option) : set.add(fc.dataset.option);
+    renderFilterBar(); renderAreaList(); return;
+  }
+  if (e.target.closest("#btnClearFilters")) { state.filters[state.sport] = {}; renderFilterBar(); renderAreaList(); return; }
+  if (e.target.closest("#btnNear")) { toggleNear(); return; }
+  if (e.target.closest("#btnGpx") && state.area && state.geo) { downloadText(`${state.area.id}.gpx`, toGPX(state.geo, state.area)); toast("GPX gespeichert – in Komoot, Garmin Connect oder Apple Karten öffnen"); return; }
+  if (e.target.closest("#btnShare") && state.area) {
+    const url = location.origin + location.pathname + "#" + state.sport + "/" + state.area.id;
+    if (navigator.share) navigator.share({ title: `Sportatlas – ${state.area.name}`, url }).catch(() => {});
+    else navigator.clipboard?.writeText(url).then(() => toast("Link kopiert: " + url), () => toast(url));
+    return;
+  }
   const st = e.target.closest("[data-star]"); if (st && state.area) { const v = +st.dataset.star; const cur = notes.get(state.area.id).stars; notes.set(state.area.id, { stars: cur === v ? 0 : v }); renderDetailPanel(); renderAreaList(); return; }
   if (e.target.closest("#closeDetail")) { setHash(state.sport, null); setSheet($("#left"), true); if (map) flyToRegion(map, state.region); return; }
   if (e.target.closest("#btnOverview")) { setHash(state.sport, null); setSheet($("#left"), true); if (map) flyToRegion(map, state.region); return; }

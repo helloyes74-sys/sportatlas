@@ -50,6 +50,16 @@ body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-display
 .panel-head { display: flex; gap: 8px; align-items: center; padding: 10px; border-bottom: 1px solid var(--panel-line); }
 .panel-head input { flex: 1; min-width: 0; font: 500 12px var(--f-data); background: rgba(255,255,255,.04); color: var(--ink); border: 1px solid var(--line); padding: 7px 9px; }
 .panel-head input:focus { outline: none; border-color: var(--accent); }
+.filters { flex: none; padding: 6px 8px 4px; border-bottom: 1px solid var(--panel-line); display: grid; gap: 4px; max-height: 38vh; overflow-y: auto; }
+.chiprow { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.chiplabel { font: 500 9.5px var(--f-data); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-right: 2px; min-width: 58px; }
+.chip { font: 500 11px var(--f-data); color: var(--muted); background: rgba(255,255,255,.03); border: 1px solid var(--line); padding: 4px 8px; cursor: pointer; border-radius: 2px; }
+.chip:hover { color: var(--ink); border-color: var(--accent); }
+.chip[aria-pressed="true"] { color: var(--ink); border-color: var(--accent); background: var(--accent-soft); }
+.chip.near[aria-pressed="true"]::before { content: "◉ "; color: var(--accent); }
+.chip.clear { margin-left: auto; color: var(--accent); border-color: var(--accent-soft); }
+.chip:disabled { opacity: .6; cursor: progress; }
+.dist { color: var(--accent); font: 500 11px var(--f-data); margin-left: 6px; }
 .count { font: 500 10px var(--f-data); color: var(--muted); white-space: nowrap; }
 .favfilter { font-size: 15px; line-height: 1; background: none; border: 1px solid var(--line); color: var(--muted); width: 30px; height: 30px; cursor: pointer; flex: none; }
 .favfilter[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
@@ -174,7 +184,8 @@ body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-display
   /* --sheet-h ist die Zielhöhe (liest map.js für den Kamera-Ausschnitt; eigene Variable, weil der
      animierte max-height-Wert während des Auf-/Zuklappens nicht stimmt) */
   .panel.left, .panel.right { top: auto; left: 0; right: 0; bottom: 0; width: auto; border-left: 0; border-right: 0; overflow: hidden; max-height: calc(var(--sheet-h) + env(safe-area-inset-bottom)); transition: max-height .28s cubic-bezier(.2,.8,.2,1); padding-bottom: env(safe-area-inset-bottom); }
-  .panel.left { --sheet-h: 44vh; }
+  .panel.left { --sheet-h: 52vh; }
+  .filters { max-height: 22vh; }
   .panel.right { --sheet-h: 52vh; }
   .panel.left.collapsed { --sheet-h: 66px; }
   .panel.right.collapsed { --sheet-h: 108px; }

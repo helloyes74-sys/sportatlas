@@ -27,7 +27,7 @@ function keyFacts(a) {
   return `<b>${km}</b>${a.duration_min ? fmtTime(a.duration_min) : a.ascent_m ? `↑ ${fmtNum(a.ascent_m)} m` : STARS[a.difficulty] || ""}`;
 }
 
-export function renderList(areas, selectedId, { onlyFavs = false } = {}) {
+export function renderList(areas, selectedId, { onlyFavs = false, distances = null } = {}) {
   const favs = favorites.list(), all = notes.all();
   const list = onlyFavs ? areas.filter((a) => favs.includes(a.id) || all[a.id]?.stars) : areas;
   if (!list.length) return onlyFavs ? `<p class="empty">Noch nichts gemerkt. Im Detailblatt eines Gebiets auf ☆ tippen oder Sterne vergeben.</p>` : `<p class="empty">Nichts gefunden.</p>`;
@@ -36,7 +36,7 @@ export function renderList(areas, selectedId, { onlyFavs = false } = {}) {
     const n = all[a.id];
     return `<button class="item" role="listitem" data-area="${a.id}" aria-pressed="${a.id === selectedId}">
       <span class="nm">${favs.includes(a.id) ? '<span class="favmark" aria-label="gemerkt">★</span>' : ""}${esc(a.name)}</span><span class="kv">${keyFacts(a)}</span>
-      <span class="rg">${(a.type === "bike" || a.type === "hike") && a.kind ? esc(a.kind) + " · " : ""}${esc(a.region || "")}${n?.stars ? ` <span class="stars mini" aria-label="${n.stars} von 5 Sternen">${starsHtml(n.stars)}</span>` : ""}</span>
+      <span class="rg">${(a.type === "bike" || a.type === "hike") && a.kind ? esc(a.kind) + " · " : ""}${esc(a.region || "")}${distances?.[a.id] != null ? `<span class="dist">${Math.round(distances[a.id])} km</span>` : ""}${n?.stars ? ` <span class="stars mini" aria-label="${n.stars} von 5 Sternen">${starsHtml(n.stars)}</span>` : ""}</span>
       ${s ? `<span class="st ${s.cls}">${s.text}</span>` : ""}
     </button>`;
   }).join("");
@@ -101,6 +101,8 @@ export function renderDetail(a, geo, { selectedFeature, hikeMode, sectors = [], 
       ${a.links?.lift_status ? `<a class="btn" href="${esc(a.links.lift_status)}" target="_blank" rel="noopener">Offene Lifte beim Betreiber ↗</a>` : ""}
       ${a.links?.map_pdf ? `<a class="btn" href="${esc(a.links.map_pdf)}" target="_blank" rel="noopener">Pistenplan PDF ↗</a>` : ""}
       ${a.links?.info ? `<a class="btn" href="${esc(a.links.info)}" target="_blank" rel="noopener">Info ↗</a>` : ""}
+      ${feats.length ? `<button class="btn" id="btnGpx" title="Alle Linien dieses Gebiets als GPX (Garmin, Komoot, Apple Karten)">GPX herunterladen</button>` : ""}
+      <button class="btn" id="btnShare" title="Link zu diesem Gebiet kopieren oder teilen">Link teilen</button>
       <a class="btn" href="https://www.windy.com/${a.center[1].toFixed(3)}/${a.center[0].toFixed(3)}?${a.center[1].toFixed(3)},${a.center[0].toFixed(3)},11" target="_blank" rel="noopener">Windy ↗</a>
     </div></section>
     <p class="src">Stammdaten Stand ${esc(a.updated || "")}: ${(a.sources || []).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(" · ")}.${geo ? ` Linien: © OpenStreetMap-Mitwirkende (ODbL), geladen ${esc(geo.meta?.fetched || "")}${geo.meta?.elevation ? `, Höhen: ${esc(geo.meta.elevation)}` : ""}.` : ""}</p>`;

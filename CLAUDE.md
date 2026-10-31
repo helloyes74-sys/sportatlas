@@ -27,6 +27,8 @@ app/                   die PWA (statisch ausliefern, fertig)
   js/main.js           Zustand, Ereignisse, Hash-Routing (#ski, #ski/gerlitzen)
   js/map.js            Basisstil, Gelände, Datenebenen, Farben (COLORS)
   js/ui.js             Render-Funktionen (HTML-Strings) für Listen und Detailblatt
+  js/filters.js        Filterchips je Sportart, Entfernungssortierung (Standort)
+  js/gpx.js            GPX-Export der geladenen Linien
   js/profile.js        Gefälle-/Steigungsprofil als Canvas-Balken
   js/weather.js        Open-Meteo-Vorhersage
   js/data.js           Laden von Index, Gebieten, GeoJSON; Formatierer

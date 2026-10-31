@@ -64,4 +64,4 @@ npm test          # Unit-Tests
 
 Alles Weitere steht in `CLAUDE.md` (Aufbau, Datenregeln, Stil, nächste Schritte).
 
-Stand: 31.10.2026 – Rad- und Wanderrouten neu als Tagestouren (30 Wanderungen, 15 Radtouren); Stammdaten Ski Saison 2026/27.
+Stand: 31.10.2026 – Rad- und Wanderrouten als Tagestouren (30 Wanderungen, 15 Radtouren), Filterchips, Sortierung nach Standort, GPX-Export und Teilen-Link; Stammdaten Ski Saison 2026/27.

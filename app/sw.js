@@ -1,7 +1,7 @@
 // Service Worker: eigene Dateien immer zuerst frisch vom Server (Fallback Cache, damit die App offline öffnet);
 // Bibliotheken und Schriften aus dem Cache; Kacheln, Gelände und Wetter nur online.
-const VERSION = "sportatlas-v3";
-const SHELL = ["./", "index.html", "css/app.css", "js/main.js", "js/map.js", "js/ui.js", "js/data.js", "js/profile.js", "js/weather.js", "js/geo.js", "js/sectors.js", "js/favorites.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
+const VERSION = "sportatlas-v4";
+const SHELL = ["./", "index.html", "css/app.css", "js/main.js", "js/map.js", "js/ui.js", "js/data.js", "js/profile.js", "js/weather.js", "js/geo.js", "js/sectors.js", "js/favorites.js", "js/filters.js", "js/gpx.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
