@@ -225,7 +225,7 @@
     "file": "geo/hike/dobratsch-gipfelhaus.geojson",
     "features": 1,
     "fetched": "2026-10-31",
-    "area_sig": "stale"
+    "area_sig": "[{\"bbox\":[13.64,46.58,13.73,46.62],\"route\":\"hiking\",\"relation_ids\":[7510652],\"clip\":true,\"search\":\"Dobratsch Gipfel Rosstratte\",\"note\":\"Wanderweg 291 (rwn) – der „Dobratsch Rundwanderweg“ (10028985) ist eine Runde am Bergfuß auf 960 m, nicht der Gipfelweg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.64,46.58,13.73,46.62]]"
   },
   "hike/gerlitzen-huettersteig": {
     "file": "geo/hike/gerlitzen-huettersteig.geojson",
@@ -370,5 +370,11 @@
     "features": 1,
     "fetched": "2026-10-31",
     "area_sig": "[{\"bbox\":[13.88,46.64,14.08,46.7],\"route\":\"bicycle\",\"relation_ids\":[1165340],\"search\":\"Ossiacher See Radweg R2\",\"note\":\"Relation reicht über die Seerunde hinaus (Zubringer), darum an der Bounding-Box abgeschnitten. R2 Ossiacher See Radweg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\",\"clip\":true},[13.88,46.64,14.08,46.7]]"
+  },
+  "ski/simonhoehe": {
+    "file": "geo/ski/simonhoehe.geojson",
+    "features": 18,
+    "fetched": "2026-10-31",
+    "area_sig": "[{\"bbox\":[14.08,46.73,14.2,46.81],\"site_relation\":null},[14.08,46.73,14.2,46.81]]"
   }
 }
