@@ -1,5 +1,5 @@
-# Veröffentlicht den Ordner app/ bei jedem Push auf main als GitHub Pages.
-# Die App ist statisch (keine Abhängigkeiten, kein Build) – es wird nur hochgeladen.
+# Die App ist NICHT öffentlich (Wunsch Thomas, 31.10.2026): veröffentlicht wird nur offline/ – eine leere
+# Seite, die alte Service-Worker-Caches auf Geräten löscht. Zum Wiederveröffentlichen path: app setzen.
 name: Sportatlas auf GitHub Pages
 
 on:
@@ -27,6 +27,6 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: app
+          path: offline
       - id: deployment
         uses: actions/deploy-pages@v4
