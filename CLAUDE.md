@@ -120,11 +120,24 @@ tests/                 node:test
   `way_name`-Routen) und nimmt das Niveau der Tourenbeschreibung, wenn OSM keine `sac_scale` hat.
 - Relationen liefern keine Tags ihrer Mitglieder (`out geom`), darum dort keine Tunnelerkennung.
 - `Profile rechnen.command` rechnet nur das neu, ohne Overpass.
+- `smoothElevations` in `geo.js` glättet vor dem Profil (Median 5, dann Mittel 3, symmetrisches Fenster am Rand);
+  ein 80-m-Ausreißer des Höhenmodells bleibt als ±7 m übrig statt ±60 %.
 
-## Nächste Schritte (Stand 31.10.2026, mittags)
+## Oberfläche
 
-1. Nach dem nächsten Datenlauf prüfen: Loipen der 8 neuen Gebiete (Bounding-Boxen `center_note`), Alpe-Adria-Trail-Etappen
-   (Relationen „Alpe Adria Trail Exx“), neue Hütten-/Almwanderungen.
-2. Test am iPhone (Online-Version). Profile glätten (Medianfilter), Malta-Hochalmstraße hat noch eine 46-%-Spitze.
-3. Routen ohne OSM-Verlauf (`osm.none`) bleiben mit Kennzahlen; Weinebene/Weissbriach ohne Schneebericht-Link.
-4. **Nicht öffentlich** (seit 31.10.2026): `pages.yml` veröffentlicht nur `offline/` (leere Seite, löscht alte SW-Caches). Nicht ohne Rückfrage bei Thomas wieder auf `app` stellen. `data.yml` aktualisiert weiter wöchentlich.
+- Start: `introFlight` (von oben, flach, dann Schrägansicht; Berührung bricht ab). `snapshot` liest das Canvas im
+  nächsten `render` (kein preserveDrawingBuffer) und legt Titel und Namensnennung darüber → Knopf „Bild“.
+- `snowline`: Raster-Ebene aus den Terrarium-Kacheln (`raster-color`), weißlich ab 1800 m – Schattierung, kein Schneebericht.
+- Sektorname = Talstation des tiefsten Lifts (`sectors.js`), sonst längste Piste.
+- Detailblatt: Reiter (`.tabs`, sticky) springen zu `#sec-lines`, `#snow`, `#wx`, `#sec-notes`. Am Handy größere Kennzahlen.
+- Preise: `prices.season` ≠ laufende Saison → UI zeigt das Saisonkürzel mit („Tageskarte 2025/26“).
+
+## Nächste Schritte (Stand 31.10.2026, nachmittags)
+
+1. Nach dem nächsten Datenlauf prüfen: Loipen der 8 neuen Gebiete (`center_note`), AAT-Etappen, neue Hütten-/Almwanderungen;
+   Profile nach Glättung (Malta-Hochalmstraße).
+2. Am Mac testen: Anflug, Reiter, „Bild“, Schneeschattierung in 3D.
+3. Preise 2026/27 noch offen: Hochrindl, Weinebene, Weissensee, Simonhöhe, Dreiländereck, Bodental, Emberger Alm,
+   Kötschach-Mauthen, Weißbriach (Betreiber haben noch nicht veröffentlicht; Stand 19.10.2026).
+4. **Nicht öffentlich** (seit 31.10.2026): `pages.yml` veröffentlicht nur `offline/` (leere Seite, löscht alte SW-Caches).
+   Nicht ohne Rückfrage bei Thomas wieder auf `app` stellen. Die App läuft nur noch lokal am Mac.

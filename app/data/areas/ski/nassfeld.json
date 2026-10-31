@@ -26,7 +26,7 @@
     "season": "2026/27",
     "currency": "EUR",
     "day_adult": 73,
-    "note": "Tageskarte Erwachsene laut HDsports"
+    "note": "Tageskarte Erwachsene Hauptsaison 2026/27 laut schneehoehen.de (Vorjahr 69,50 €)"
   },
   "highlights": [
     "Größtes Skigebiet Kärntens, grenzüberschreitend mit Italien; lange Talabfahrt nach Tröpolach."
@@ -58,6 +58,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "schneehoehen.de – Nassfeld Preise Hauptsaison 2026/27",
+      "url": "https://www.schneehoehen.de/skigebiete/preise/nassfeld-pressegger-see"
     }
   ],
   "updated": "2026-10-31",

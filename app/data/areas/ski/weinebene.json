@@ -26,7 +26,7 @@
     "season": "2026/27",
     "currency": "EUR",
     "day_adult": 28.5,
-    "note": "Tageskarte Erwachsene laut HDsports"
+    "note": "Tageskarte Erwachsene laut HDsports; Betreiber hat 2026/27 noch nicht veröffentlicht (Vorjahr 38,50 € laut urlaubshamster.at)"
   },
   "highlights": [
     "Günstigste Tageskarte unter den mittelgroßen Gebieten."
@@ -52,6 +52,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "urlaubshamster.at – Skipass-Preise 2026/27 im Vergleich",
+      "url": "https://www.urlaubshamster.at/skipass-preise-2026-27/"
     }
   ],
   "updated": "2026-10-31",

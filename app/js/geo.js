@@ -50,12 +50,24 @@ export function resample(coords, stepM = 40) {
   return out;
 }
 
-/** Gleitender Mittelwert über Höhen (Fenster 3), dämpft Rauschen des Höhenmodells. */
+/** Höhen glätten: erst Median über 5 Punkte (schluckt einzelne Ausreißer des Höhenmodells, etwa an
+ *  Felskanten oder Brücken), dann gleitender Mittelwert über 3 Punkte gegen das Grundrauschen.
+ *  Endpunkte bleiben unverändert. */
 export function smoothElevations(coords) {
-  return coords.map((c, i) => {
-    if (c.length < 3 || i === 0 || i === coords.length - 1) return c;
-    const a = coords[i - 1][2], b = c[2], d = coords[i + 1][2];
-    return [c[0], c[1], (a + b + d) / 3];
+  const n = coords.length;
+  if (n < 3) return coords;
+  const ok = (c) => c.length > 2 && Number.isFinite(c[2]);
+  const med = coords.map((c, i) => {
+    if (!ok(c) || i === 0 || i === n - 1) return c;
+    const r = Math.min(2, i, n - 1 - i); // symmetrisches Fenster, sonst kippt der Median am Rand
+    const w = [];
+    for (let k = i - r; k <= i + r; k++) if (ok(coords[k])) w.push(coords[k][2]);
+    w.sort((a, b) => a - b);
+    return [c[0], c[1], w[Math.floor(w.length / 2)]];
+  });
+  return med.map((c, i) => {
+    if (!ok(c) || i === 0 || i === n - 1) return c;
+    return [c[0], c[1], (med[i - 1][2] + c[2] + med[i + 1][2]) / 3];
   });
 }
 

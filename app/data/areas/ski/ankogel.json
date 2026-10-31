@@ -26,7 +26,7 @@
     "season": "2026/27",
     "currency": "EUR",
     "day_adult": 58,
-    "note": "Tageskarte Erwachsene laut HDsports"
+    "note": "Tageskarte Erwachsene Hauptsaison 2026/27 laut schneehoehen.de"
   },
   "highlights": [
     "Hochgebirgsbahnen im Nationalpark Hohe Tauern."
@@ -58,6 +58,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "schneehoehen.de – Ankogel Preise Hauptsaison 2026/27",
+      "url": "https://www.schneehoehen.de/skigebiete/preise/hochgebirgsbahnen-ankogel"
     }
   ],
   "updated": "2026-10-31",

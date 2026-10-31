@@ -63,9 +63,11 @@ export function computeSectors(geo, area) {
     let high = null, highEle = -Infinity;
     for (const c of coords) if (c.length > 2 && c[2] > highEle) { highEle = c[2]; high = c; }
     const bearing = high ? azimuth(center, high) : -18;
-    // Name: längster Lift, sonst längste benannte Piste/Loipe
+    // Name: der Lift mit der tiefsten Talstation (dort kommt man an), sonst längste benannte Piste/Loipe
     const named = (kind) => members.filter((f) => f.properties.kind === kind && (f.properties.name || f.properties.display_name)).sort((a, b) => (b.properties.length_m || 0) - (a.properties.length_m || 0))[0];
-    const lift = named("lift"), piste = named("piste") || named("xc");
+    const lifts = members.filter((f) => f.properties.kind === "lift" && f.properties.name);
+    const lift = lifts.sort((a, b) => (a.properties.bottom_m ?? Infinity) - (b.properties.bottom_m ?? Infinity) || (b.properties.length_m || 0) - (a.properties.length_m || 0))[0];
+    const piste = named("piste") || named("xc");
     const label = lift ? lift.properties.name.replace(/\s*\d+er[- ]?/i, " ").replace(/\s{2,}/g, " ").trim() : piste ? (piste.properties.display_name || piste.properties.name) : `Sektor ${n + 1}`;
     const top = members.reduce((m, f) => Math.max(m, f.properties.top_m ?? -Infinity), -Infinity);
     return { id: `s${n}`, name: label.length > 26 ? label.slice(0, 25) + "…" : label, center, zoom: zoomForRadius(radius, lat), bearing: Math.round(bearing), pitch: 62, top_m: Number.isFinite(top) ? top : null, count: members.length };

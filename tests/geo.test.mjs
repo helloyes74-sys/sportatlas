@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { haversine, lineLength, resample, profile, hikingMinutes, gradeClass, pisteGradeClass, durationClass, pisteDifficulty, hikeDifficulty, bbox } from "../app/js/geo.js";
+import { smoothElevations, haversine, lineLength, resample, profile, hikingMinutes, gradeClass, pisteGradeClass, durationClass, pisteDifficulty, hikeDifficulty, bbox } from "../app/js/geo.js";
 
 test("haversine: Klagenfurt → Villach rund 36 km", () => {
   const d = haversine([14.3053, 46.6247], [13.8506, 46.6103]);
@@ -73,4 +73,16 @@ test("profileParts zählt die Lücke zwischen Teilstücken nicht als Strecke ode
   assert.ok(p.max_grade < 15, "keine Fantasie-Rampe: " + p.max_grade);
   assert.equal(p.top_m, 1650);
   assert.equal(p.bottom_m, 1000);
+});
+
+test("smoothElevations: Ausreißer verschwindet, Hang bleibt", () => {
+  const pts = resample([[13.9, 46.7, 1200], [13.9131, 46.7, 1000]], 50);
+  const i = Math.floor(pts.length / 2);
+  const orig = pts[i][2];
+  pts[i] = [pts[i][0], pts[i][1], orig + 80]; // einzelne Felskante im Höhenmodell
+  const raw = profile(pts, 100);
+  const sm = smoothElevations(pts);
+  assert.ok(Math.abs(sm[i][2] - orig) < 10, `Spitze bleibt: ${sm[i][2]}`);
+  assert.ok(raw.segments.every((s) => s.g < -12 && s.g > -30), `ohne Glättung wären es ±60 %: ${JSON.stringify(raw.segments.map((s) => s.g))}`);
+  assert.equal(sm[0][2], 1200); assert.equal(sm[sm.length - 1][2], 1000);
 });

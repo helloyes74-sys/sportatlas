@@ -64,4 +64,4 @@ npm test          # Unit-Tests
 
 Alles Weitere steht in `CLAUDE.md` (Aufbau, Datenregeln, Stil, nächste Schritte).
 
-Stand: 31.10.2026 – 22 Skigebiete (mit Schneelage, Webcams, Höhen), 14 Loipengebiete, 15 Radtouren, 58 Wanderungen (inkl. 22 Alpe-Adria-Trail-Etappen); Filter, Standort, GPX, Teilen; wöchentliche Datenaktualisierung per GitHub Actions.
+Stand: 31.10.2026 – 22 Skigebiete (mit Schneelage, Webcams, Höhen), 14 Loipengebiete, 15 Radtouren, 58 Wanderungen (inkl. 22 Alpe-Adria-Trail-Etappen); Filter, Standort, GPX, Teilen, Bild sichern; Anflug beim Start, Schneeschattierung ab 1800 m, geglättete Profile, Reiter im Detailblatt; Skipasspreise 2026/27 von Betreiber- und Preisvergleichsseiten geprüft; wöchentliche Datenaktualisierung per GitHub Actions.

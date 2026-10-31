@@ -55,7 +55,7 @@ function statsFor(a) {
   const cell = (k, v) => (v == null || v === "" ? "" : `<div><small>${k}</small><b>${v}</b></div>`);
   if (a.type === "ski") {
     const s = seasonState(a);
-    return `<div class="stats">${cell("Pisten", fmtNum(a.pistes_km?.total, a.pistes_km?.total % 1 ? 1 : 0) + " km")}${cell("Tageskarte", fmtEur(a.prices?.day_adult) + (a.prices?.dynamic ? " ab" : ""))}${cell("Lifte", a.lifts)}${cell("Höhe", a.elevation ? `${a.elevation.base_m}–${a.elevation.top_m} m` : null)}${cell("Saison", a.season ? `${fmtDate(a.season.from)}–${fmtDate(a.season.to)}` : null)}${cell("Betrieb", a.season?.hours)}${cell("Beschneiung", a.snowmaking_pct != null ? a.snowmaking_pct + " %" : null)}</div>
+    return `<div class="stats">${cell("Pisten", fmtNum(a.pistes_km?.total, a.pistes_km?.total % 1 ? 1 : 0) + " km")}${cell("Tageskarte" + (priceStale(a) ? ` ${a.prices.season}` : ""), fmtEur(a.prices?.day_adult) + (a.prices?.dynamic ? " ab" : ""))}${cell("Lifte", a.lifts)}${cell("Höhe", a.elevation ? `${a.elevation.base_m}–${a.elevation.top_m} m` : null)}${cell("Saison", a.season ? `${fmtDate(a.season.from)}–${fmtDate(a.season.to)}` : null)}${cell("Betrieb", a.season?.hours)}${cell("Beschneiung", a.snowmaking_pct != null ? a.snowmaking_pct + " %" : null)}</div>
     ${s ? `<p class="sub ${s.cls}" style="font-weight:600">${s.text}</p>` : ""}${kmBar(a.pistes_km)}`;
   }
   if (a.type === "xc") return `<div class="stats">${cell("Loipen", a.loipen_km?.total ? fmtNum(a.loipen_km.total) + " km" : null)}${cell("Technik", esc(a.technique))}${cell("Tageskarte", a.prices ? fmtEur(a.prices.day_adult) : null)}</div>`;
@@ -78,6 +78,12 @@ function kmBar(km) {
 }
 
 /** Detailblatt eines Gebiets. `geo` ist die GeoJSON-Sammlung oder null. */
+/** Preis noch aus der Vorsaison? Dann steht das Saisonkürzel mit in der Kennzahl. */
+function priceStale(a) {
+  const y = a.season?.from?.slice(0, 4); if (!y || !a.prices?.season) return false;
+  return a.prices.season !== `${y}/${String(+y + 1).slice(2)}`;
+}
+function linesLabel(a) { return a.type === "ski" ? "Pisten" : a.type === "xc" ? "Loipen" : a.type === "bike" ? "Routen" : "Wege"; }
 export function renderDetail(a, geo, { selectedFeature, hikeMode, sectors = [], activeSector } = {}) {
   const feats = geo?.features || [];
   const fav = favorites.has(a.id), note = notes.get(a.id);
@@ -88,6 +94,7 @@ export function renderDetail(a, geo, { selectedFeature, hikeMode, sectors = [], 
     ${a.status?.text ? `<p class="sub status-${esc(a.status.state)}" style="font-weight:600">${esc(a.status.text)}</p>` : ""}
     <div class="headrow"><h2>${esc(a.name)}</h2><button class="favbtn" id="favBtn" aria-pressed="${fav}" title="${fav ? "Aus der Merkliste nehmen" : "Merken"}">${fav ? "★" : "☆"}</button></div>
     ${statsFor(a)}
+    <nav class="tabs" aria-label="Abschnitte"><button data-tab="top" aria-pressed="true">Überblick</button>${feats.length || a.osm?.none ? `<button data-tab="#sec-lines">${linesLabel(a)}</button>` : ""}${a.type === "ski" ? `<button data-tab="#snow">Schnee</button>` : ""}<button data-tab="#wx">Wetter</button><button data-tab="#sec-notes">Notizen</button></nav>
     ${sectors.length ? `<section><h3><span>Sektoren</span><span>Kamerafahrt</span></h3><div class="chips" id="sectorChips">${sectors.map((s) => `<button data-sector="${s.id}" aria-pressed="${s.id === activeSector}" title="${s.count} Linien${s.top_m ? ` · bis ${s.top_m} m` : ""}">${esc(s.name)}</button>`).join("")}<button data-sector="tour" id="btnTour" aria-pressed="false" title="Langsame Drehung um den Ausschnitt; jede Berührung stoppt">⟳ Rundflug</button></div></section>` : ""}
     ${a.highlights?.length ? `<section><h3><span>Besonderheiten</span></h3><ul class="hl">${a.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul></section>` : ""}
     ${a.type === "ski" ? `<section id="snow"><h3><span>Schneelage</span><span id="snowstate">lädt …</span></h3><div class="stats" id="snowgrid"></div>
@@ -95,8 +102,8 @@ export function renderDetail(a, geo, { selectedFeature, hikeMode, sectors = [], 
       <p class="wx-note">Schneedecke und Neuschnee aus dem Wettermodell (Open-Meteo), kein Pistenbericht – der Betreiber meldet, was wirklich offen ist.</p></section>` : ""}
     <section id="wx"><h3><span>Wetter${a.type === "ski" && a.elevation?.top_m ? ` am Berg (${a.elevation.top_m} m)` : ""}</span><span id="wxstate">lädt …</span></h3><div class="wx" id="wxgrid"></div><p class="wx-note">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener" style="color:inherit">Open-Meteo.com</a></p></section>
     ${prof}
-    ${featureList(a, feats, selectedFeature, hikeMode)}
-    <section><h3><span>Meine Bewertung</span><span>${note.updated ? "vom " + fmtDate(note.updated) : "nur auf diesem Gerät"}</span></h3>
+    ${featureList(a, feats, selectedFeature, hikeMode).replace("<section", '<section id="sec-lines"')}
+    <section id="sec-notes"><h3><span>Meine Bewertung</span><span>${note.updated ? "vom " + fmtDate(note.updated) : "nur auf diesem Gerät"}</span></h3>
       <div class="rate" id="rate">${starsHtml(note.stars, true)}</div>
       <textarea id="noteTxt" rows="2" placeholder="Notiz, z. B. Parkplatz früh voll, Pisten top präpariert">${esc(note.text)}</textarea>
     </section>

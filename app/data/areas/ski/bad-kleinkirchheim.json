@@ -22,14 +22,14 @@
   },
   "season": {
     "from": "2026-12-04",
-    "to": "2027-04-05",
+    "to": "2027-03-29",
     "hours": "09:00–16:00"
   },
   "prices": {
     "season": "2026/27",
     "currency": "EUR",
-    "day_adult": 69.5,
-    "note": "Tageskarte Erwachsene laut HDsports"
+    "day_adult": 73,
+    "note": "Tageskarte Erwachsene 9–16 Uhr, Kassapreis laut Betreiber"
   },
   "highlights": [
     "Weltcup-Pisten, Skipass auch mit Therme kombinierbar."
@@ -61,6 +61,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "Bad Kleinkirchheimer Bergbahnen – Preise und Betriebszeiten 2026/27",
+      "url": "https://www.badkleinkirchheim.com/en/skiing-area/prices-operating-hours/"
     }
   ],
   "updated": "2026-10-31",

@@ -18,15 +18,15 @@
     "total": 17.4
   },
   "season": {
-    "from": "2026-06-11",
-    "to": "2027-05-02",
+    "from": "2026-11-05",
+    "to": "2027-05-30",
     "hours": "08:00–16:30"
   },
   "prices": {
     "season": "2026/27",
     "currency": "EUR",
-    "day_adult": 59,
-    "note": "Tageskarte Erwachsene laut HDsports"
+    "day_adult": 72,
+    "note": "Tageskarte Erwachsene laut schneehoehen.de (Angaben ohne Gewähr)"
   },
   "highlights": [
     "Gletscherskigebiet bis 3.122 m, fast ganzjährig geöffnet."
@@ -58,6 +58,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "schneehoehen.de – Mölltaler Gletscher (Preis, Saison 2026/27)",
+      "url": "https://www.schneehoehen.de/skigebiete/info/moelltaler-gletscher"
     }
   ],
   "updated": "2026-10-31",

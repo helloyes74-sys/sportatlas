@@ -18,15 +18,15 @@
     "total": 43
   },
   "season": {
-    "from": "2026-11-28",
-    "to": "2027-04-05",
+    "from": "2026-11-27",
+    "to": "2027-04-11",
     "hours": "09:00–16:00"
   },
   "prices": {
     "season": "2026/27",
     "currency": "EUR",
-    "day_adult": 68.5,
-    "note": "Tageskarte Erwachsene laut HDsports"
+    "day_adult": 72.5,
+    "note": "Tageskarte Erwachsene laut schneehoehen.de (Angaben ohne Gewähr)"
   },
   "highlights": [
     "Schneesicher auf rund 1.763 m, großes Fun-Angebot und Turracher See."
@@ -58,6 +58,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "schneehoehen.de – Turracher Höhe (Preis, Saison 2026/27)",
+      "url": "https://www.schneehoehen.de/skigebiete/info/turracher-hoehe"
     }
   ],
   "updated": "2026-10-31",

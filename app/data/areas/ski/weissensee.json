@@ -23,10 +23,10 @@
     "hours": "09:00–16:15"
   },
   "prices": {
-    "season": "2026/27",
+    "season": "2025/26",
     "currency": "EUR",
     "day_adult": 49.9,
-    "note": "Tageskarte Erwachsene laut HDsports"
+    "note": "Tageskarte Erwachsene Hauptsaison 2025/26 – Preis 2026/27 noch nicht veröffentlicht"
   },
   "highlights": [
     "Kleines Skigebiet am Naturpark Weissensee."
@@ -57,6 +57,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "schneehoehen.de – Weissensee Bergbahn Preise",
+      "url": "https://www.schneehoehen.de/skigebiete/preise/weissensee-bergbahn"
     }
   ],
   "updated": "2026-10-31",

@@ -25,8 +25,8 @@
   "prices": {
     "season": "2026/27",
     "currency": "EUR",
-    "day_adult": 59,
-    "note": "Tageskarte Erwachsene laut HDsports"
+    "day_adult": 64.5,
+    "note": "Tageskarte Erwachsene Hauptsaison 2026/27 laut schneehoehen.de, inkl. 2 Stunden Hallenbad"
   },
   "highlights": [
     "Sportberg direkt über Spittal."
@@ -58,6 +58,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "schneehoehen.de – Goldeck Preise Hauptsaison 2026/27",
+      "url": "https://www.schneehoehen.de/skigebiete/preise/goldeck"
     }
   ],
   "updated": "2026-10-31",

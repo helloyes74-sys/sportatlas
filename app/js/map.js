@@ -25,11 +25,15 @@ export function baseStyle() {
       dem: { type: "raster-dem", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], encoding: "terrarium", tileSize: 256, maxzoom: 14, attribution: 'Gelände: <a href="https://registry.opendata.aws/terrain-tiles/">Terrain Tiles</a>' },
       // zweite Quelle für die Schummerung (MapLibre rät von einer gemeinsamen Quelle für Terrain und Hillshade ab)
       demShade: { type: "raster-dem", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], encoding: "terrarium", tileSize: 256, maxzoom: 14 },
+      demTint: { type: "raster", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"], tileSize: 256, maxzoom: 14, attribution: "Gelände: Terrain Tiles (Mapzen/AWS)" },
     },
     sky: { "sky-color": "#0a0d10", "horizon-color": "#0a0d10", "fog-color": "#0a0d10", "fog-ground-blend": .6, "horizon-fog-blend": .9, "sky-horizon-blend": 1, "atmosphere-blend": 0 },
     layers: [
       { id: "bg", type: "background", paint: { "background-color": "#0a0d10" } },
-      { id: "hillshade", type: "hillshade", source: "demShade", paint: { "hillshade-exaggeration": .55, "hillshade-shadow-color": "#05070a", "hillshade-highlight-color": "#4a5661", "hillshade-accent-color": "#1a2229", "hillshade-illumination-direction": 325 } },
+      { id: "hillshade", type: "hillshade", source: "demShade", paint: { "hillshade-exaggeration": .6, "hillshade-shadow-color": "#04060a", "hillshade-highlight-color": "#56636f", "hillshade-accent-color": "#1a2229", "hillshade-illumination-direction": 325 } },
+      // Höhenzonen aus denselben Geländekacheln: oberhalb der Waldgrenze hellt das Relief kühl-weißlich auf (Schnee, Fels),
+      // Täler bleiben dunkel. raster-color-mix dekodiert Terrarium (R*256 + G + B/256 - 32768) zu Metern.
+      { id: "snowline", type: "raster", source: "demTint", paint: { "raster-color-mix": [256, 1, 1 / 256, -32768], "raster-color-range": [0, 4000], "raster-color": ["interpolate", ["linear"], ["raster-value"], 0, "rgba(0,0,0,0)", 1500, "rgba(0,0,0,0)", 1800, "rgba(190,205,220,0.10)", 2200, "rgba(220,232,245,0.24)", 2800, "rgba(245,250,255,0.38)", 3500, "rgba(255,255,255,0.46)"], "raster-resampling": "linear", "raster-fade-duration": 300 } },
       { id: "landcover-ice", type: "fill", source: "omt", "source-layer": "landcover", filter: ["==", ["get", "class"], "ice"], paint: { "fill-color": "#cfd8df", "fill-opacity": .55 } },
       { id: "water", type: "fill", source: "omt", "source-layer": "water", paint: { "fill-color": "#0c1b26" } },
       { id: "waterway", type: "line", source: "omt", "source-layer": "waterway", paint: { "line-color": "#143040", "line-width": ["interpolate", ["linear"], ["zoom"], 8, .4, 14, 1.6] } },
@@ -294,6 +298,50 @@ export function flyToRegion(map, region) {
   whenReady(map, () => {
     const cam = cameraFor(map, region.bbox, { bearing: -12 });
     if (cam) flyGrounded(map, cam, { pitch: 45, duration: 1600 });
+  });
+}
+
+/** Anflug beim Start: von hoch oben, flach und ungedreht in die Schrägansicht auf das Bundesland.
+ *  Jede Berührung bricht ab (flyTo mit essential läuft sonst weiter). Danach `done`. */
+export function introFlight(map, region, done) {
+  whenReady(map, () => {
+    const cam = cameraFor(map, region.bbox, { bearing: -12 });
+    if (!cam) return done?.();
+    map.jumpTo({ center: cam.center, zoom: Math.max(6.5, cam.zoom - 1.4), pitch: 0, bearing: 0, padding: cam.padding });
+    const stop = () => map.stop();
+    ["mousedown", "wheel", "touchstart"].forEach((ev) => map.getCanvas().addEventListener(ev, stop, { once: true, passive: true }));
+    map.once("moveend", () => { ["mousedown", "wheel", "touchstart"].forEach((ev) => map.getCanvas().removeEventListener(ev, stop)); done?.(); });
+    map.easeTo({ ...cam, pitch: 45, duration: 3200, easing: (t) => 1 - Math.pow(1 - t, 3), essential: true, elevation: groundAt(map, cam.center) });
+  });
+}
+
+/** Kartenbild als PNG-Blob. Die Karte zeichnet ohne preserveDrawingBuffer, darum wird im nächsten
+ *  Render-Durchlauf gelesen; Titelzeile und Namensnennung kommen auf ein zweites Canvas. */
+export function snapshot(map, { title = "", subtitle = "" } = {}) {
+  return new Promise((resolve, reject) => {
+    map.once("render", () => {
+      try {
+        const src = map.getCanvas();
+        const out = document.createElement("canvas");
+        out.width = src.width; out.height = src.height;
+        const ctx = out.getContext("2d");
+        ctx.drawImage(src, 0, 0);
+        const s = src.width / Math.max(320, src.clientWidth || src.width); // Gerätepixel je CSS-Pixel
+        const pad = 18 * s;
+        const grad = ctx.createLinearGradient(0, out.height - 140 * s, 0, out.height);
+        grad.addColorStop(0, "rgba(10,13,16,0)"); grad.addColorStop(1, "rgba(10,13,16,.85)");
+        ctx.fillStyle = grad; ctx.fillRect(0, out.height - 140 * s, out.width, 140 * s);
+        ctx.fillStyle = "#e23b2e"; ctx.fillRect(pad, out.height - pad - 62 * s, 3 * s, 48 * s);
+        ctx.fillStyle = "#f2f4f6"; ctx.font = `800 ${26 * s}px Archivo, system-ui, sans-serif`;
+        ctx.fillText(title || "Sportatlas", pad + 12 * s, out.height - pad - 36 * s);
+        ctx.fillStyle = "#aab3bc"; ctx.font = `500 ${11 * s}px "JetBrains Mono", monospace`;
+        ctx.fillText(subtitle, pad + 12 * s, out.height - pad - 16 * s);
+        ctx.textAlign = "right";
+        ctx.fillText("© OpenStreetMap-Mitwirkende · OpenFreeMap · Terrain Tiles (AWS)", out.width - pad, out.height - pad - 16 * s);
+        out.toBlob((b) => (b ? resolve(b) : reject(new Error("Kein Bild"))), "image/png");
+      } catch (e) { reject(e); }
+    });
+    map.triggerRepaint();
   });
 }
 

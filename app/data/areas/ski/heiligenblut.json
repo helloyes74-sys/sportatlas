@@ -26,7 +26,7 @@
     "season": "2026/27",
     "currency": "EUR",
     "day_adult": 47,
-    "note": "Tageskarte Erwachsene laut HDsports",
+    "note": "Dynamischer Preis, Tageskarte Erwachsene ab 47 € je nach Buchungstag und Nachfrage",
     "dynamic": true
   },
   "highlights": [
@@ -59,6 +59,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "schneehoehen.de – Heiligenblut Preise 2026/27",
+      "url": "https://www.schneehoehen.de/skigebiete/preise/heiligenblut-grossglockner"
     }
   ],
   "updated": "2026-10-31",

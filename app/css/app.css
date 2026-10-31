@@ -96,12 +96,19 @@ body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-display
 .empty { color: var(--muted); padding: 24px 12px; font-size: 13px; }
 .empty code { font: 500 11px var(--f-data); color: var(--ink); background: rgba(255,255,255,.06); padding: 1px 5px; }
 
-.close { position: absolute; top: 8px; right: 8px; z-index: 2; background: none; border: 1px solid var(--line); color: var(--ink); width: 30px; height: 30px; cursor: pointer; font-size: 14px; }
+.close { position: absolute; top: 8px; right: 8px; z-index: 3; background: var(--bg); border: 1px solid var(--line); color: var(--ink); width: 30px; height: 30px; cursor: pointer; font-size: 14px; }
 .close:hover { border-color: var(--accent); }
 #detail { overflow-y: auto; min-height: 0; padding: 16px 16px 20px; display: grid; gap: 16px; align-content: start; }
 #detail h2 { margin: 2px 0 0; font-weight: 800; font-stretch: 74%; font-size: 26px; line-height: 1.02; padding-right: 30px; }
 #detail h3 { margin: 0 0 8px; font: 500 10px var(--f-data); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
 .sub { color: var(--muted); font-size: 12px; margin: 2px 0 0; }
+/* Reiter im Detailblatt: springen zu den Abschnitten (am Handy spart das langes Scrollen) */
+.tabs { display: flex; gap: 4px; min-height: 44px; align-items: center; position: sticky; top: 0; z-index: 2; margin: 0 -16px; padding: 8px 16px; background: #0e1216; box-shadow: 0 -16px 0 #0e1216; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs button { all: unset; cursor: pointer; font: 500 11px var(--f-data); color: var(--muted); padding: 6px 10px; border: 1px solid transparent; white-space: nowrap; }
+.tabs button:hover { color: var(--ink); }
+.tabs button[aria-pressed="true"] { color: var(--ink); border-color: var(--accent); background: var(--accent-soft); }
+#detail section { scroll-margin-top: 62px; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .stats div { border-top: 1px solid var(--line); padding-top: 5px; min-width: 0; }
 .stats small { display: block; color: var(--muted); font-size: 10.5px; }
@@ -200,8 +207,16 @@ body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-display
   .tip { display: none; }
   .toast { bottom: auto; top: max(160px, calc(env(safe-area-inset-top) + 148px)); }
   /* Kennzahlen: drei Spalten sind am Handy zu eng für „04.12.26–04.04.27“ */
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .stats b { font-size: 13px; }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 10px 12px; }
+  .stats small { font-size: 11.5px; }
+  .stats b { font-size: 17px; }
+  #detail h2 { font-size: 30px; }
+  .feat .nm { font-size: 15px; }
+  .feat .mt { font-size: 12px; }
+  .feat { padding: 9px 8px; }
+  .sub, .hl li { font-size: 13.5px; }
+  #detail { gap: 18px; }
+  .tabs { padding-right: 52px; }
 }
 
 

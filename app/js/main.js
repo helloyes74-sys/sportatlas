@@ -2,7 +2,7 @@
 /* global maplibregl */
 
 import { loadRegion, loadGeo, loadSpots } from "./data.js";
-import { createMap, setHere, setAreaMarkers, setGeo, setSelection, setHikeColorMode, flyToBbox, flyToRegion, setFocus, flyToSector, startTour, stopTour, tourRunning, INTERACTIVE_LAYERS, COLORS, narrow } from "./map.js";
+import { createMap, setHere, setAreaMarkers, setGeo, setSelection, setHikeColorMode, flyToBbox, flyToRegion, setFocus, flyToSector, startTour, stopTour, tourRunning, introFlight, snapshot, INTERACTIVE_LAYERS, COLORS, narrow } from "./map.js";
 import { computeSectors } from "./sectors.js";
 import { favorites, notes } from "./favorites.js";
 import { filterGroups, applyFilters, renderFilters, distanceKm } from "./filters.js";
@@ -54,6 +54,8 @@ function collapseSheets() { if (narrow()) document.querySelectorAll(".panel").fo
 document.addEventListener("click", (e) => { const g = e.target.closest("[data-grab]"); if (g) setSheet(g.parentElement, g.parentElement.classList.contains("collapsed")); });
 $("#q").addEventListener("focus", () => setSheet($("#left"), true));
 window.matchMedia("(max-width: 860px)").addEventListener("change", (m) => { if (!m.matches) document.querySelectorAll(".panel").forEach((p) => p.classList.remove("collapsed")); });
+// Anflug beim Start, wenn kein Gebiet in der Adresse steht (sonst fliegt openArea direkt hin)
+if (map && !parseHash().areaId) introFlight(map, state.region);
 applyRoute();
 window.addEventListener("hashchange", applyRoute);
 // Zum Nachsehen in der Browser-Konsole: sportatlas.map, sportatlas.state
@@ -181,6 +183,19 @@ function closeArea() {
   document.querySelectorAll("#list .item").forEach((b) => b.setAttribute("aria-pressed", "false"));
   if (map) { stopTour(map); setGeo(map, null); setSelection(map, null); setFocus(map, null); }
 }
+/** Kartenbild sichern: am Handy über das Teilen-Blatt (Fotos, Nachrichten), sonst als Download. */
+async function saveSnapshot() {
+  const name = state.area ? state.area.name : `${state.region.name} · ${sportLabel(state.sport)}`;
+  const sub = state.area ? `${sportLabel(state.sport)} · ${state.area.region || state.region.name} · sportatlas` : "sportatlas";
+  try {
+    const blob = await snapshot(map, { title: name, subtitle: sub });
+    const file = new File([blob], `sportatlas-${(state.area?.id || state.sport)}.png`, { type: "image/png" });
+    if (navigator.canShare?.({ files: [file] })) { await navigator.share({ files: [file], title: `Sportatlas – ${name}` }).catch(() => {}); return; }
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = file.name; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    toast("Bild gespeichert: " + file.name);
+  } catch (e) { toast("Bild konnte nicht erstellt werden: " + e.message); }
+}
 function renderDetailPanel() {
   queueMicrotask(() => { if (state.area && snowCache.has(state.area.id)) { const [top, base] = snowCache.get(state.area.id); const g = $("#snowgrid"); if (g) { g.innerHTML = renderSnow(top, base, state.area); const st = $("#snowstate"); if (st) st.textContent = "Modell"; } } });
   const el = $("#detail");
@@ -276,6 +291,15 @@ document.addEventListener("click", (e) => {
   if (e.target.closest("#closeDetail")) { setHash(state.sport, null); setSheet($("#left"), true); if (map) flyToRegion(map, state.region); return; }
   if (e.target.closest("#btnOverview")) { setHash(state.sport, null); setSheet($("#left"), true); if (map) flyToRegion(map, state.region); return; }
   if (e.target.closest("#btnTilt") && map) { map.easeTo({ pitch: map.getPitch() > 20 ? 0 : 60, duration: 700 }); return; }
+  if (e.target.closest("#btnShot") && map) { saveSnapshot(); return; }
+  const tab = e.target.closest("[data-tab]");
+  if (tab) {
+    const target = tab.dataset.tab === "top" ? $("#detail") : $(tab.dataset.tab);
+    setSheet($("#right"), true);
+    document.querySelectorAll("#detail .tabs button").forEach((b) => b.setAttribute("aria-pressed", b === tab));
+    if (tab.dataset.tab === "top") $("#detail").scrollTo({ top: 0, behavior: "smooth" }); else target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
 });
 $("#q").addEventListener("input", (e) => { state.query = e.target.value; rerenderList(); });
 document.addEventListener("input", (e) => { if (e.target.id === "noteTxt" && state.area) notes.set(state.area.id, { text: e.target.value }); });

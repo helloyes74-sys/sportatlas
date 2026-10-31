@@ -1,6 +1,6 @@
 // Service Worker: eigene Dateien immer zuerst frisch vom Server (Fallback Cache, damit die App offline öffnet);
 // Bibliotheken und Schriften aus dem Cache; Kacheln, Gelände und Wetter nur online.
-const VERSION = "sportatlas-v6";
+const VERSION = "sportatlas-v7";
 const SHELL = ["./", "index.html", "css/app.css", "js/main.js", "js/map.js", "js/ui.js", "js/data.js", "js/profile.js", "js/weather.js", "js/geo.js", "js/sectors.js", "js/favorites.js", "js/filters.js", "js/gpx.js", "js/spots.js", "datenschutz.html", "vendor/fonts/fonts.css", "vendor/maplibre/maplibre-gl.js", "vendor/maplibre/maplibre-gl.css", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", (e) => {

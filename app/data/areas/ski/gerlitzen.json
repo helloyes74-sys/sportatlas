@@ -35,7 +35,7 @@
     "season": "2026/27",
     "currency": "EUR",
     "day_adult": 73,
-    "note": "Tageskarte Erwachsene laut HDsports; Kärntner Skipass ab 2 Tagen"
+    "note": "Tageskarte Erwachsene ab 8:10 Uhr, Kassapreis laut Betreiber (ab 13:55 Uhr 43,50 €)"
   },
   "highlights": [
     "Neu ab Oktober 2026: 10er-Kabinenbahn Kanzelbahn II ersetzt die alte 4er-Sesselbahn",
@@ -81,6 +81,10 @@
     {
       "label": "schneehoehen.de – Schneebericht und Webcams",
       "url": "https://www.schneehoehen.de/skigebiete/schneebericht/gerlitzen"
+    },
+    {
+      "label": "Bergbahnen Gerlitzen Alpe – Skiticketpreise 2026/27",
+      "url": "https://www.gerlitzen.com/de/preise"
     }
   ],
   "updated": "2026-10-31"

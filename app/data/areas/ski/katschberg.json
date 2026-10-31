@@ -25,8 +25,8 @@
   "prices": {
     "season": "2026/27",
     "currency": "EUR",
-    "day_adult": 66,
-    "note": "Tageskarte Erwachsene laut HDsports"
+    "day_adult": 73,
+    "note": "Tageskarte Erwachsene Winter 2026/27 laut schneehoehen.de"
   },
   "highlights": [
     "Familiengebiet an der Grenze zu Salzburg; Direttissima mit bis zu 100 % Gefälle."
@@ -58,6 +58,10 @@
     {
       "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
       "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
+    },
+    {
+      "label": "schneehoehen.de – Katschberg Preise Winter 2026/27",
+      "url": "https://www.schneehoehen.de/skigebiete/preise/katschberg-aineck"
     }
   ],
   "updated": "2026-10-31",
