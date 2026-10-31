@@ -18,7 +18,8 @@ node scripts/build-sportorte.mjs  # nur die App-Datei app/data/sportorte/kaernte
 ```
 
 Es gibt keinen Build-Schritt und keine npm-Abhängigkeiten. Die App ist reines ES-Modul-JavaScript,
-MapLibre GL kommt per `<script>` von unpkg (Version in `app/index.html` gepinnt). Node ≥ 20.
+MapLibre GL und die Schriften liegen lokal unter `app/vendor/` (Workflow „Bibliotheken lokal ablegen“, Version dort gepinnt) – keine Anfragen an Google Fonts oder unpkg (Datenschutz). Node ≥ 20.
+Neue externe Dienste nur nach Eintrag in `app/datenschutz.html`. Links aus OSM-Daten immer durch `safeUrl` (spots.js).
 
 ## Aufbau
 

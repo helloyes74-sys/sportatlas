@@ -37,7 +37,7 @@ export function renderCatalog(catalog, counts, { here, radius, query = "" }) {
       <span class="nm">${esc(s.label)}</span><span class="kv">${main}</span>
       <span class="rg">${here ? plural(c.total, unit) + " in Kärnten" : s.route ? "Gebiete und Strecken mit Karte" : "Orte aus OpenStreetMap"}</span>
     </button>`;
-  }).join("")}</div>`).join("");
+  }).join("")}</div>`).join("") + `<a class="legal" href="datenschutz.html">Datenschutz · Impressum</a>`;
 }
 
 /** Umkreis-Chips und Standort-Knopf über der Ortsliste. */

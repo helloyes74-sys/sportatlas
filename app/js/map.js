@@ -57,7 +57,7 @@ export function createMap(container, region) {
     // Nicht die ganze Welt: weiter als Österreich-Übersicht lässt sich nicht herauszoomen (Hochformat braucht 6,5)
     minZoom: 6.5,
     renderWorldCopies: false,
-    attributionControl: { compact: true },
+    attributionControl: { compact: true, customAttribution: '<a href="datenschutz.html">Datenschutz · Impressum</a>' },
     hash: false,
   });
   // Am Handy sitzt unten das Listenblatt, darum die Zoom-/Kompass-Knöpfe oben rechts

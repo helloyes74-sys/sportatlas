@@ -214,3 +214,5 @@ body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-display
 .back:hover { color: var(--ink); }
 .hint { font: 500 10.5px var(--f-data); color: var(--muted); }
 body[data-view="catalog"] #legend, body[data-view="spots"] #legend { display: none; }
+.legal { display: block; text-align: center; font: 500 10.5px var(--f-data); color: var(--muted); padding: 14px 0 6px; text-decoration: none; }
+.legal:hover { color: var(--ink); }
