@@ -1,0 +1,467 @@
+{
+  "id": "kaernten",
+  "name": "Kärnten",
+  "country": "AT",
+  "center": [
+    13.85,
+    46.72
+  ],
+  "bbox": [
+    12.65,
+    46.37,
+    15.07,
+    47.13
+  ],
+  "types": {
+    "ski": "Skigebiete",
+    "xc": "Langlauf",
+    "bike": "Radfahren",
+    "hike": "Wandern"
+  },
+  "skipass": {
+    "name": "Kärntner Skipass 2026/27",
+    "note": "Gültig ab 2 Tagen in 31 Skigebieten in Kärnten und Osttirol: 845 Pistenkilometer, 262 Aufstiegshilfen",
+    "source": "https://www.schneehoehen.de/skigebiete/preise/nassfeld-pressegger-see"
+  },
+  "areas": [
+    {
+      "id": "gerlitzen",
+      "type": "ski",
+      "name": "Gerlitzen Alpe",
+      "file": "areas/ski/gerlitzen.json"
+    },
+    {
+      "id": "nassfeld",
+      "type": "ski",
+      "name": "Nassfeld",
+      "file": "areas/ski/nassfeld.json"
+    },
+    {
+      "id": "bad-kleinkirchheim",
+      "type": "ski",
+      "name": "Bad Kleinkirchheim – St. Oswald",
+      "file": "areas/ski/bad-kleinkirchheim.json"
+    },
+    {
+      "id": "katschberg",
+      "type": "ski",
+      "name": "Katschberg",
+      "file": "areas/ski/katschberg.json"
+    },
+    {
+      "id": "heiligenblut",
+      "type": "ski",
+      "name": "Großglockner Heiligenblut",
+      "file": "areas/ski/heiligenblut.json"
+    },
+    {
+      "id": "turracher-hoehe",
+      "type": "ski",
+      "name": "Turracher Höhe",
+      "file": "areas/ski/turracher-hoehe.json"
+    },
+    {
+      "id": "innerkrems",
+      "type": "ski",
+      "name": "Innerkrems",
+      "file": "areas/ski/innerkrems.json"
+    },
+    {
+      "id": "klippitztoerl",
+      "type": "ski",
+      "name": "Klippitztörl",
+      "file": "areas/ski/klippitztoerl.json"
+    },
+    {
+      "id": "goldeck",
+      "type": "ski",
+      "name": "Goldeck",
+      "file": "areas/ski/goldeck.json"
+    },
+    {
+      "id": "weinebene",
+      "type": "ski",
+      "name": "Weinebene",
+      "file": "areas/ski/weinebene.json"
+    },
+    {
+      "id": "hochrindl",
+      "type": "ski",
+      "name": "Hochrindl",
+      "file": "areas/ski/hochrindl.json"
+    },
+    {
+      "id": "koralpe",
+      "type": "ski",
+      "name": "Koralpe",
+      "file": "areas/ski/koralpe.json"
+    },
+    {
+      "id": "moelltaler-gletscher",
+      "type": "ski",
+      "name": "Mölltaler Gletscher",
+      "file": "areas/ski/moelltaler-gletscher.json"
+    },
+    {
+      "id": "dreilaendereck",
+      "type": "ski",
+      "name": "Dreiländereck",
+      "file": "areas/ski/dreilaendereck.json"
+    },
+    {
+      "id": "petzen",
+      "type": "ski",
+      "name": "Petzen",
+      "file": "areas/ski/petzen.json"
+    },
+    {
+      "id": "simonhoehe",
+      "type": "ski",
+      "name": "Simonhöhe",
+      "file": "areas/ski/simonhoehe.json"
+    },
+    {
+      "id": "ankogel",
+      "type": "ski",
+      "name": "Ankogel – Mallnitz",
+      "file": "areas/ski/ankogel.json"
+    },
+    {
+      "id": "emberger-alm",
+      "type": "ski",
+      "name": "Emberger Alm",
+      "file": "areas/ski/emberger-alm.json"
+    },
+    {
+      "id": "koetschach-mauthen",
+      "type": "ski",
+      "name": "Kötschach-Mauthen",
+      "file": "areas/ski/koetschach-mauthen.json"
+    },
+    {
+      "id": "weissensee",
+      "type": "ski",
+      "name": "Weissensee",
+      "file": "areas/ski/weissensee.json"
+    },
+    {
+      "id": "weissbriach",
+      "type": "ski",
+      "name": "Weißbriach",
+      "file": "areas/ski/weissbriach.json"
+    },
+    {
+      "id": "bodental",
+      "type": "ski",
+      "name": "Bodental",
+      "file": "areas/ski/bodental.json"
+    },
+    {
+      "id": "weissensee-loipen",
+      "type": "xc",
+      "name": "Loipennetz Weissensee",
+      "file": "areas/xc/weissensee-loipen.json"
+    },
+    {
+      "id": "nassfeld-langlauf",
+      "type": "xc",
+      "name": "Langlaufzentrum Nassfeld-Pressegger See",
+      "file": "areas/xc/nassfeld-langlauf.json"
+    },
+    {
+      "id": "bad-kleinkirchheim-loipen",
+      "type": "xc",
+      "name": "Römerloipe Bad Kleinkirchheim",
+      "file": "areas/xc/bad-kleinkirchheim-loipen.json"
+    },
+    {
+      "id": "turracher-hoehe-loipen",
+      "type": "xc",
+      "name": "Loipen Turracher See",
+      "file": "areas/xc/turracher-hoehe-loipen.json"
+    },
+    {
+      "id": "pirkdorf",
+      "type": "xc",
+      "name": "Langlaufarena Pirkdorf",
+      "file": "areas/xc/pirkdorf.json"
+    },
+    {
+      "id": "villacher-alpenarena",
+      "type": "xc",
+      "name": "Villacher Alpen Arena",
+      "file": "areas/xc/villacher-alpenarena.json"
+    },
+    {
+      "id": "woerthersee-rundfahrt",
+      "type": "bike",
+      "name": "Wörthersee-Rundfahrt",
+      "file": "areas/bike/woerthersee-rundfahrt.json"
+    },
+    {
+      "id": "ossiacher-see-radweg",
+      "type": "bike",
+      "name": "Ossiacher See Radweg (Rundtour)",
+      "file": "areas/bike/ossiacher-see-radweg.json"
+    },
+    {
+      "id": "drauradweg-etappe-3",
+      "type": "bike",
+      "name": "Drauradweg Etappe 3: Spittal – Villach",
+      "file": "areas/bike/drauradweg-etappe-3.json"
+    },
+    {
+      "id": "drauradweg-etappe-4",
+      "type": "bike",
+      "name": "Drauradweg Etappe 4: Villach – Ferlach",
+      "file": "areas/bike/drauradweg-etappe-4.json"
+    },
+    {
+      "id": "drauradweg-etappe-5",
+      "type": "bike",
+      "name": "Drauradweg Etappe 5: Ferlach – Lavamünd",
+      "file": "areas/bike/drauradweg-etappe-5.json"
+    },
+    {
+      "id": "glockner-radweg-moelltal",
+      "type": "bike",
+      "name": "Glockner-Radweg durchs Mölltal: Heiligenblut – Möllbrücke",
+      "file": "areas/bike/glockner-radweg-moelltal.json"
+    },
+    {
+      "id": "gailtalradweg",
+      "type": "bike",
+      "name": "Gailtalradweg R3: Kötschach-Mauthen – Villach",
+      "file": "areas/bike/gailtalradweg.json"
+    },
+    {
+      "id": "villacher-alpenstrasse",
+      "type": "bike",
+      "name": "Villacher Alpenstraße (Rennrad-Anstieg)",
+      "file": "areas/bike/villacher-alpenstrasse.json"
+    },
+    {
+      "id": "gerlitzen-alpenstrasse",
+      "type": "bike",
+      "name": "Gerlitzen Alpenstraße von Bodensdorf",
+      "file": "areas/bike/gerlitzen-alpenstrasse.json"
+    },
+    {
+      "id": "grossglockner-heiligenblut-kfjh",
+      "type": "bike",
+      "name": "Großglockner Hochalpenstraße: Heiligenblut – Kaiser-Franz-Josefs-Höhe",
+      "file": "areas/bike/grossglockner-heiligenblut-kfjh.json"
+    },
+    {
+      "id": "nockalmstrasse-eisentalhoehe",
+      "type": "bike",
+      "name": "Nockalmstraße: Kremsbrücke – Eisentalhöhe",
+      "file": "areas/bike/nockalmstrasse-eisentalhoehe.json"
+    },
+    {
+      "id": "malta-hochalmstrasse",
+      "type": "bike",
+      "name": "Malta Hochalmstraße: Brandstatt – Kölnbreinsperre",
+      "file": "areas/bike/malta-hochalmstrasse.json"
+    },
+    {
+      "id": "wurzenpass",
+      "type": "bike",
+      "name": "Wurzenpass von Riegersdorf",
+      "file": "areas/bike/wurzenpass.json"
+    },
+    {
+      "id": "flow-country-trail-petzen",
+      "type": "bike",
+      "name": "Flow Country Trail Petzen",
+      "file": "areas/bike/flow-country-trail-petzen.json"
+    },
+    {
+      "id": "flow-country-trail-bad-kleinkirchheim",
+      "type": "bike",
+      "name": "Flow Country Trail Bad Kleinkirchheim",
+      "file": "areas/bike/flow-country-trail-bad-kleinkirchheim.json"
+    },
+    {
+      "id": "dobratsch-gipfelhaus",
+      "type": "hike",
+      "name": "Dobratsch Gipfelhaus von der Rosstratte",
+      "file": "areas/hike/dobratsch-gipfelhaus.json"
+    },
+    {
+      "id": "gerlitzen-huettersteig",
+      "type": "hike",
+      "name": "Gerlitzen Hüttersteig (Annenheim – Kanzelhöhe)",
+      "file": "areas/hike/gerlitzen-huettersteig.json"
+    },
+    {
+      "id": "garnitzenklamm",
+      "type": "hike",
+      "name": "Garnitzenklamm (Rundtour)",
+      "file": "areas/hike/garnitzenklamm.json"
+    },
+    {
+      "id": "tscheppaschlucht",
+      "type": "hike",
+      "name": "Durch die Tscheppaschlucht ins Loibltal",
+      "file": "areas/hike/tscheppaschlucht.json"
+    },
+    {
+      "id": "hochobir-eisenkappler-huette",
+      "type": "hike",
+      "name": "Hochobir von der Eisenkappler Hütte",
+      "file": "areas/hike/hochobir-eisenkappler-huette.json"
+    },
+    {
+      "id": "petzen-rundmarsch",
+      "type": "hike",
+      "name": "Oberer Petzen-Rundmarsch (Feistritzer Spitze)",
+      "file": "areas/hike/petzen-rundmarsch.json"
+    },
+    {
+      "id": "mittagskogel-rundtour",
+      "type": "hike",
+      "name": "Rundtour Mittagskogel",
+      "file": "areas/hike/mittagskogel-rundtour.json"
+    },
+    {
+      "id": "pyramidenkogelweg-keutschach",
+      "type": "hike",
+      "name": "Pyramidenkogelweg Keutschach",
+      "file": "areas/hike/pyramidenkogelweg-keutschach.json"
+    },
+    {
+      "id": "koralpe-panoramarunde",
+      "type": "hike",
+      "name": "Panorama-Rundwanderung Koralpe (Großer Speikkogel)",
+      "file": "areas/hike/koralpe-panoramarunde.json"
+    },
+    {
+      "id": "mirnock-rundweg",
+      "type": "hike",
+      "name": "Rundwanderweg zum Mirnock",
+      "file": "areas/hike/mirnock-rundweg.json"
+    },
+    {
+      "id": "granattor-weg-der-liebe",
+      "type": "hike",
+      "name": "Weg der Liebe: Alexanderhütte – Granattor",
+      "file": "areas/hike/granattor-weg-der-liebe.json"
+    },
+    {
+      "id": "koenigstuhl-karlbad",
+      "type": "hike",
+      "name": "Königstuhl von Karlbad (Nockalmstraße)",
+      "file": "areas/hike/koenigstuhl-karlbad.json"
+    },
+    {
+      "id": "falkert-roedresnock",
+      "type": "hike",
+      "name": "Rödresnock und Falkertspitze vom Falkertsee",
+      "file": "areas/hike/falkert-roedresnock.json"
+    },
+    {
+      "id": "gamsgrubenweg-pasterze",
+      "type": "hike",
+      "name": "Gletscherweg Pasterze mit Gamsgrubenweg",
+      "file": "areas/hike/gamsgrubenweg-pasterze.json"
+    },
+    {
+      "id": "raggaschlucht",
+      "type": "hike",
+      "name": "Rundwanderung Raggaschlucht",
+      "file": "areas/hike/raggaschlucht.json"
+    },
+    {
+      "id": "seebachtal-stappitzer-see",
+      "type": "hike",
+      "name": "Naturlehrweg Seebachtal zur Schwussnerhütte",
+      "file": "areas/hike/seebachtal-stappitzer-see.json"
+    },
+    {
+      "id": "wolayersee",
+      "type": "hike",
+      "name": "Wolayerseehütte von der Unteren Valentinalm",
+      "file": "areas/hike/wolayersee.json"
+    },
+    {
+      "id": "zollnersee",
+      "type": "hike",
+      "name": "Zollnersee-Hütte vom Plöckenhaus",
+      "file": "areas/hike/zollnersee.json"
+    },
+    {
+      "id": "wangenitzsee",
+      "type": "hike",
+      "name": "Wangenitzseehütte von Döllach",
+      "file": "areas/hike/wangenitzsee.json"
+    },
+    {
+      "id": "doesental-blockgletscherweg",
+      "type": "hike",
+      "name": "Blockgletscherweg ins Dösental (Dösener See)",
+      "file": "areas/hike/doesental-blockgletscherweg.json"
+    },
+    {
+      "id": "slow-trail-weissensee",
+      "type": "hike",
+      "name": "Slow Trail Weissensee",
+      "file": "areas/hike/slow-trail-weissensee.json"
+    },
+    {
+      "id": "slow-trail-roemerschlucht",
+      "type": "hike",
+      "name": "Slow Trail Römerschlucht",
+      "file": "areas/hike/slow-trail-roemerschlucht.json"
+    },
+    {
+      "id": "slow-trail-yogaweg",
+      "type": "hike",
+      "name": "Slow Trail Yogaweg",
+      "file": "areas/hike/slow-trail-yogaweg.json"
+    },
+    {
+      "id": "slow-trail-schaukelweg",
+      "type": "hike",
+      "name": "Slow Trail Schaukelweg (St.-Margarethen-Runde)",
+      "file": "areas/hike/slow-trail-schaukelweg.json"
+    },
+    {
+      "id": "slow-trail-brahmsweg",
+      "type": "hike",
+      "name": "Slow Trail Brahmsweg",
+      "file": "areas/hike/slow-trail-brahmsweg.json"
+    },
+    {
+      "id": "slow-trail-suedufer-millstaetter-see",
+      "type": "hike",
+      "name": "Slow Trail Südufer Millstätter See",
+      "file": "areas/hike/slow-trail-suedufer-millstaetter-see.json"
+    },
+    {
+      "id": "slow-trail-kitzelberg",
+      "type": "hike",
+      "name": "Slow Trail Kitzelberg",
+      "file": "areas/hike/slow-trail-kitzelberg.json"
+    },
+    {
+      "id": "slow-trail-pressegger-see",
+      "type": "hike",
+      "name": "Slow Trail Pressegger See",
+      "file": "areas/hike/slow-trail-pressegger-see.json"
+    },
+    {
+      "id": "slow-trail-afritzer-see",
+      "type": "hike",
+      "name": "Slow Trail Afritzer See",
+      "file": "areas/hike/slow-trail-afritzer-see.json"
+    },
+    {
+      "id": "slow-trail-bleistaetter-moor",
+      "type": "hike",
+      "name": "Slow Trail Bleistätter Moor",
+      "file": "areas/hike/slow-trail-bleistaetter-moor.json"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "weissbriach",
+  "type": "ski",
+  "name": "Weißbriach",
+  "region": "Gitschtal",
+  "center": [
+    13.26,
+    46.68
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    13.217,
+    46.65,
+    13.303,
+    46.71
+  ],
+  "pistes_km": {
+    "total": 4
+  },
+  "season": {
+    "from": "2026-12-20",
+    "to": "2027-03-07",
+    "hours": "09:00–15:30"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 42,
+    "note": "Tageskarte Erwachsene laut HDsports"
+  },
+  "highlights": [
+    "Kleines Ortsskigebiet im Gitschtal."
+  ],
+  "osm": {
+    "bbox": [
+      13.217,
+      46.65,
+      13.303,
+      46.71
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/weissbriach"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

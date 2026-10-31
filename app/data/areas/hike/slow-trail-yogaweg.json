@@ -1,0 +1,45 @@
+{
+  "id": "slow-trail-yogaweg",
+  "type": "hike",
+  "name": "Slow Trail Yogaweg",
+  "kind": "Slow Trail",
+  "region": "Velden / Wörthersee",
+  "length_km": 3,
+  "duration_min": 90,
+  "difficulty": 1,
+  "start": "Tourismusinformation Velden",
+  "round_trip": true,
+  "center": [
+    14.04,
+    46.61
+  ],
+  "bbox": [
+    14.02,
+    46.6,
+    14.06,
+    46.63
+  ],
+  "osm": {
+    "bbox": [
+      14.02,
+      46.6,
+      14.06,
+      46.63
+    ],
+    "route": "hiking",
+    "way_name": "Yoga",
+    "search": "Slow Trail Yogaweg Velden",
+    "note": "Slow Trail in OSM nicht als Route erfasst. Stand 31.10.2026 – `none` entfernen, sobald jemand die Route in OSM einträgt. Wege nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt",
+    "none": true
+  },
+  "highlights": [
+    "Kurzer Weg mit Yoga-Stationen am Seeufer"
+  ],
+  "sources": [
+    {
+      "label": "Wörthersee Tourismus – Slow Trails",
+      "url": "https://www.woerthersee.com/wandern/slowtrails"
+    }
+  ],
+  "updated": "2026-10-31"
+}

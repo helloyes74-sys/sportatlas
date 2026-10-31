@@ -1,0 +1,51 @@
+{
+  "id": "drauradweg-etappe-3",
+  "type": "bike",
+  "name": "Drauradweg Etappe 3: Spittal – Villach",
+  "kind": "Radweg-Etappe",
+  "region": "Spittal an der Drau → Villach",
+  "length_km": 40.3,
+  "duration_min": 180,
+  "ascent_m": 121,
+  "descent_m": 202,
+  "top_m": 549,
+  "difficulty": 1,
+  "start": "Schloss Porcia, Spittal an der Drau",
+  "end": "Villach, Stadtzentrum",
+  "surface": "Asphalt, Dammwege",
+  "center": [
+    13.7,
+    46.72
+  ],
+  "bbox": [
+    13.48,
+    46.6,
+    13.86,
+    46.8
+  ],
+  "osm": {
+    "bbox": [
+      13.48,
+      46.6,
+      13.86,
+      46.8
+    ],
+    "route": "bicycle",
+    "relation_ids": [
+      9733289
+    ],
+    "clip": true,
+    "search": "Drauradweg R1",
+    "note": "Drauradweg Teil 2 (Möllbrücke–Villach, Land Kärnten), auf die Etappe zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Eben entlang der Drau bis Warmbad Villach, familientauglich"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Drauradweg, Etappe 3: Von Spittal nach Villach",
+      "url": "https://www.bergwelten.com/t/m/7424"
+    }
+  ],
+  "updated": "2026-10-31"
+}

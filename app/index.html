@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0d10">
+<meta name="description" content="Sportatlas Kärnten: Skigebiete, Loipen, Radwege und Wanderwege auf einer 3D-Nachtkarte.">
+<title>Sportatlas Kärnten</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="map" aria-label="Karte"></div>
+<div class="frame" aria-hidden="true"></div>
+
+<header class="brand">
+  <span class="tag" id="crumb">Kärnten</span>
+  <h1>Sportatlas</h1>
+</header>
+
+<nav class="sports" id="sports" aria-label="Sportart"></nav>
+
+<aside class="panel left" id="left">
+  <div class="grab" data-grab title="Liste ein-/ausklappen"></div>
+  <div class="panel-head">
+    <input type="search" id="q" placeholder="Suchen …" aria-label="Gebiete suchen" autocomplete="off">
+    <button class="favfilter" id="favFilter" aria-pressed="false" title="Nur Merkliste zeigen">★</button>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="list" id="list" role="list"></div>
+</aside>
+
+<aside class="panel right" id="right" hidden>
+  <div class="grab" data-grab title="Detailblatt ein-/ausklappen"></div>
+  <button class="close" id="closeDetail" aria-label="Schließen">✕</button>
+  <div id="detail"></div>
+</aside>
+
+<div class="hud-bottom" id="hudBottom">
+  <div class="legend" id="legend"></div>
+  <div class="hud-tools">
+    <button id="phoneLink" class="phone" hidden title="Diese Adresse am Handy im selben WLAN öffnen; Klick kopiert sie"></button>
+    <button id="btnOverview" title="Zurück zur Übersicht">Übersicht</button>
+    <button id="btnTilt" title="Neigung wechseln">3D</button>
+    <label title="Pistenverlauf nach Schwierigkeit oder Wanderwege nach Gehzeit färben" id="modeWrap" hidden>
+      Farbe <select id="colorMode"></select>
+    </label>
+  </div>
+</div>
+
+<div id="tip" class="tip" hidden></div>
+<div id="toast" class="toast" hidden></div>
+
+<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

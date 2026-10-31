@@ -1,0 +1,51 @@
+{
+  "id": "ossiacher-see-radweg",
+  "type": "bike",
+  "name": "Ossiacher See Radweg (Rundtour)",
+  "kind": "Seenrunde",
+  "region": "Annenheim – Ossiach – Steindorf",
+  "length_km": 28.6,
+  "duration_min": 140,
+  "ascent_m": 85,
+  "descent_m": 85,
+  "top_m": 542,
+  "difficulty": 1,
+  "start": "Annenheim",
+  "round_trip": true,
+  "surface": "Radweg, meist Asphalt",
+  "center": [
+    13.98,
+    46.67
+  ],
+  "bbox": [
+    13.88,
+    46.64,
+    14.08,
+    46.7
+  ],
+  "osm": {
+    "bbox": [
+      13.88,
+      46.64,
+      14.08,
+      46.7
+    ],
+    "route": "bicycle",
+    "relation_ids": [
+      1165340
+    ],
+    "search": "Ossiacher See Radweg R2",
+    "note": "Relation reicht über die Seerunde hinaus (Zubringer), darum an der Bounding-Box abgeschnitten. R2 Ossiacher See Radweg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt",
+    "clip": true
+  },
+  "highlights": [
+    "Flache Seerunde über Stift Ossiach, viele Badestellen"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Ossiacher See Radweg",
+      "url": "https://www.bergwelten.com/t/m/43114"
+    }
+  ],
+  "updated": "2026-10-31"
+}

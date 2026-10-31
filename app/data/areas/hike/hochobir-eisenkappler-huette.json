@@ -1,0 +1,51 @@
+{
+  "id": "hochobir-eisenkappler-huette",
+  "type": "hike",
+  "name": "Hochobir von der Eisenkappler Hütte",
+  "kind": "Gipfelwanderung",
+  "region": "Bad Eisenkappel / Karawanken",
+  "length_km": 2.7,
+  "duration_min": 90,
+  "ascent_m": 540,
+  "descent_m": 3,
+  "top_m": 2139,
+  "difficulty": 2,
+  "start": "Eisenkappler Hütte (1.553 m), Zufahrt über Mautstraße",
+  "end": "Hochobir (2.139 m), zurück am selben Weg",
+  "center": [
+    14.48,
+    46.51
+  ],
+  "bbox": [
+    14.44,
+    46.49,
+    14.52,
+    46.53
+  ],
+  "osm": {
+    "bbox": [
+      14.44,
+      46.49,
+      14.52,
+      46.53
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      2922123
+    ],
+    "clip": true,
+    "search": "Hochobir Eisenkappler Hütte",
+    "note": "Wanderweg 623 (Eisenkappler Hütte – Hochobir), zugeschnitten; 625 ist der Talweg und bleibt weg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Kurzer, steiler Gipfelanstieg mit Rundblick von den Hohen Tauern bis Slowenien",
+    "Hannwarte am Gipfel"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Hochobir von der Eisenkappler Hütte",
+      "url": "https://www.bergwelten.com/t/w/19359"
+    }
+  ],
+  "updated": "2026-10-31"
+}

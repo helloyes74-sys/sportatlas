@@ -1,0 +1,46 @@
+{
+  "id": "gailtalradweg",
+  "type": "bike",
+  "name": "Gailtalradweg R3: Kötschach-Mauthen – Villach",
+  "kind": "Radweg",
+  "region": "Kötschach-Mauthen → Hermagor → Villach",
+  "length_km": 90,
+  "difficulty": 2,
+  "start": "Kötschach-Mauthen",
+  "end": "Villach",
+  "surface": "Asphalt / Kies",
+  "center": [
+    13.4,
+    46.63
+  ],
+  "bbox": [
+    12.95,
+    46.55,
+    13.9,
+    46.7
+  ],
+  "osm": {
+    "bbox": [
+      12.95,
+      46.55,
+      13.9,
+      46.7
+    ],
+    "route": "bicycle",
+    "relation_ids": [
+      47952
+    ],
+    "search": "Gailtalradweg R3",
+    "note": "R3 Gailtal Radweg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Entlang der Gail durch das Bergsturzgebiet Schütt am Fuß des Dobratsch; Rückfahrt mit der Gailtalbahn"
+  ],
+  "sources": [
+    {
+      "label": "Rail & Bike Kärnten (PDF)",
+      "url": "https://www.kaernten.at/fileadmin/user_upload/LP_Rad/Trekkingrad/Bahn_und_Rad/Folder_Rail_und_Bike_Kaernten_Maerz_2023.pdf"
+    }
+  ],
+  "updated": "2026-10-31"
+}

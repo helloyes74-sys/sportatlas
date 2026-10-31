@@ -1,0 +1,80 @@
+#!/usr/bin/env node
+// Lädt Pisten, Lifte, Loipen und Routen aus OpenStreetMap (Overpass) und legt sie als GeoJSON ab.
+//
+//   node scripts/fetch-osm.mjs                 alle Gebiete aller Regionen
+//   node scripts/fetch-osm.mjs gerlitzen       nur dieses Gebiet (id)
+//   node scripts/fetch-osm.mjs --type ski      nur eine Sportart
+//   node scripts/fetch-osm.mjs --force         auch Gebiete neu laden, deren Datei jünger als 7 Tage ist
+//
+// Ergebnis: app/data/geo/<type>/<id>.geojson  (ohne Höhen; die kommen mit add-elevation.mjs)
+
+import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { overpass, skiQuery, nordicQuery, routeQuery, toGeoJSON, skiKind } from "./lib/overpass.mjs";
+import { shapeRoute } from "./lib/lines.mjs";
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const DATA = path.join(ROOT, "app", "data");
+
+const args = process.argv.slice(2);
+const typeFilter = args.includes("--type") ? args[args.indexOf("--type") + 1] : null;
+const force = args.includes("--force");
+const ids = args.filter((a, i) => !a.startsWith("--") && args[i - 1] !== "--type");
+
+const readJSON = async (p) => JSON.parse(await readFile(p, "utf8"));
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const regions = (await readJSON(path.join(DATA, "regions", "index.json"))).regions;
+const GEO_INDEX = path.join(DATA, "geo", "index.json");
+let geoIndex = {};
+try { geoIndex = await readJSON(GEO_INDEX); } catch { /* noch keiner */ }
+let done = 0;
+for (const r of regions) {
+  const region = await readJSON(path.join(DATA, r.file));
+  for (const entry of region.areas) {
+    if (typeFilter && entry.type !== typeFilter) continue;
+    if (ids.length && !ids.includes(entry.id)) continue;
+    const area = await readJSON(path.join(DATA, entry.file));
+    if (area.osm?.none) { process.stderr.write(`${area.type}/${area.id}: in OSM nicht erfasst (osm.none), übersprungen\n`); continue; }
+    const out = path.join(DATA, "geo", area.type, `${area.id}.geojson`);
+    const have = geoIndex[`${area.type}/${area.id}`];
+    // Überspringen, wenn frisch geladen – außer die Gebietsdatei wurde seit dem Laden geändert (neue
+    // osm-Angaben). Verglichen wird mit der im Index gemerkten Änderungszeit der Gebietsdatei, nicht mit
+    // der GeoJSON-Datei: die schreibt add-elevation später neu.
+    const areaMtime = (await stat(path.join(DATA, entry.file))).mtimeMs;
+    const areaChanged = have?.area_mtime ? have.area_mtime !== areaMtime : await stat(out).then((g) => areaMtime > g.mtimeMs).catch(() => false);
+    if (have && have.features > 0 && !force && !ids.length && !areaChanged && (Date.now() - Date.parse(have.fetched)) < 7 * 864e5) { process.stderr.write(`${area.type}/${area.id}: schon vom ${have.fetched}, übersprungen (--force lädt neu)\n`); continue; }
+    await mkdir(path.dirname(out), { recursive: true });
+    process.stderr.write(`${area.type}/${area.id}: lade …\n`);
+    let query, kindOf;
+    if (area.type === "ski") { query = skiQuery(area); kindOf = skiKind; }
+    else if (area.type === "xc") { query = nordicQuery(area); kindOf = () => "xc"; }
+    else { query = routeQuery(area); kindOf = () => (area.type === "bike" ? "bike" : "hike"); }
+    try {
+      const osm = await overpass(query);
+      let fc = toGeoJSON(osm, kindOf);
+      if (area.type === "bike" || area.type === "hike") fc = shapeRoute(fc, area);
+      fc.meta = { area: area.id, type: area.type, fetched: new Date().toISOString().slice(0, 10), source: "OpenStreetMap-Mitwirkende, ODbL", features: fc.features.length };
+      if (!fc.features.length) {
+        process.stderr.write(`  0 Objekte: osm-Angaben (relation_ids, way_name, relation_name) oder Bounding-Box prüfen (${path.relative(ROOT, path.join(DATA, entry.file))}); „Routen prüfen.command“ listet Kandidaten\n`);
+        delete geoIndex[`${area.type}/${area.id}`];
+        await mkdir(path.dirname(GEO_INDEX), { recursive: true });
+        await writeFile(GEO_INDEX, JSON.stringify(geoIndex, null, 2));
+        await sleep(2500);
+        continue;
+      }
+      await writeFile(out, JSON.stringify(fc));
+      geoIndex[`${area.type}/${area.id}`] = { file: `geo/${area.type}/${area.id}.geojson`, features: fc.features.length, fetched: fc.meta.fetched, area_mtime: areaMtime };
+      await mkdir(path.dirname(GEO_INDEX), { recursive: true });
+      await writeFile(GEO_INDEX, JSON.stringify(geoIndex, null, 2));
+      const kinds = fc.features.reduce((m, f) => ((m[f.properties.kind] = (m[f.properties.kind] || 0) + 1), m), {});
+      process.stderr.write(`  ${fc.features.length} Objekte ${JSON.stringify(kinds)} → ${path.relative(ROOT, out)}\n`);
+      done++;
+    } catch (e) {
+      process.stderr.write(`  FEHLER: ${e.message}\n`);
+    }
+    await sleep(2500); // Overpass fair use
+  }
+}
+process.stderr.write(`Fertig: ${done} Dateien. Jetzt: node scripts/add-elevation.mjs\n`);

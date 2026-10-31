@@ -1,0 +1,53 @@
+{
+  "id": "klippitztoerl",
+  "type": "ski",
+  "name": "Klippitztörl",
+  "region": "Saualpe",
+  "center": [
+    14.68,
+    46.93
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    14.593,
+    46.87,
+    14.767,
+    46.99
+  ],
+  "pistes_km": {
+    "total": 28
+  },
+  "season": {
+    "from": "2026-12-05",
+    "to": "2027-03-28",
+    "hours": "09:00–16:00"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 46,
+    "note": "Tageskarte Erwachsene laut HDsports"
+  },
+  "highlights": [
+    "Familiengebiet auf der Saualpe im Osten Kärntens."
+  ],
+  "osm": {
+    "bbox": [
+      14.593,
+      46.87,
+      14.767,
+      46.99
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/klippitztoerl"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

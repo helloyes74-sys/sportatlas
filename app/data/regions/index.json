@@ -1,0 +1,9 @@
+{
+  "regions": [
+    {
+      "id": "kaernten",
+      "name": "Kärnten",
+      "file": "regions/kaernten.json"
+    }
+  ]
+}

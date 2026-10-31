@@ -1,0 +1,50 @@
+{
+  "id": "gamsgrubenweg-pasterze",
+  "type": "hike",
+  "name": "Gletscherweg Pasterze mit Gamsgrubenweg",
+  "kind": "Themenweg",
+  "region": "Heiligenblut / Großglockner",
+  "length_km": 8.1,
+  "duration_min": 270,
+  "ascent_m": 462,
+  "top_m": 2400,
+  "difficulty": 2,
+  "start": "Kaiser-Franz-Josefs-Höhe (2.369 m), Großglockner Hochalpenstraße",
+  "round_trip": true,
+  "center": [
+    12.75,
+    47.07
+  ],
+  "bbox": [
+    12.72,
+    47.05,
+    12.79,
+    47.09
+  ],
+  "osm": {
+    "bbox": [
+      12.72,
+      47.05,
+      12.79,
+      47.09
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      1951106,
+      1951114
+    ],
+    "search": "Gamsgrubenweg Pasterze Gletscherweg",
+    "note": "Gletscherweg Pasterze + Naturlehrweg Gamsgrube (Nationalpark). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Durch die Tunnel des Gamsgrubenwegs und hinunter zur Pasterze, Österreichs größtem Gletscher",
+    "Mautstraße, Saison etwa Mai–Oktober"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Gletscherweg Pasterze mit Gamsgrubenweg",
+      "url": "https://www.bergwelten.com/t/w/22762"
+    }
+  ],
+  "updated": "2026-10-31"
+}

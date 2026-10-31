@@ -1,0 +1,44 @@
+{
+  "id": "slow-trail-brahmsweg",
+  "type": "hike",
+  "name": "Slow Trail Brahmsweg",
+  "kind": "Slow Trail",
+  "region": "Pörtschach / Wörthersee",
+  "length_km": 5.9,
+  "duration_min": 120,
+  "difficulty": 2,
+  "start": "Pörtschach am Wörther See",
+  "round_trip": true,
+  "center": [
+    14.15,
+    46.63
+  ],
+  "bbox": [
+    14.12,
+    46.62,
+    14.18,
+    46.65
+  ],
+  "osm": {
+    "bbox": [
+      14.12,
+      46.62,
+      14.18,
+      46.65
+    ],
+    "route": "hiking",
+    "way_name": "Brahms",
+    "search": "Slow Trail Brahmsweg Pörtschach",
+    "note": "Wege nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Auf den Spuren von Johannes Brahms über die Halbinsel und zum Gloriette-Blick"
+  ],
+  "sources": [
+    {
+      "label": "Wörthersee Tourismus – Slow Trails",
+      "url": "https://www.woerthersee.com/wandern/slowtrails"
+    }
+  ],
+  "updated": "2026-10-31"
+}

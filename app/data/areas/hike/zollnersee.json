@@ -1,0 +1,49 @@
+{
+  "id": "zollnersee",
+  "type": "hike",
+  "name": "Zollnersee-Hütte vom Plöckenhaus",
+  "kind": "Hüttenwanderung",
+  "region": "Kötschach-Mauthen / Karnische Alpen",
+  "length_km": 15.3,
+  "duration_min": 360,
+  "ascent_m": 1340,
+  "top_m": 1750,
+  "difficulty": 3,
+  "start": "Plöckenhaus",
+  "end": "Zollnersee-Hütte, zurück am selben Weg",
+  "center": [
+    12.99,
+    46.62
+  ],
+  "bbox": [
+    12.95,
+    46.59,
+    13.05,
+    46.65
+  ],
+  "osm": {
+    "bbox": [
+      12.95,
+      46.59,
+      13.05,
+      46.65
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      9788881
+    ],
+    "clip": true,
+    "search": "Zollnersee Plöckenhaus",
+    "note": "Via Alpina Stage 20 Zollnersee Hütte – Untere Valentinalm, zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Lange Tagestour am Karnischen Kamm, Zollnersee auf 1.750 m"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Wanderung zur Zollnersee-Hütte vom Plöckenhaus",
+      "url": "https://www.bergwelten.com/t/w/25273"
+    }
+  ],
+  "updated": "2026-10-31"
+}

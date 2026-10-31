@@ -1,0 +1,44 @@
+{
+  "id": "slow-trail-kitzelberg",
+  "type": "hike",
+  "name": "Slow Trail Kitzelberg",
+  "kind": "Slow Trail",
+  "region": "Klopeiner See",
+  "length_km": 3.5,
+  "difficulty": 1,
+  "start": "Westufer Klopeiner See",
+  "round_trip": true,
+  "center": [
+    14.56,
+    46.6
+  ],
+  "bbox": [
+    14.54,
+    46.58,
+    14.58,
+    46.62
+  ],
+  "osm": {
+    "bbox": [
+      14.54,
+      46.58,
+      14.58,
+      46.62
+    ],
+    "route": "hiking",
+    "way_name": "Kitzelberg|Slow.?Trail",
+    "search": "Slow Trail Kitzelberg Klopeiner See",
+    "note": "Slow Trail in OSM nicht als Route erfasst. Stand 31.10.2026 – `none` entfernen, sobald jemand die Route in OSM einträgt. Wege nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt",
+    "none": true
+  },
+  "highlights": [
+    "Aussichtsplattform über Klopeiner See, Turnersee und Kleinsee"
+  ],
+  "sources": [
+    {
+      "label": "Kärnten Werbung – Slow Trails",
+      "url": "https://www.visitcarinthia.at/hiking/slow-trails/"
+    }
+  ],
+  "updated": "2026-10-31"
+}

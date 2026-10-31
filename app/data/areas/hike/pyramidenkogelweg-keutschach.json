@@ -1,0 +1,50 @@
+{
+  "id": "pyramidenkogelweg-keutschach",
+  "type": "hike",
+  "name": "Pyramidenkogelweg Keutschach",
+  "kind": "Rundwanderung",
+  "region": "Keutschach / Wörthersee",
+  "length_km": 13.8,
+  "duration_min": 230,
+  "ascent_m": 385,
+  "descent_m": 385,
+  "top_m": 845,
+  "difficulty": 2,
+  "start": "Panoramatafel beim Gemeindeamt Keutschach (510 m)",
+  "round_trip": true,
+  "center": [
+    14.15,
+    46.6
+  ],
+  "bbox": [
+    14.11,
+    46.58,
+    14.19,
+    46.63
+  ],
+  "osm": {
+    "bbox": [
+      14.11,
+      46.58,
+      14.19,
+      46.63
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      20109881
+    ],
+    "search": "Pyramidenkogel Keutschach",
+    "note": "W14 Pyramidenkogelweg Keutschach. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Über St. Margarethen und die Burgruine Reifnitz zum Aussichtsturm Pyramidenkogel",
+    "Steiler Waldanstieg, Rutsche vom Turm als Belohnung"
+  ],
+  "sources": [
+    {
+      "label": "Wörthersee Tourismus – Pyramidenkogelweg Keutschach",
+      "url": "https://www.woerthersee.com/dc-neu/detail/Tour/pyramidenkogelweg-keutschach"
+    }
+  ],
+  "updated": "2026-10-31"
+}

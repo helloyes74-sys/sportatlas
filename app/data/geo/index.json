@@ -1,0 +1,316 @@
+{
+  "ski/gerlitzen": {
+    "file": "geo/ski/gerlitzen.geojson",
+    "features": 109,
+    "fetched": "2026-10-31",
+    "area_mtime": 1793401691969.1628
+  },
+  "ski/bad-kleinkirchheim": {
+    "file": "geo/ski/bad-kleinkirchheim.geojson",
+    "features": 222,
+    "fetched": "2026-10-30"
+  },
+  "ski/katschberg": {
+    "file": "geo/ski/katschberg.geojson",
+    "features": 285,
+    "fetched": "2026-10-30"
+  },
+  "ski/heiligenblut": {
+    "file": "geo/ski/heiligenblut.geojson",
+    "features": 88,
+    "fetched": "2026-10-30"
+  },
+  "ski/turracher-hoehe": {
+    "file": "geo/ski/turracher-hoehe.geojson",
+    "features": 175,
+    "fetched": "2026-10-30"
+  },
+  "ski/innerkrems": {
+    "file": "geo/ski/innerkrems.geojson",
+    "features": 49,
+    "fetched": "2026-10-30"
+  },
+  "ski/klippitztoerl": {
+    "file": "geo/ski/klippitztoerl.geojson",
+    "features": 44,
+    "fetched": "2026-10-30"
+  },
+  "ski/goldeck": {
+    "file": "geo/ski/goldeck.geojson",
+    "features": 55,
+    "fetched": "2026-10-30"
+  },
+  "ski/weinebene": {
+    "file": "geo/ski/weinebene.geojson",
+    "features": 58,
+    "fetched": "2026-10-30"
+  },
+  "ski/hochrindl": {
+    "file": "geo/ski/hochrindl.geojson",
+    "features": 9,
+    "fetched": "2026-10-30"
+  },
+  "ski/koralpe": {
+    "file": "geo/ski/koralpe.geojson",
+    "features": 58,
+    "fetched": "2026-10-30"
+  },
+  "ski/moelltaler-gletscher": {
+    "file": "geo/ski/moelltaler-gletscher.geojson",
+    "features": 8,
+    "fetched": "2026-10-30"
+  },
+  "ski/dreilaendereck": {
+    "file": "geo/ski/dreilaendereck.geojson",
+    "features": 31,
+    "fetched": "2026-10-30"
+  },
+  "ski/petzen": {
+    "file": "geo/ski/petzen.geojson",
+    "features": 26,
+    "fetched": "2026-10-30"
+  },
+  "ski/ankogel": {
+    "file": "geo/ski/ankogel.geojson",
+    "features": 57,
+    "fetched": "2026-10-30"
+  },
+  "ski/emberger-alm": {
+    "file": "geo/ski/emberger-alm.geojson",
+    "features": 25,
+    "fetched": "2026-10-30"
+  },
+  "ski/koetschach-mauthen": {
+    "file": "geo/ski/koetschach-mauthen.geojson",
+    "features": 10,
+    "fetched": "2026-10-30"
+  },
+  "ski/weissensee": {
+    "file": "geo/ski/weissensee.geojson",
+    "features": 36,
+    "fetched": "2026-10-30"
+  },
+  "ski/weissbriach": {
+    "file": "geo/ski/weissbriach.geojson",
+    "features": 27,
+    "fetched": "2026-10-30"
+  },
+  "ski/bodental": {
+    "file": "geo/ski/bodental.geojson",
+    "features": 2,
+    "fetched": "2026-10-30"
+  },
+  "xc/weissensee-loipen": {
+    "file": "geo/xc/weissensee-loipen.geojson",
+    "features": 6,
+    "fetched": "2026-10-30"
+  },
+  "xc/nassfeld-langlauf": {
+    "file": "geo/xc/nassfeld-langlauf.geojson",
+    "features": 1,
+    "fetched": "2026-10-30"
+  },
+  "xc/bad-kleinkirchheim-loipen": {
+    "file": "geo/xc/bad-kleinkirchheim-loipen.geojson",
+    "features": 5,
+    "fetched": "2026-10-30"
+  },
+  "xc/turracher-hoehe-loipen": {
+    "file": "geo/xc/turracher-hoehe-loipen.geojson",
+    "features": 15,
+    "fetched": "2026-10-30"
+  },
+  "ski/nassfeld": {
+    "file": "geo/ski/nassfeld.geojson",
+    "features": 201,
+    "fetched": "2026-10-31"
+  },
+  "bike/drauradweg-etappe-3": {
+    "file": "geo/bike/drauradweg-etappe-3.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/drauradweg-etappe-4": {
+    "file": "geo/bike/drauradweg-etappe-4.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/drauradweg-etappe-5": {
+    "file": "geo/bike/drauradweg-etappe-5.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/glockner-radweg-moelltal": {
+    "file": "geo/bike/glockner-radweg-moelltal.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/gailtalradweg": {
+    "file": "geo/bike/gailtalradweg.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/villacher-alpenstrasse": {
+    "file": "geo/bike/villacher-alpenstrasse.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/gerlitzen-alpenstrasse": {
+    "file": "geo/bike/gerlitzen-alpenstrasse.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/grossglockner-heiligenblut-kfjh": {
+    "file": "geo/bike/grossglockner-heiligenblut-kfjh.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/nockalmstrasse-eisentalhoehe": {
+    "file": "geo/bike/nockalmstrasse-eisentalhoehe.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/malta-hochalmstrasse": {
+    "file": "geo/bike/malta-hochalmstrasse.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/flow-country-trail-petzen": {
+    "file": "geo/bike/flow-country-trail-petzen.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/flow-country-trail-bad-kleinkirchheim": {
+    "file": "geo/bike/flow-country-trail-bad-kleinkirchheim.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/dobratsch-gipfelhaus": {
+    "file": "geo/hike/dobratsch-gipfelhaus.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/gerlitzen-huettersteig": {
+    "file": "geo/hike/gerlitzen-huettersteig.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/garnitzenklamm": {
+    "file": "geo/hike/garnitzenklamm.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/hochobir-eisenkappler-huette": {
+    "file": "geo/hike/hochobir-eisenkappler-huette.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/petzen-rundmarsch": {
+    "file": "geo/hike/petzen-rundmarsch.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/mittagskogel-rundtour": {
+    "file": "geo/hike/mittagskogel-rundtour.geojson",
+    "features": 2,
+    "fetched": "2026-10-31"
+  },
+  "hike/pyramidenkogelweg-keutschach": {
+    "file": "geo/hike/pyramidenkogelweg-keutschach.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/koralpe-panoramarunde": {
+    "file": "geo/hike/koralpe-panoramarunde.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/mirnock-rundweg": {
+    "file": "geo/hike/mirnock-rundweg.geojson",
+    "features": 2,
+    "fetched": "2026-10-31"
+  },
+  "hike/granattor-weg-der-liebe": {
+    "file": "geo/hike/granattor-weg-der-liebe.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/koenigstuhl-karlbad": {
+    "file": "geo/hike/koenigstuhl-karlbad.geojson",
+    "features": 2,
+    "fetched": "2026-10-31"
+  },
+  "hike/gamsgrubenweg-pasterze": {
+    "file": "geo/hike/gamsgrubenweg-pasterze.geojson",
+    "features": 2,
+    "fetched": "2026-10-31"
+  },
+  "hike/raggaschlucht": {
+    "file": "geo/hike/raggaschlucht.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/seebachtal-stappitzer-see": {
+    "file": "geo/hike/seebachtal-stappitzer-see.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/wolayersee": {
+    "file": "geo/hike/wolayersee.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/zollnersee": {
+    "file": "geo/hike/zollnersee.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/doesental-blockgletscherweg": {
+    "file": "geo/hike/doesental-blockgletscherweg.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/slow-trail-roemerschlucht": {
+    "file": "geo/hike/slow-trail-roemerschlucht.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/slow-trail-schaukelweg": {
+    "file": "geo/hike/slow-trail-schaukelweg.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/slow-trail-brahmsweg": {
+    "file": "geo/hike/slow-trail-brahmsweg.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/slow-trail-bleistaetter-moor": {
+    "file": "geo/hike/slow-trail-bleistaetter-moor.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "bike/wurzenpass": {
+    "file": "geo/bike/wurzenpass.geojson",
+    "features": 1,
+    "fetched": "2026-10-31"
+  },
+  "hike/falkert-roedresnock": {
+    "file": "geo/hike/falkert-roedresnock.geojson",
+    "features": 2,
+    "fetched": "2026-10-31",
+    "area_mtime": 1793435920330.3857
+  },
+  "bike/woerthersee-rundfahrt": {
+    "file": "geo/bike/woerthersee-rundfahrt.geojson",
+    "features": 2,
+    "fetched": "2026-10-31",
+    "area_mtime": 1793410445312.6338
+  },
+  "bike/ossiacher-see-radweg": {
+    "file": "geo/bike/ossiacher-see-radweg.geojson",
+    "features": 1,
+    "fetched": "2026-10-31",
+    "area_mtime": 1793410444999.1907
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "flow-country-trail-bad-kleinkirchheim",
+  "type": "bike",
+  "name": "Flow Country Trail Bad Kleinkirchheim",
+  "kind": "Flow Trail (MTB)",
+  "region": "Bad Kleinkirchheim / Kaiserburg",
+  "length_km": 15,
+  "ascent_m": 0,
+  "descent_m": 910,
+  "top_m": 2100,
+  "max_grade": 8,
+  "difficulty": 2,
+  "start": "Bergstation Kaiserburgbahn (2.100 m)",
+  "end": "Talstation Kaiserburgbahn, Bad Kleinkirchheim",
+  "surface": "Gebauter Trail, max. 8 % Gefälle",
+  "center": [
+    13.79,
+    46.81
+  ],
+  "bbox": [
+    13.76,
+    46.79,
+    13.83,
+    46.83
+  ],
+  "osm": {
+    "bbox": [
+      13.76,
+      46.79,
+      13.83,
+      46.83
+    ],
+    "route": "mtb",
+    "relation_ids": [
+      16336786
+    ],
+    "search": "Flow Country Trail Bad Kleinkirchheim Kaiserburg",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Vier Sektionen mit Anschluss an die Nock Lake Trails; Pumptrack und Bikewash an der Talstation",
+    "Nur zu Betriebszeiten der Kaiserburgbahn, Saison Juni–Oktober"
+  ],
+  "sources": [
+    {
+      "label": "Bad Kleinkirchheim Tourismus – Flow Country Trail",
+      "url": "https://www.badkleinkirchheim.com/en/bike/flow-country-trail/"
+    }
+  ],
+  "updated": "2026-10-31"
+}

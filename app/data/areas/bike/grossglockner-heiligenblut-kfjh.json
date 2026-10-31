@@ -1,0 +1,49 @@
+{
+  "id": "grossglockner-heiligenblut-kfjh",
+  "type": "bike",
+  "name": "Großglockner Hochalpenstraße: Heiligenblut – Kaiser-Franz-Josefs-Höhe",
+  "kind": "Rennrad-Anstieg",
+  "region": "Heiligenblut → Kaiser-Franz-Josefs-Höhe",
+  "length_km": 17.3,
+  "ascent_m": 1181,
+  "descent_m": 0,
+  "top_m": 2365,
+  "avg_grade": 6.8,
+  "max_grade": 14.9,
+  "difficulty": 4,
+  "start": "Heiligenblut (1.288 m)",
+  "end": "Kaiser-Franz-Josefs-Höhe (2.365 m)",
+  "surface": "Asphalt (Mautstraße, Saison Mai–Oktober)",
+  "center": [
+    12.8,
+    47.05
+  ],
+  "bbox": [
+    12.72,
+    47.02,
+    12.88,
+    47.08
+  ],
+  "osm": {
+    "bbox": [
+      12.72,
+      47.02,
+      12.88,
+      47.08
+    ],
+    "route": "bicycle",
+    "way_name": "Gro(ss|ß)glockner.?Hochalpenstra(ss|ß)e",
+    "search": "Großglockner Hochalpenstraße Glocknerstraße",
+    "note": "Straße nach Name, Bounding-Box begrenzt auf die Südrampe. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Südrampe der berühmtesten Alpenstraße Österreichs, Ziel mit Blick auf Pasterze und Großglockner"
+  ],
+  "sources": [
+    {
+      "label": "climbfinder – Kaiser-Franz-Josefs-Höhe from Heiligenblut",
+      "url": "https://climbfinder.com/en/climbs/franz-josefs-hohe-heiligenblut"
+    }
+  ],
+  "updated": "2026-10-31"
+}

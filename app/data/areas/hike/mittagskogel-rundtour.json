@@ -1,0 +1,51 @@
+{
+  "id": "mittagskogel-rundtour",
+  "type": "hike",
+  "name": "Rundtour Mittagskogel",
+  "kind": "Bergtour",
+  "region": "Finkenstein / Karawanken",
+  "length_km": 13.3,
+  "duration_min": 510,
+  "ascent_m": 1450,
+  "descent_m": 1450,
+  "top_m": 2145,
+  "difficulty": 4,
+  "start": "Gasthaus Martinihof, Finkenstein am Faaker See",
+  "round_trip": true,
+  "center": [
+    13.95,
+    46.52
+  ],
+  "bbox": [
+    13.91,
+    46.49,
+    13.99,
+    46.55
+  ],
+  "osm": {
+    "bbox": [
+      13.91,
+      46.49,
+      13.99,
+      46.55
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      3267398,
+      3823790
+    ],
+    "search": "Mittagskogel Bertahütte",
+    "note": "Mittagskogel-Normalweg 680 + Wanderweg 679 (ÖAV Villach). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Anspruchsvolle Runde über Zoll- und Annahütte auf den Großen Mittagskogel, Abstieg zur Bertahütte",
+    "Trittsicherheit und Kondition nötig (T4)"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Rundtour Mittagskogel",
+      "url": "https://www.bergwelten.com/t/w/10941"
+    }
+  ],
+  "updated": "2026-10-31"
+}

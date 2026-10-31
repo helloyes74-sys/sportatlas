@@ -1,0 +1,51 @@
+{
+  "id": "drauradweg-etappe-4",
+  "type": "bike",
+  "name": "Drauradweg Etappe 4: Villach – Ferlach",
+  "kind": "Radweg-Etappe",
+  "region": "Villach → Rosental → Ferlach",
+  "length_km": 51.4,
+  "duration_min": 230,
+  "ascent_m": 317,
+  "descent_m": 392,
+  "top_m": 532,
+  "difficulty": 1,
+  "start": "Villach",
+  "end": "Ferlach",
+  "surface": "Asphalt, Dammwege",
+  "center": [
+    14.05,
+    46.56
+  ],
+  "bbox": [
+    13.84,
+    46.5,
+    14.32,
+    46.62
+  ],
+  "osm": {
+    "bbox": [
+      13.84,
+      46.5,
+      14.32,
+      46.62
+    ],
+    "route": "bicycle",
+    "relation_ids": [
+      10103325
+    ],
+    "clip": true,
+    "search": "Drauradweg R1",
+    "note": "Drauradweg Teil 3 (Villach–Lavamünd, Land Kärnten), auf die Etappe zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Durch das Rosental auf Dammwegen, Abstecher zum Faaker See möglich"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Drauradweg, Etappe 4: Von Villach nach Ferlach",
+      "url": "https://www.bergwelten.com/t/m/7427"
+    }
+  ],
+  "updated": "2026-10-31"
+}

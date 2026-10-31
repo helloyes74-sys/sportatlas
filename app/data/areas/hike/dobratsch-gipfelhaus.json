@@ -1,0 +1,51 @@
+{
+  "id": "dobratsch-gipfelhaus",
+  "type": "hike",
+  "name": "Dobratsch Gipfelhaus von der Rosstratte",
+  "kind": "Gipfelwanderung",
+  "region": "Villach / Naturpark Dobratsch",
+  "length_km": 4,
+  "duration_min": 97,
+  "ascent_m": 490,
+  "descent_m": 40,
+  "top_m": 2143,
+  "difficulty": 1,
+  "start": "Rosstratte (1.650 m), Ende der Villacher Alpenstraße",
+  "end": "Dobratsch Gipfelhaus (2.143 m), zurück am selben Weg",
+  "center": [
+    13.69,
+    46.6
+  ],
+  "bbox": [
+    13.64,
+    46.58,
+    13.73,
+    46.62
+  ],
+  "osm": {
+    "bbox": [
+      13.64,
+      46.58,
+      13.73,
+      46.62
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      7510652
+    ],
+    "clip": true,
+    "search": "Dobratsch Gipfel Rosstratte",
+    "note": "Wanderweg 291 (rwn) – der „Dobratsch Rundwanderweg“ (10028985) ist eine Runde am Bergfuß auf 960 m, nicht der Gipfelweg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Leichte Familienwanderung über Almwiesen, Gipfelhaus ganzjährig offen",
+    "Blick auf Julische Alpen und Karawanken"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Dobratsch Gipfelhaus von der Rosstratte",
+      "url": "https://www.bergwelten.com/t/w/3519"
+    }
+  ],
+  "updated": "2026-10-31"
+}

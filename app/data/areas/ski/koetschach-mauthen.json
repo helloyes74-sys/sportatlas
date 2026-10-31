@@ -1,0 +1,53 @@
+{
+  "id": "koetschach-mauthen",
+  "type": "ski",
+  "name": "Kötschach-Mauthen",
+  "region": "Gailtal",
+  "center": [
+    12.99,
+    46.68
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    12.947,
+    46.65,
+    13.033,
+    46.71
+  ],
+  "pistes_km": {
+    "total": 7
+  },
+  "season": {
+    "from": "2026-12-11",
+    "to": "2027-02-28",
+    "hours": "09:00–16:00"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 31,
+    "note": "Tageskarte Erwachsene laut HDsports"
+  },
+  "highlights": [
+    "Kleines Ortsskigebiet."
+  ],
+  "osm": {
+    "bbox": [
+      12.947,
+      46.65,
+      13.033,
+      46.71
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/koetschach-mauthen"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

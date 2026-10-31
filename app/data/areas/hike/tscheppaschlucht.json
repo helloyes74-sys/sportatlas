@@ -1,0 +1,49 @@
+{
+  "id": "tscheppaschlucht",
+  "type": "hike",
+  "name": "Durch die Tscheppaschlucht ins Loibltal",
+  "kind": "Klammwanderung",
+  "region": "Ferlach / Rosental",
+  "length_km": 4.4,
+  "duration_min": 120,
+  "ascent_m": 378,
+  "descent_m": 295,
+  "top_m": 834,
+  "difficulty": 2,
+  "start": "Parkplatz Unterloibl an der B 91 (580 m)",
+  "end": "Gasthof Deutscher Peter, Loibltal; Bus zurück zum Parkplatz",
+  "center": [
+    14.26,
+    46.47
+  ],
+  "bbox": [
+    14.24,
+    46.45,
+    14.28,
+    46.49
+  ],
+  "osm": {
+    "bbox": [
+      14.24,
+      46.45,
+      14.28,
+      46.49
+    ],
+    "route": "hiking",
+    "way_name": "Tscheppaschlucht",
+    "search": "Tscheppaschlucht",
+    "note": "Klammsteig ist in OSM weder als Route noch mit Namen erfasst. Stand 31.10.2026 – `none` entfernen, sobald jemand die Route in OSM einträgt. Wege nach Name; keine Routen-Relation. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt",
+    "none": true
+  },
+  "highlights": [
+    "Leitern, Brücken, Wendeltreppe und Hängebrücke bis zum Tschaukofall",
+    "Nicht für Hunde und Kleinkinder, Schwindelfreiheit nötig"
+  ],
+  "sources": [
+    {
+      "label": "Wörthersee Tourismus – Durch die Tscheppaschlucht ins Loibltal",
+      "url": "https://www.woerthersee.com/dc-neu/detail/Tour/durch-die-tscheppaschlucht-ins-loibltal-1"
+    }
+  ],
+  "updated": "2026-10-31"
+}

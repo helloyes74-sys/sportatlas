@@ -1,0 +1,44 @@
+{
+  "id": "slow-trail-pressegger-see",
+  "type": "hike",
+  "name": "Slow Trail Pressegger See",
+  "kind": "Slow Trail",
+  "region": "Hermagor / Pressegger See",
+  "length_km": 5.8,
+  "difficulty": 1,
+  "start": "Pressegger See",
+  "round_trip": true,
+  "center": [
+    13.45,
+    46.63
+  ],
+  "bbox": [
+    13.42,
+    46.62,
+    13.48,
+    46.65
+  ],
+  "osm": {
+    "bbox": [
+      13.42,
+      46.62,
+      13.48,
+      46.65
+    ],
+    "route": "hiking",
+    "way_name": "Slow.?Trail|Schilf",
+    "search": "Slow Trail Pressegger See Schilf",
+    "note": "Slow Trail in OSM nicht als Route erfasst. Stand 31.10.2026 – `none` entfernen, sobald jemand die Route in OSM einträgt. Wege nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt",
+    "none": true
+  },
+  "highlights": [
+    "Weg durchs Schilf: bis 3 m hoher Schilfgürtel, Seerosen, Haubentaucher"
+  ],
+  "sources": [
+    {
+      "label": "Kärnten Werbung – Slow Trails",
+      "url": "https://www.visitcarinthia.at/hiking/slow-trails/"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "falkert-roedresnock",
+  "type": "hike",
+  "name": "Rödresnock und Falkertspitze vom Falkertsee",
+  "kind": "Gipfelwanderung",
+  "region": "Nockberge / Falkert",
+  "length_km": 7.9,
+  "duration_min": 240,
+  "ascent_m": 645,
+  "top_m": 2310,
+  "difficulty": 2,
+  "start": "Falkertsee, Heidi-Alm (1.870 m)",
+  "round_trip": true,
+  "center": [
+    13.83,
+    46.858
+  ],
+  "bbox": [
+    13.8,
+    46.845,
+    13.9,
+    46.875
+  ],
+  "osm": {
+    "bbox": [
+      13.8,
+      46.845,
+      13.9,
+      46.875
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      19381340,
+      17192143
+    ],
+    "search": "Falkert Rödresnock Falkertsee",
+    "note": "Lage aus den OSM-Linien korrigiert (Falkertsee bei 13,83/46,858). Wanderweg 1591 Falkertsee → Falkertscharte + 159 zum Falkert-Gipfel, zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Zwei Nockgipfel über dem Falkertsee, sanfte Kuppen und weite Almen"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Rödresnock und Falkertspitze vom Falkertsee",
+      "url": "https://www.bergwelten.com/t/w/22575"
+    }
+  ],
+  "updated": "2026-10-31"
+}

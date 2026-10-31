@@ -1,0 +1,53 @@
+{
+  "id": "dreilaendereck",
+  "type": "ski",
+  "name": "Dreiländereck",
+  "region": "Arnoldstein",
+  "center": [
+    13.71,
+    46.56
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    13.638,
+    46.51,
+    13.782,
+    46.61
+  ],
+  "pistes_km": {
+    "total": 17
+  },
+  "season": {
+    "from": "2026-11-28",
+    "to": "2027-03-07",
+    "hours": "09:00–16:00"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 35.5,
+    "note": "Tageskarte Erwachsene laut HDsports"
+  },
+  "highlights": [
+    "Ab 2026/27 mit zusätzlichen Pistenkilometern."
+  ],
+  "osm": {
+    "bbox": [
+      13.638,
+      46.51,
+      13.782,
+      46.61
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/dreilaendereck"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

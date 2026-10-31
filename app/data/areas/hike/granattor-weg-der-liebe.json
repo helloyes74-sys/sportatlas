@@ -1,0 +1,50 @@
+{
+  "id": "granattor-weg-der-liebe",
+  "type": "hike",
+  "name": "Weg der Liebe: Alexanderhütte – Granattor",
+  "kind": "Höhenwanderung",
+  "region": "Millstätter Alpe",
+  "length_km": 6.4,
+  "duration_min": 180,
+  "ascent_m": 263,
+  "descent_m": 13,
+  "top_m": 2066,
+  "difficulty": 2,
+  "start": "Alexanderhütte (1.768 m), Zufahrt über Mautstraße ab Millstatt",
+  "end": "Granattor (2.066 m), zurück am selben Weg",
+  "center": [
+    13.63,
+    46.82
+  ],
+  "bbox": [
+    13.58,
+    46.8,
+    13.68,
+    46.84
+  ],
+  "osm": {
+    "bbox": [
+      13.58,
+      46.8,
+      13.68,
+      46.84
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      14639262
+    ],
+    "search": "Granattor Weg der Liebe Alexanderhütte",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Sieben Stationen mit Bänken und Büchern, Granattor mit Seeblick",
+    "Familienfreundlich, Mautstraße bis zur Alexanderhütte"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Weg der Liebe – Von der Alexanderhütte zum Granattor",
+      "url": "https://www.bergwelten.com/t/w/7540"
+    }
+  ],
+  "updated": "2026-10-31"
+}

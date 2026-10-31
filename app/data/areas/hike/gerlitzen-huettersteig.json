@@ -1,0 +1,49 @@
+{
+  "id": "gerlitzen-huettersteig",
+  "type": "hike",
+  "name": "Gerlitzen Hüttersteig (Annenheim – Kanzelhöhe)",
+  "kind": "Bergwanderung",
+  "region": "Villach / Ossiacher See",
+  "length_km": 6.65,
+  "duration_min": 195,
+  "ascent_m": 984,
+  "descent_m": 55,
+  "top_m": 1495,
+  "difficulty": 3,
+  "start": "Talstation Kanzelbahn, Annenheim (516 m)",
+  "end": "Bergstation Kanzelbahn, Kanzelhöhe; Abstieg per Bahn",
+  "center": [
+    13.91,
+    46.68
+  ],
+  "bbox": [
+    13.88,
+    46.66,
+    13.94,
+    46.7
+  ],
+  "osm": {
+    "bbox": [
+      13.88,
+      46.66,
+      13.94,
+      46.7
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      17708345
+    ],
+    "search": "Hüttersteig Gerlitzen Kanzelhöhe",
+    "note": "Wanderweg 34A Annenheim Talstation → Ossiachberg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Steiler Aufstieg vom Ossiacher See zur Kanzelhöhe, Abstieg bequem mit der Kanzelbahn"
+  ],
+  "sources": [
+    {
+      "label": "Region Villach Tourismus – Gerlitzen – Hüttersteig",
+      "url": "https://www.visitvillach.at/en/tours/gerlitzen-huettersteig.html"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "glockner-radweg-moelltal",
+  "type": "bike",
+  "name": "Glockner-Radweg durchs Mölltal: Heiligenblut – Möllbrücke",
+  "kind": "Radweg",
+  "region": "Heiligenblut → Obervellach → Möllbrücke",
+  "length_km": 89.8,
+  "duration_min": 360,
+  "ascent_m": 223,
+  "descent_m": 993,
+  "top_m": 1295,
+  "difficulty": 2,
+  "start": "Heiligenblut (Jungfernsprung)",
+  "end": "Möllbrücke an der Drau",
+  "surface": "Asphalt, Nebenstraßen",
+  "center": [
+    13.05,
+    46.93
+  ],
+  "bbox": [
+    12.8,
+    46.82,
+    13.38,
+    47.05
+  ],
+  "osm": {
+    "bbox": [
+      12.8,
+      46.82,
+      13.38,
+      47.05
+    ],
+    "route": "bicycle",
+    "relation_ids": [
+      1353074
+    ],
+    "search": "Glockner Radweg Mölltal R8",
+    "note": "R8 Glockner-/Mölltalradweg. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Fast nur bergab entlang der Möll; Rad- und Wanderbus bringt zurück nach Heiligenblut"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Glockner-Radweg durchs Mölltal",
+      "url": "https://www.bergwelten.com/t/m/23837"
+    }
+  ],
+  "updated": "2026-10-31"
+}

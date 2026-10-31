@@ -1,0 +1,50 @@
+{
+  "id": "drauradweg-etappe-5",
+  "type": "bike",
+  "name": "Drauradweg Etappe 5: Ferlach – Lavamünd",
+  "kind": "Radweg-Etappe",
+  "region": "Ferlach → Völkermarkt → Lavamünd",
+  "length_km": 66.9,
+  "duration_min": 270,
+  "ascent_m": 574,
+  "descent_m": 635,
+  "difficulty": 1,
+  "start": "Ferlach",
+  "end": "Lavamünd (Grenze zu Slowenien)",
+  "surface": "Asphalt, Dammwege",
+  "center": [
+    14.65,
+    46.58
+  ],
+  "bbox": [
+    14.28,
+    46.52,
+    14.95,
+    46.66
+  ],
+  "osm": {
+    "bbox": [
+      14.28,
+      46.52,
+      14.95,
+      46.66
+    ],
+    "route": "bicycle",
+    "relation_ids": [
+      10103325
+    ],
+    "clip": true,
+    "search": "Drauradweg R1",
+    "note": "Drauradweg Teil 3 (Villach–Lavamünd, Land Kärnten), auf die Etappe zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Letzte Kärntner Etappe über die Jauntalbrücke bis zur Grenze"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Drauradweg, Etappe 5: Von Ferlach nach Lavamünd",
+      "url": "https://www.bergwelten.com/t/m/7428"
+    }
+  ],
+  "updated": "2026-10-31"
+}

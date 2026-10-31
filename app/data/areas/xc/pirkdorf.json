@@ -1,0 +1,46 @@
+{
+  "id": "pirkdorf",
+  "type": "xc",
+  "name": "Langlaufarena Pirkdorf",
+  "region": "Unterkärnten",
+  "center": [
+    14.72,
+    46.566
+  ],
+  "bbox": [
+    14.69,
+    46.545,
+    14.75,
+    46.59
+  ],
+  "loipen_km": {
+    "total": 10
+  },
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Langlaufzentrum mit 10 km Strecke.",
+    "10-km-Runde (2,5 km beschneit), 160 Höhenmeter je Runde, Nachtloipe Di/Do/Fr bis 20 Uhr, Laser-Biathlon"
+  ],
+  "osm": {
+    "bbox": [
+      14.69,
+      46.545,
+      14.75,
+      46.59
+    ],
+    "note": "Loipen in OSM nicht erfasst (piste:type=nordic fehlt). Stand 31.10.2026 – `none` entfernen, sobald jemand sie einträgt.",
+    "none": true
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Höhenloipen",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/hoehenloipen"
+    },
+    {
+      "label": "kaernten.at – Langlaufzentren",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/langlaufzentren/"
+    }
+  ],
+  "updated": "2026-10-31",
+  "center_note": "ungefähr (Pirkdorfer See, Feistritz ob Bleiburg) – prüfen, sobald Loipen aus OSM da sind"
+}

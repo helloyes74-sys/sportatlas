@@ -1,0 +1,52 @@
+{
+  "id": "woerthersee-rundfahrt",
+  "type": "bike",
+  "name": "Wörthersee-Rundfahrt",
+  "kind": "Seenrunde",
+  "region": "Velden – Klagenfurt – Maria Wörth",
+  "length_km": 41.3,
+  "duration_min": 150,
+  "ascent_m": 104,
+  "descent_m": 104,
+  "top_m": 486,
+  "difficulty": 2,
+  "start": "Velden, Parkplatz Eishalle (Köstenberger Straße 3)",
+  "round_trip": true,
+  "surface": "Asphalt; am Südufer kein durchgehender Radweg",
+  "center": [
+    14.15,
+    46.62
+  ],
+  "bbox": [
+    14.03,
+    46.58,
+    14.33,
+    46.66
+  ],
+  "osm": {
+    "bbox": [
+      14.03,
+      46.58,
+      14.33,
+      46.66
+    ],
+    "route": "bicycle",
+    "relation_ids": [
+      1694591,
+      15453688
+    ],
+    "search": "Wörthersee Rundfahrt Radweg",
+    "note": "Relation reicht über die Seerunde hinaus (Zubringer), darum an der Bounding-Box abgeschnitten. R4 Wörthersee Radweg + R4D Südufer. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt",
+    "clip": true
+  },
+  "highlights": [
+    "Über Pörtschach, Krumpendorf und Klagenfurt (Minimundus, Lendkanal) zurück über das Südufer"
+  ],
+  "sources": [
+    {
+      "label": "Wörthersee Tourismus – Wörthersee Rundfahrt",
+      "url": "https://www.woerthersee.com/dc-neu/detail/Tour/woerthersee-rundfahrt"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "koenigstuhl-karlbad",
+  "type": "hike",
+  "name": "Königstuhl von Karlbad (Nockalmstraße)",
+  "kind": "Gipfelwanderung",
+  "region": "Nockberge / Nockalmstraße",
+  "length_km": 7.7,
+  "duration_min": 240,
+  "ascent_m": 640,
+  "top_m": 2336,
+  "difficulty": 2,
+  "start": "Karlbad an der Nockalmstraße",
+  "round_trip": true,
+  "center": [
+    13.78,
+    46.95
+  ],
+  "bbox": [
+    13.74,
+    46.93,
+    13.82,
+    46.97
+  ],
+  "osm": {
+    "bbox": [
+      13.74,
+      46.93,
+      13.82,
+      46.97
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      3276922,
+      6281337
+    ],
+    "clip": true,
+    "search": "Königstuhl Karlbad Nockalm",
+    "note": "Wanderwege 125 (Königstuhl) und 117 (Karlbad), zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Höchster Punkt des Biosphärenparks Nockberge, Dreiländerblick Kärnten–Salzburg–Steiermark",
+    "Nockalmstraße mautpflichtig (Mai–Oktober)"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Königsstuhl von Karlbad",
+      "url": "https://www.bergwelten.com/t/w/22577"
+    }
+  ],
+  "updated": "2026-10-31"
+}

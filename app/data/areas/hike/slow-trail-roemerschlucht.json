@@ -1,0 +1,50 @@
+{
+  "id": "slow-trail-roemerschlucht",
+  "type": "hike",
+  "name": "Slow Trail Römerschlucht",
+  "kind": "Slow Trail",
+  "region": "Velden / Wörthersee",
+  "length_km": 6.9,
+  "duration_min": 120,
+  "difficulty": 2,
+  "start": "Velden am Wörthersee",
+  "round_trip": true,
+  "center": [
+    14.03,
+    46.62
+  ],
+  "bbox": [
+    14,
+    46.6,
+    14.07,
+    46.64
+  ],
+  "osm": {
+    "bbox": [
+      14,
+      46.6,
+      14.07,
+      46.64
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      14434502
+    ],
+    "search": "Slow Trail Römerschlucht",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Durch die Römerschlucht zum Forstsee, auch per Schiff erreichbar"
+  ],
+  "sources": [
+    {
+      "label": "Wörthersee Tourismus – Slow Trails",
+      "url": "https://www.woerthersee.com/wandern/slowtrails"
+    },
+    {
+      "label": "Kärnten Werbung – Slow Trails",
+      "url": "https://www.visitcarinthia.at/hiking/slow-trails/"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "raggaschlucht",
+  "type": "hike",
+  "name": "Rundwanderung Raggaschlucht",
+  "kind": "Klammwanderung",
+  "region": "Flattach / Mölltal",
+  "length_km": 3.4,
+  "duration_min": 120,
+  "ascent_m": 274,
+  "descent_m": 274,
+  "top_m": 942,
+  "difficulty": 1,
+  "start": "Parkplatz Schmelzhütten bzw. Tourismusbüro Flattach",
+  "round_trip": true,
+  "center": [
+    13.13,
+    46.93
+  ],
+  "bbox": [
+    13.11,
+    46.92,
+    13.16,
+    46.95
+  ],
+  "osm": {
+    "bbox": [
+      13.11,
+      46.92,
+      13.16,
+      46.95
+    ],
+    "route": "hiking",
+    "way_name": "Ragga",
+    "search": "Raggaschlucht",
+    "note": "Wege nach Name; keine Routen-Relation. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Holzstege durch die 800 m lange, bis 200 m tiefe Klamm im Nationalpark Hohe Tauern",
+    "Eintritt, kindertauglich"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Rundwanderung durch die Raggaschlucht",
+      "url": "https://www.bergwelten.com/t/w/22763"
+    }
+  ],
+  "updated": "2026-10-31"
+}

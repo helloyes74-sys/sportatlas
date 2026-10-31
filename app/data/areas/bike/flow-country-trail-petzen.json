@@ -1,0 +1,55 @@
+{
+  "id": "flow-country-trail-petzen",
+  "type": "bike",
+  "name": "Flow Country Trail Petzen",
+  "kind": "Flow Trail (MTB)",
+  "region": "Petzen / Feistritz ob Bleiburg",
+  "length_km": 11.5,
+  "duration_min": 40,
+  "ascent_m": 138,
+  "descent_m": 1000,
+  "top_m": 1530,
+  "difficulty": 2,
+  "start": "Bergstation Siebenhütten, Petzen-Bergbahn",
+  "end": "Talstation Petzen-Bergbahn",
+  "surface": "Gebauter Trail (Anleger, Wellen, Tables)",
+  "center": [
+    14.74,
+    46.52
+  ],
+  "bbox": [
+    14.7,
+    46.5,
+    14.78,
+    46.55
+  ],
+  "osm": {
+    "bbox": [
+      14.7,
+      46.5,
+      14.78,
+      46.55
+    ],
+    "route": "mtb",
+    "relation_ids": [
+      6482957
+    ],
+    "search": "Flow Country Trail Petzen",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Rund 1.000 Tiefenmeter Flow, für Einsteiger wie Könner; Auffahrt mit der Bergbahn",
+    "Von Diddie Schneider gebaut, einer der längsten Flow Trails Europas"
+  ],
+  "sources": [
+    {
+      "label": "Kärnten Werbung – Flow Country Trail Petzen",
+      "url": "https://www.kaernten.at/rad/mountainbike/flow-country-trail-petzen/"
+    },
+    {
+      "label": "Bergwelten – Flow Country Trail Petzen",
+      "url": "https://www.bergwelten.com/t/m/19391"
+    }
+  ],
+  "updated": "2026-10-31"
+}

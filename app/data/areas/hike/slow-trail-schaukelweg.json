@@ -1,0 +1,46 @@
+{
+  "id": "slow-trail-schaukelweg",
+  "type": "hike",
+  "name": "Slow Trail Schaukelweg (St.-Margarethen-Runde)",
+  "kind": "Slow Trail",
+  "region": "Reifnitz / Wörthersee",
+  "length_km": 6.2,
+  "duration_min": 120,
+  "difficulty": 2,
+  "start": "Reifnitz, Maria Wörth",
+  "round_trip": true,
+  "center": [
+    14.19,
+    46.6
+  ],
+  "bbox": [
+    14.16,
+    46.58,
+    14.22,
+    46.62
+  ],
+  "osm": {
+    "bbox": [
+      14.16,
+      46.58,
+      14.22,
+      46.62
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      5234372
+    ],
+    "search": "Slow Trail Schaukelweg Reifnitz",
+    "note": "Sankt Margarethen Runde W16. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Benannt nach der Schaukel mit Seeblick"
+  ],
+  "sources": [
+    {
+      "label": "Wörthersee Tourismus – Slow Trails",
+      "url": "https://www.woerthersee.com/wandern/slowtrails"
+    }
+  ],
+  "updated": "2026-10-31"
+}

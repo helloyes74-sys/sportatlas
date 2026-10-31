@@ -1,0 +1,38 @@
+{
+  "id": "gerlitzen",
+  "type": "ski",
+  "name": "Gerlitzen Alpe",
+  "region": "Villach / Ossiacher See",
+  "center": [13.912, 46.694],
+  "bbox": [13.84, 46.63, 14.0, 46.74],
+  "elevation": { "base_m": 529, "top_m": 1911 },
+  "pistes_km": { "total": 53, "easy": 8.65, "intermediate": 37.25, "difficult": 7, "routes": 12 },
+  "lifts": 24,
+  "snowmaking_pct": 95,
+  "season": { "from": "2026-12-04", "to": "2027-04-04", "hours": "08:10–16:30" },
+  "prices": { "season": "2026/27", "currency": "EUR", "day_adult": 73, "note": "Tageskarte Erwachsene laut HDsports; Kärntner Skipass ab 2 Tagen" },
+  "highlights": [
+    "Neu ab Oktober 2026: 10er-Kabinenbahn Kanzelbahn II ersetzt die alte 4er-Sesselbahn",
+    "Feuerbergabfahrt (Nr. 20) mit Speedcheck",
+    "Moserabfahrt mit Waveline",
+    "Klösterle Talabfahrt 7,5 km, täglich präpariert",
+    "Übungszentren Kanzelhöhe und Klösterle"
+  ],
+  "osm": {
+    "note": "Pisten, Lifte und Loipen werden per Overpass in dieser Bounding-Box geladen. Für ein Skigebiet mit OSM-Site-Relation kann stattdessen site_relation gesetzt werden.",
+    "bbox": [13.84, 46.63, 14.0, 46.74],
+    "site_relation": null
+  },
+  "links": {
+    "website": "https://www.gerlitzen.com",
+    "lift_status": "https://www.gerlitzen.com/winter/saisonzeiten",
+    "map_pdf": "https://www.gerlitzen.com/fileadmin/user_upload/winter/folder/gerlitzen_skimap_2025_winter_655x435_de_final_web.pdf"
+  },
+  "sources": [
+    { "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)", "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete" },
+    { "label": "schneehoehen.de – Gerlitzen (Pistenkm nach Farbe, Lifte, Beschneiung)", "url": "https://www.schneehoehen.de/skigebiete/info/gerlitzen" },
+    { "label": "PeakVisor – Gerlitzen (Stationshöhen)", "url": "https://peakvisor.com/ski-resort/gerlitzen.html" },
+    { "label": "Austria-Forum – Gerlitzen (Lifttypen, Längen)", "url": "https://austria-forum.org/af/AustriaWiki/Gerlitzen" }
+  ],
+  "updated": "2026-10-30"
+}

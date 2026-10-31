@@ -1,0 +1,50 @@
+{
+  "id": "garnitzenklamm",
+  "type": "hike",
+  "name": "Garnitzenklamm (Rundtour)",
+  "kind": "Klammwanderung",
+  "region": "Hermagor / Gailtal",
+  "length_km": 10.7,
+  "duration_min": 270,
+  "ascent_m": 854,
+  "descent_m": 844,
+  "top_m": 1188,
+  "difficulty": 2,
+  "start": "Parkplatz Klammeingang, Möderndorf bei Hermagor (610 m)",
+  "round_trip": true,
+  "center": [
+    13.37,
+    46.6
+  ],
+  "bbox": [
+    13.34,
+    46.57,
+    13.4,
+    46.63
+  ],
+  "osm": {
+    "bbox": [
+      13.34,
+      46.57,
+      13.4,
+      46.63
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      15487964
+    ],
+    "search": "Garnitzenklamm Geotrail",
+    "note": "Wanderweg 484 Garnitzenklamm zur Garnitzenalm (ÖAV Hermagor). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Geotrail durch die Klamm mit Brücken und Steiganlagen; Eintritt an der Klamm",
+    "Nur bei trockenem Wetter, Trittsicherheit nötig"
+  ],
+  "sources": [
+    {
+      "label": "Nassfeld-Pressegger See Tourismus – Garnitzenklamm",
+      "url": "https://nassfeld.at/en/Tour/Garnitzen-Gorge_t_35130"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "nassfeld",
+  "type": "ski",
+  "name": "Nassfeld",
+  "region": "Hermagor",
+  "center": [
+    13.27,
+    46.56
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    13.096,
+    46.44,
+    13.444,
+    46.68
+  ],
+  "pistes_km": {
+    "total": 110
+  },
+  "season": {
+    "from": "2026-12-04",
+    "to": "2027-04-04",
+    "hours": "08:30–16:15"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 73,
+    "note": "Tageskarte Erwachsene laut HDsports"
+  },
+  "highlights": [
+    "Größtes Skigebiet Kärntens, grenzüberschreitend mit Italien; lange Talabfahrt nach Tröpolach."
+  ],
+  "osm": {
+    "bbox": [
+      13.096,
+      46.44,
+      13.444,
+      46.68
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/nassfeld"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

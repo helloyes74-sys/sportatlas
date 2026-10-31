@@ -1,0 +1,39 @@
+{
+  "id": "bad-kleinkirchheim-loipen",
+  "type": "xc",
+  "name": "Römerloipe Bad Kleinkirchheim",
+  "region": "Nockberge",
+  "center": [
+    13.8,
+    46.81
+  ],
+  "bbox": [
+    13.72,
+    46.78,
+    13.9,
+    46.85
+  ],
+  "loipen_km": {
+    "total": 8
+  },
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Mit dem Kärntner Loipengütesiegel ausgezeichnet, 1.068–1.076 m."
+  ],
+  "osm": {
+    "bbox": [
+      13.72,
+      46.78,
+      13.9,
+      46.85
+    ],
+    "note": "Loipen: way[piste:type=nordic] in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufen",
+      "url": "https://www.kaernten.at/aktivitaeten/winter/langlaufen/"
+    }
+  ],
+  "updated": "2026-10-30"
+}

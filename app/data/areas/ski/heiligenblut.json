@@ -1,0 +1,54 @@
+{
+  "id": "heiligenblut",
+  "type": "ski",
+  "name": "Großglockner Heiligenblut",
+  "region": "Mölltal",
+  "center": [
+    12.84,
+    47.04
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    12.695,
+    46.94,
+    12.985,
+    47.14
+  ],
+  "pistes_km": {
+    "total": 55
+  },
+  "season": {
+    "from": "2026-12-04",
+    "to": "2027-04-05",
+    "hours": "09:00–16:00"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 47,
+    "note": "Tageskarte Erwachsene laut HDsports",
+    "dynamic": true
+  },
+  "highlights": [
+    "Dynamische Preise: früh online buchen ist günstiger (ab € 47)."
+  ],
+  "osm": {
+    "bbox": [
+      12.695,
+      46.94,
+      12.985,
+      47.14
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/grossglockner-heiligenblut"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

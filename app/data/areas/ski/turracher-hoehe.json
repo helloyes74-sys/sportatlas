@@ -1,0 +1,53 @@
+{
+  "id": "turracher-hoehe",
+  "type": "ski",
+  "name": "Turracher Höhe",
+  "region": "Nockberge",
+  "center": [
+    13.88,
+    46.92
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    13.764,
+    46.84,
+    13.996,
+    47.0
+  ],
+  "pistes_km": {
+    "total": 43
+  },
+  "season": {
+    "from": "2026-11-28",
+    "to": "2027-04-05",
+    "hours": "09:00–16:00"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 68.5,
+    "note": "Tageskarte Erwachsene laut HDsports"
+  },
+  "highlights": [
+    "Schneesicher auf rund 1.763 m, großes Fun-Angebot und Turracher See."
+  ],
+  "osm": {
+    "bbox": [
+      13.764,
+      46.84,
+      13.996,
+      47.0
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/turracher-hoehe"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

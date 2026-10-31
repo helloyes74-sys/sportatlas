@@ -1,0 +1,53 @@
+{
+  "id": "weinebene",
+  "type": "ski",
+  "name": "Weinebene",
+  "region": "Koralpe",
+  "center": [
+    15.0,
+    46.84
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    14.928,
+    46.79,
+    15.072,
+    46.89
+  ],
+  "pistes_km": {
+    "total": 22
+  },
+  "season": {
+    "from": "2026-11-27",
+    "to": "2027-03-21",
+    "hours": "09:00–16:00"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 28.5,
+    "note": "Tageskarte Erwachsene laut HDsports"
+  },
+  "highlights": [
+    "Günstigste Tageskarte unter den mittelgroßen Gebieten."
+  ],
+  "osm": {
+    "bbox": [
+      14.928,
+      46.79,
+      15.072,
+      46.89
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/weinebene"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

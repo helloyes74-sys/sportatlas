@@ -1,0 +1,49 @@
+{
+  "id": "petzen-rundmarsch",
+  "type": "hike",
+  "name": "Oberer Petzen-Rundmarsch (Feistritzer Spitze)",
+  "kind": "Rundwanderung",
+  "region": "Bleiburg / Petzen",
+  "length_km": 7.2,
+  "duration_min": 225,
+  "ascent_m": 628,
+  "descent_m": 628,
+  "top_m": 2113,
+  "difficulty": 2,
+  "start": "Bergstation Petzen-Bergbahn (1.571 m)",
+  "round_trip": true,
+  "center": [
+    14.75,
+    46.51
+  ],
+  "bbox": [
+    14.72,
+    46.49,
+    14.78,
+    46.53
+  ],
+  "osm": {
+    "bbox": [
+      14.72,
+      46.49,
+      14.78,
+      46.53
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      3046498
+    ],
+    "search": "Petzen Feistritzer Spitze Hochpetzen",
+    "note": "Hochpetzensteig P4. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Über die Feistritzer Spitze (Hochpetzen, 2.113 m) mit Blick ins Jauntal und nach Slowenien"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Oberer Petzen-Rundmarsch",
+      "url": "https://www.bergwelten.com/t/w/19319"
+    }
+  ],
+  "updated": "2026-10-31"
+}

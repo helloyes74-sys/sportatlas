@@ -1,0 +1,48 @@
+{
+  "id": "seebachtal-stappitzer-see",
+  "type": "hike",
+  "name": "Naturlehrweg Seebachtal zur Schwussnerhütte",
+  "kind": "Talwanderung",
+  "region": "Mallnitz / Nationalpark Hohe Tauern",
+  "length_km": 9.1,
+  "duration_min": 150,
+  "ascent_m": 150,
+  "top_m": 1320,
+  "difficulty": 1,
+  "start": "Mallnitz, Talstation Ankogelbahn",
+  "end": "Schwussnerhütte, zurück am selben Weg oder mit dem Tälerbus",
+  "center": [
+    13.19,
+    47
+  ],
+  "bbox": [
+    13.15,
+    46.98,
+    13.23,
+    47.02
+  ],
+  "osm": {
+    "bbox": [
+      13.15,
+      46.98,
+      13.23,
+      47.02
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      1958331
+    ],
+    "search": "Seebachtal Stappitzer See Schwussnerhütte",
+    "note": "Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Ebener Weg am Stappitzer See vorbei, Wasserfälle und Dreitausender-Kulisse"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Wanderung zur Schwussnerhütte über den Naturlehrweg Seebachtal",
+      "url": "https://www.bergwelten.com/t/w/22775"
+    }
+  ],
+  "updated": "2026-10-31"
+}

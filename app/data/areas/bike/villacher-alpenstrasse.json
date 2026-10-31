@@ -1,0 +1,49 @@
+{
+  "id": "villacher-alpenstrasse",
+  "type": "bike",
+  "name": "Villacher Alpenstraße (Rennrad-Anstieg)",
+  "kind": "Rennrad-Anstieg",
+  "region": "Villach → Rosstratte",
+  "length_km": 16.4,
+  "ascent_m": 1182,
+  "descent_m": 0,
+  "top_m": 1728,
+  "avg_grade": 7.2,
+  "max_grade": 16.1,
+  "difficulty": 4,
+  "start": "Villach-Möltschach, Mautstelle",
+  "end": "Rosstratte, Ende der Alpenstraße (1.728 m)",
+  "surface": "Asphalt (Mautstraße, Rad frei)",
+  "center": [
+    13.74,
+    46.59
+  ],
+  "bbox": [
+    13.66,
+    46.57,
+    13.84,
+    46.62
+  ],
+  "osm": {
+    "bbox": [
+      13.66,
+      46.57,
+      13.84,
+      46.62
+    ],
+    "route": "bicycle",
+    "way_name": "Villacher Alpenstra(ss|ß)e",
+    "search": "Villacher Alpenstraße",
+    "note": "Straße nach Name (keine Routen-Relation). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Gleichmäßiger Anstieg mit Aussichtsplätzen und Rote Wand"
+  ],
+  "sources": [
+    {
+      "label": "climbfinder – Villacher Alpenstraße from Villach",
+      "url": "https://climbfinder.com/en/climbs/villacher-alpenstrasse-villacher-alpenarena"
+    }
+  ],
+  "updated": "2026-10-31"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "nassfeld-langlauf",
+  "type": "xc",
+  "name": "Langlaufzentrum Nassfeld-Pressegger See",
+  "region": "Gail-, Gitsch- und Lesachtal",
+  "center": [
+    13.37,
+    46.62
+  ],
+  "bbox": [
+    13.2,
+    46.55,
+    13.5,
+    46.7
+  ],
+  "loipen_km": {
+    "total": 130
+  },
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Regionales Netz mit zwei Höhenloipen und Nordic Competence Center mit Biathlon-Übungszentrum."
+  ],
+  "osm": {
+    "bbox": [
+      13.2,
+      46.55,
+      13.5,
+      46.7
+    ],
+    "note": "Loipen: way[piste:type=nordic] in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "schneehoehen.de – Abseits der Pisten am Nassfeld",
+      "url": "https://www.schneehoehen.de/artikel/skitouren-schneeschuhwandern-tipps-nassfeld"
+    }
+  ],
+  "updated": "2026-10-30"
+}

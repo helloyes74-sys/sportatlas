@@ -1,0 +1,44 @@
+{
+  "id": "slow-trail-suedufer-millstaetter-see",
+  "type": "hike",
+  "name": "Slow Trail Südufer Millstätter See",
+  "kind": "Slow Trail",
+  "region": "Seeboden / Millstätter See",
+  "length_km": 4.4,
+  "difficulty": 1,
+  "start": "Seeboden",
+  "round_trip": true,
+  "center": [
+    13.52,
+    46.79
+  ],
+  "bbox": [
+    13.49,
+    46.77,
+    13.56,
+    46.81
+  ],
+  "osm": {
+    "bbox": [
+      13.49,
+      46.77,
+      13.56,
+      46.81
+    ],
+    "route": "hiking",
+    "way_name": "Slow.?Trail",
+    "search": "Slow Trail Südufer Millstätter See Seeboden",
+    "note": "Slow Trail in OSM nicht als Route erfasst. Stand 31.10.2026 – `none` entfernen, sobald jemand die Route in OSM einträgt. Wege nach Name, Bounding-Box Südufer. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt",
+    "none": true
+  },
+  "highlights": [
+    "Versteckte Buchten, Sandstrände, Hängematten und die Tafeln der „Seebegegnungen“"
+  ],
+  "sources": [
+    {
+      "label": "Kärnten Werbung – Slow Trails",
+      "url": "https://www.visitcarinthia.at/hiking/slow-trails/"
+    }
+  ],
+  "updated": "2026-10-31"
+}

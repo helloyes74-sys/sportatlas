@@ -1,0 +1,50 @@
+{
+  "id": "mirnock-rundweg",
+  "type": "hike",
+  "name": "Rundwanderweg zum Mirnock",
+  "kind": "Gipfelwanderung",
+  "region": "Millstätter See / Döbriach",
+  "length_km": 12.4,
+  "duration_min": 300,
+  "ascent_m": 945,
+  "descent_m": 945,
+  "top_m": 2092,
+  "difficulty": 2,
+  "start": "Haus Spieler bei Döbriach (wenige Parkplätze)",
+  "round_trip": true,
+  "center": [
+    13.7,
+    46.76
+  ],
+  "bbox": [
+    13.65,
+    46.73,
+    13.74,
+    46.79
+  ],
+  "osm": {
+    "bbox": [
+      13.65,
+      46.73,
+      13.74,
+      46.79
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      3922800,
+      12659331
+    ],
+    "search": "Mirnock",
+    "note": "Wanderwege 187 und 188 Döbriach – Mirnock. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Aussichtsberg hoch über dem Millstätter See, Sage vom Riesen Mirnock"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Rundwanderweg zum Mirnock",
+      "url": "https://www.bergwelten.com/t/w/49809"
+    }
+  ],
+  "updated": "2026-10-31"
+}

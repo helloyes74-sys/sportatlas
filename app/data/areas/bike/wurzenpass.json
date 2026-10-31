@@ -1,0 +1,50 @@
+{
+  "id": "wurzenpass",
+  "type": "bike",
+  "name": "Wurzenpass von Riegersdorf",
+  "kind": "Rennrad-Anstieg",
+  "region": "Riegersdorf → Wurzenpass (Grenze Slowenien)",
+  "length_km": 7,
+  "ascent_m": 562,
+  "descent_m": 0,
+  "top_m": 1071,
+  "avg_grade": 8.1,
+  "max_grade": 21,
+  "difficulty": 3,
+  "start": "Riegersdorf bei Arnoldstein",
+  "end": "Wurzenpass (1.071 m)",
+  "surface": "Asphalt (B 109)",
+  "center": [
+    13.75,
+    46.54
+  ],
+  "bbox": [
+    13.71,
+    46.51,
+    13.8,
+    46.57
+  ],
+  "osm": {
+    "bbox": [
+      13.71,
+      46.51,
+      13.8,
+      46.57
+    ],
+    "route": "bicycle",
+    "way_ref": "B ?109",
+    "search": "Wurzenpass",
+    "note": "Straße B 109 (ref) oder Wege mit „Wurzenpass“ im Namen in der Bounding-Box. Wurzenpass Straße B 109 in der Bounding-Box. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt",
+    "way_name": "Wurzenpa(ss|ß)"
+  },
+  "highlights": [
+    "Kurz, aber mit Rampen bis 18 % laut Beschilderung – steilster Pass Kärntens"
+  ],
+  "sources": [
+    {
+      "label": "climbfinder – Wurzenpass from Riegersdorf",
+      "url": "https://climbfinder.com/en/climbs/wurzenpass-riegersdorf"
+    }
+  ],
+  "updated": "2026-10-31"
+}

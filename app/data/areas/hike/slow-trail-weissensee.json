@@ -1,0 +1,44 @@
+{
+  "id": "slow-trail-weissensee",
+  "type": "hike",
+  "name": "Slow Trail Weissensee",
+  "kind": "Slow Trail",
+  "region": "Naturpark Weissensee",
+  "length_km": 8.8,
+  "difficulty": 1,
+  "start": "Neusach (Ronacherfels) oder umgekehrt vom Ostufer",
+  "end": "Ostufer; Rückweg mit dem Schiff MS Alpenperle möglich",
+  "center": [
+    13.33,
+    46.7
+  ],
+  "bbox": [
+    13.27,
+    46.68,
+    13.42,
+    46.73
+  ],
+  "osm": {
+    "bbox": [
+      13.27,
+      46.68,
+      13.42,
+      46.73
+    ],
+    "route": "hiking",
+    "way_name": "Slow.?Trail",
+    "search": "Slow Trail Weissensee",
+    "note": "Slow Trail in OSM nicht als Route erfasst, Uferweg ohne Namen. Stand 31.10.2026 – `none` entfernen, sobald jemand die Route in OSM einträgt. Wege nach Name, Bounding-Box Weissensee. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt",
+    "none": true
+  },
+  "highlights": [
+    "Fast durchgehend am naturbelassenen Südufer, Buchten und Rastplätze"
+  ],
+  "sources": [
+    {
+      "label": "Kärnten Werbung – Slow Trails",
+      "url": "https://www.visitcarinthia.at/hiking/slow-trails/"
+    }
+  ],
+  "updated": "2026-10-31"
+}

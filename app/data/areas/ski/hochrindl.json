@@ -1,0 +1,53 @@
+{
+  "id": "hochrindl",
+  "type": "ski",
+  "name": "Hochrindl",
+  "region": "Gurktaler Alpen",
+  "center": [
+    14.07,
+    46.9
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    13.998,
+    46.85,
+    14.142,
+    46.95
+  ],
+  "pistes_km": {
+    "total": 20.6
+  },
+  "season": {
+    "from": "2026-12-05",
+    "to": "2027-03-14",
+    "hours": "09:00–16:00"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 49,
+    "note": "Tageskarte Erwachsene laut HDsports"
+  },
+  "highlights": [
+    "Mit Höhenloipe für Langläufer."
+  ],
+  "osm": {
+    "bbox": [
+      13.998,
+      46.85,
+      14.142,
+      46.95
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/hochrindl"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

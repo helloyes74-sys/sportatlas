@@ -1,0 +1,29 @@
+{
+  "id": "slow-trail-bleistaetter-moor",
+  "type": "hike",
+  "name": "Slow Trail Bleistätter Moor",
+  "kind": "Slow Trail",
+  "region": "Ossiacher See / Steindorf",
+  "length_km": 7.1,
+  "difficulty": 1,
+  "start": "Torbogen am Wegbeginn, Ostufer Ossiacher See (Steindorf)",
+  "round_trip": true,
+  "center": [13.99, 46.7],
+  "bbox": [13.96, 46.68, 14.03, 46.72],
+  "osm": {
+    "bbox": [13.96, 46.68, 14.03, 46.72],
+    "route": "hiking",
+    "relation_ids": [12326166],
+    "search": "Slow Trail Bleistätter Moor",
+    "note": "OSM-Relation route=foot „Slow Trail durch das artenreiche Bleistätter Moor“ (distance 7,1 km). Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex)."
+  },
+  "highlights": [
+    "Renaturiertes Moor am Ostufer mit Aussichtstürmen und Vogelbeobachtung",
+    "Im Sommer Schiffsverbindung Ossiach – Steindorf (Mitte Mai bis Mitte Oktober)"
+  ],
+  "sources": [
+    { "label": "Kärnten Werbung – Slow Trails", "url": "https://www.visitcarinthia.at/hiking/slow-trails/" },
+    { "label": "OpenStreetMap – Relation 12326166 (Länge)", "url": "https://www.openstreetmap.org/relation/12326166" }
+  ],
+  "updated": "2026-10-31"
+}

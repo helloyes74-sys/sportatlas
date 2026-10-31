@@ -1,0 +1,49 @@
+{
+  "id": "nockalmstrasse-eisentalhoehe",
+  "type": "bike",
+  "name": "Nockalmstraße: Kremsbrücke – Eisentalhöhe",
+  "kind": "Rennrad-Anstieg",
+  "region": "Kremsbrücke → Innerkrems → Eisentalhöhe",
+  "length_km": 17.8,
+  "ascent_m": 1101,
+  "descent_m": 0,
+  "top_m": 2049,
+  "avg_grade": 6.2,
+  "max_grade": 10.6,
+  "difficulty": 3,
+  "start": "Kremsbrücke (Liesertal)",
+  "end": "Eisentalhöhe (2.049 m), höchster Punkt der Nockalmstraße",
+  "surface": "Asphalt (Mautstraße, Mai–Oktober)",
+  "center": [
+    13.72,
+    46.97
+  ],
+  "bbox": [
+    13.62,
+    46.94,
+    13.82,
+    47
+  ],
+  "osm": {
+    "bbox": [
+      13.62,
+      46.94,
+      13.82,
+      47
+    ],
+    "route": "bicycle",
+    "way_name": "Nockalmstra(ss|ß)e",
+    "search": "Nockalmstraße",
+    "note": "Straße nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Gleichmäßige Rampe durch den Biosphärenpark Nockberge, danach Abfahrt nach Ebene Reichenau möglich"
+  ],
+  "sources": [
+    {
+      "label": "climbfinder – Eisenthalhöhe from Kremsbrücke",
+      "url": "https://climbfinder.com/en/climbs/eisenthalhohe-kremsbrucke"
+    }
+  ],
+  "updated": "2026-10-31"
+}

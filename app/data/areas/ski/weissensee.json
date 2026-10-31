@@ -1,0 +1,53 @@
+{
+  "id": "weissensee",
+  "type": "ski",
+  "name": "Weissensee",
+  "region": "Naggler Alm",
+  "center": [
+    13.33,
+    46.71
+  ],
+  "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
+  "bbox": [
+    13.287,
+    46.68,
+    13.373,
+    46.74
+  ],
+  "pistes_km": {
+    "total": 6
+  },
+  "season": {
+    "from": "2026-12-18",
+    "to": "2027-03-07",
+    "hours": "09:00–16:15"
+  },
+  "prices": {
+    "season": "2026/27",
+    "currency": "EUR",
+    "day_adult": 49.9,
+    "note": "Tageskarte Erwachsene laut HDsports"
+  },
+  "highlights": [
+    "Kleines Skigebiet am Naturpark Weissensee."
+  ],
+  "osm": {
+    "bbox": [
+      13.287,
+      46.68,
+      13.373,
+      46.74
+    ],
+    "site_relation": null
+  },
+  "links": {
+    "info": "https://www.hdsports.org/skifahren/weissensee"
+  },
+  "sources": [
+    {
+      "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
+      "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    }
+  ],
+  "updated": "2026-10-30"
+}

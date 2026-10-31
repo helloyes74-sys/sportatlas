@@ -1,0 +1,44 @@
+{
+  "id": "villacher-alpenarena",
+  "type": "xc",
+  "name": "Villacher Alpen Arena",
+  "region": "Villach",
+  "center": [
+    13.851,
+    46.609
+  ],
+  "bbox": [
+    13.83,
+    46.595,
+    13.872,
+    46.625
+  ],
+  "loipen_km": {},
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Langlauf- und Skirollerstrecke, auch im Sommer nutzbar.",
+    "Skiroller- und Langlaufstrecke am Eingang zum Naturpark Dobratsch, Runden 1,5 km (leicht/mittel)"
+  ],
+  "osm": {
+    "bbox": [
+      13.83,
+      46.595,
+      13.872,
+      46.625
+    ],
+    "note": "Loipen in OSM nicht erfasst (piste:type=nordic fehlt). Stand 31.10.2026 – `none` entfernen, sobald jemand sie einträgt.",
+    "none": true
+  },
+  "sources": [
+    {
+      "label": "kaernten.at – Langlaufen in Kärnten",
+      "url": "https://www.kaernten.at/tipps/winterurlaub/langlaufen-in-kaernten/"
+    },
+    {
+      "label": "Region Villach Tourismus – Villach Alpen Arena Medium",
+      "url": "https://www.visitvillach.at/en/tours/villach-alpen-arena-medium.html"
+    }
+  ],
+  "updated": "2026-10-31",
+  "center_note": "Koordinaten der Loipe laut visitvillach.at (46.6092, 13.8508)"
+}

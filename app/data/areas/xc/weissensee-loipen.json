@@ -1,0 +1,39 @@
+{
+  "id": "weissensee-loipen",
+  "type": "xc",
+  "name": "Loipennetz Weissensee",
+  "region": "Naturpark Weissensee",
+  "center": [
+    13.36,
+    46.71
+  ],
+  "bbox": [
+    13.26,
+    46.68,
+    13.46,
+    46.74
+  ],
+  "loipen_km": {
+    "total": 55
+  },
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Rund 55 km Loipen direkt am und um den See."
+  ],
+  "osm": {
+    "bbox": [
+      13.26,
+      46.68,
+      13.46,
+      46.74
+    ],
+    "note": "Loipen: way[piste:type=nordic] in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "Bergwelten – Franz-Josephs-Höhe am Weissensee",
+      "url": "https://www.bergwelten.com/t/l/22738"
+    }
+  ],
+  "updated": "2026-10-30"
+}

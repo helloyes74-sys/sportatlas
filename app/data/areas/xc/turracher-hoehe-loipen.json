@@ -1,0 +1,41 @@
+{
+  "id": "turracher-hoehe-loipen",
+  "type": "xc",
+  "name": "Loipen Turracher See",
+  "region": "Turracher Höhe",
+  "center": [
+    13.875,
+    46.915
+  ],
+  "bbox": [
+    13.82,
+    46.89,
+    13.93,
+    46.94
+  ],
+  "loipen_km": {},
+  "technique": "klassisch + Skating",
+  "highlights": [
+    "Schneesicherste Loipen Kärntens, Dezember bis April. Tageskarte € 6, mit Kärnten Card gratis."
+  ],
+  "osm": {
+    "bbox": [
+      13.82,
+      46.89,
+      13.93,
+      46.94
+    ],
+    "note": "Loipen: way[piste:type=nordic] in der Bounding-Box"
+  },
+  "sources": [
+    {
+      "label": "Kärnten Card – Loipen Turracher See",
+      "url": "https://www.kaerntencard.at/winter/en/betriebe/cross-country-ski-trails-turracher-lake/"
+    }
+  ],
+  "updated": "2026-10-30",
+  "prices": {
+    "currency": "EUR",
+    "day_adult": 6
+  }
+}

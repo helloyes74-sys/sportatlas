@@ -1,0 +1,49 @@
+{
+  "id": "wolayersee",
+  "type": "hike",
+  "name": "Wolayerseehütte von der Unteren Valentinalm",
+  "kind": "Hüttenwanderung",
+  "region": "Lesachtal / Karnische Alpen",
+  "length_km": 6.6,
+  "duration_min": 210,
+  "ascent_m": 1000,
+  "top_m": 1960,
+  "difficulty": 2,
+  "start": "Untere Valentinalm, Plöckenpass-Straße",
+  "end": "Wolayerseehütte (1.960 m), zurück am selben Weg",
+  "center": [
+    12.87,
+    46.62
+  ],
+  "bbox": [
+    12.84,
+    46.6,
+    12.9,
+    46.64
+  ],
+  "osm": {
+    "bbox": [
+      12.84,
+      46.6,
+      12.9,
+      46.64
+    ],
+    "route": "hiking",
+    "relation_ids": [
+      3315124
+    ],
+    "clip": true,
+    "search": "Wolayersee Valentinalm",
+    "note": "Wanderweg 438, zugeschnitten. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt"
+  },
+  "highlights": [
+    "Türkisgrüner Bergsee unter den Wänden der Hohen Warte, Fossilien am Weg"
+  ],
+  "sources": [
+    {
+      "label": "Bergwelten – Wanderung zur Wolayerseehütte von der Unteren Valentinalm",
+      "url": "https://www.bergwelten.com/t/w/7479"
+    }
+  ],
+  "updated": "2026-10-31"
+}
