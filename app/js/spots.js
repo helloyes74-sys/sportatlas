@@ -10,6 +10,13 @@ export const DEFAULT_RADIUS = 20;
 const ROUTE_UNIT = { ski: ["Gebiet", "Gebiete"], xc: ["Loipe", "Loipen"], bike: ["Route", "Routen"], hike: ["Route", "Routen"] };
 const SURFACE = { clay: "Sand", grass: "Rasen", artificial_turf: "Kunstrasen", acrylic: "Hartplatz", asphalt: "Asphalt", concrete: "Beton", tartan: "Tartan", sand: "Sand", artificial_grass: "Kunstrasen", carpet: "Teppich", paving_stones: "Pflaster", gravel: "Kies", wood: "Holz", rubber: "Gummi", ice: "Eis" };
 
+/** Nur http(s)-Adressen als Link zulassen: Website-Angaben kommen ungeprüft aus OSM (kein „javascript:“ o. Ä.). */
+export function safeUrl(u) {
+  const v = String(u || "").trim();
+  if (!v) return null;
+  try { const url = new URL(/^[a-z][a-z0-9+.-]*:/i.test(v) ? v : "https://" + v); return /^https?:$/.test(url.protocol) ? url.href : null; } catch { return null; }
+}
+
 /** Entfernung in km vom Standort [lon, lat] zu einem Ort {lon, lat} oder einem Gebiet {center}. */
 export const kmFrom = (here, p) => (here ? haversine(here, p.center || [p.lon, p.lat]) / 1000 : null);
 
@@ -57,6 +64,7 @@ export function renderSpotDetail(p, label, group, { here, stand }) {
   const d = kmFrom(here, p);
   const cell = (k, v) => (v == null || v === "" ? "" : `<div><small>${k}</small><b>${esc(v)}</b></div>`);
   const ll = `${p.lat},${p.lon}`;
+  const web = safeUrl(p.web);
   const osmLink = p.osm?.[0] ? `https://www.openstreetmap.org/${({ n: "node", w: "way", r: "relation" })[p.osm[0][0]]}/${p.osm[0].slice(1)}` : null;
   return `
     <span class="tag">${esc(label)} · ${esc(group)}</span>
@@ -65,8 +73,8 @@ export function renderSpotDetail(p, label, group, { here, stand }) {
     ${p.name ? "" : `<p class="sub">In OpenStreetMap ohne Namen eingetragen – oft ein Gemeinde- oder Vereinsplatz.</p>`}
     <section id="wx"><h3><span>Wetter</span><span id="wxstate">lädt …</span></h3><div class="wx" id="wxgrid"></div><p class="wx-note">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener" style="color:inherit">Open-Meteo.com</a></p></section>
     <section><h3><span>Links</span></h3><div class="links">
-      ${p.web ? `<a class="btn acc" href="${esc(p.web)}" target="_blank" rel="noopener">Website ↗</a>` : ""}
-      <a class="btn ${p.web ? "" : "acc"}" href="https://www.google.com/maps/dir/?api=1&destination=${ll}" target="_blank" rel="noopener">Route dorthin ↗</a>
+      ${web ? `<a class="btn acc" href="${esc(web)}" target="_blank" rel="noopener noreferrer">Website ↗</a>` : ""}
+      <a class="btn ${web ? "" : "acc"}" href="https://www.google.com/maps/dir/?api=1&destination=${ll}" target="_blank" rel="noopener">Route dorthin ↗</a>
       <button class="btn" id="btnShare">Link teilen</button>
     </div></section>
     <p class="src">Ort aus OpenStreetMap (© OpenStreetMap-Mitwirkende, ODbL), Stand ${esc(stand || "")}${osmLink ? ` · <a href="${osmLink}" target="_blank" rel="noopener">Eintrag ansehen oder ergänzen</a>` : ""}. Fehlt ein Platz, kann man ihn in OpenStreetMap eintragen; er erscheint dann nach dem nächsten monatlichen Abruf.</p>`;
