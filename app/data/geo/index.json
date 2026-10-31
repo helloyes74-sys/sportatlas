@@ -207,7 +207,7 @@
     "file": "geo/bike/malta-hochalmstrasse.geojson",
     "features": 1,
     "fetched": "2026-10-31",
-    "area_sig": "[{\"bbox\":[13.3,46.99,13.52,47.09],\"route\":\"bicycle\",\"way_name\":\"Malta.?Hochalm\",\"search\":\"Malta Hochalmstraße Kölnbrein\",\"note\":\"Straße nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.3,46.99,13.52,47.09]]"
+    "area_sig": "[{\"bbox\":[13.3,46.99,13.52,47.09],\"route\":\"bicycle\",\"way_name\":\"Malta.?Hochalm\",\"search\":\"Malta Hochalmstraße Kölnbrein\",\"note\":\"Tunnel (Portale aus OSM-Tags) werden beim Profil überbrückt – Neuladen nötig. Straße nach Name. Reihenfolge: relation_ids › way_name/way_ref › relation_name (Regex). clip schneidet an der Bounding-Box ab. Kandidaten: „Routen prüfen.command“ → Routen-Check.txt\"},[13.3,46.99,13.52,47.09]]"
   },
   "bike/flow-country-trail-petzen": {
     "file": "geo/bike/flow-country-trail-petzen.geojson",
