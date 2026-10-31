@@ -12,7 +12,7 @@
     13.764,
     46.84,
     13.996,
-    47.0
+    47
   ],
   "pistes_km": {
     "total": 43
@@ -36,18 +36,33 @@
       13.764,
       46.84,
       13.996,
-      47.0
+      47
     ],
     "site_relation": null
   },
   "links": {
-    "info": "https://www.hdsports.org/skifahren/turracher-hoehe"
+    "info": "https://www.hdsports.org/skifahren/turracher-hoehe",
+    "snow_report": "https://www.schneehoehen.de/skigebiete/schneebericht/turracher-hoehe",
+    "webcam": "https://www.schneehoehen.de/skigebiete/webcams/turracher-hoehe",
+    "website": "https://www.turracherhoehe.at"
   },
   "sources": [
     {
       "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
       "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    },
+    {
+      "label": "schneehoehen.de – Schneebericht und Webcams",
+      "url": "https://www.schneehoehen.de/skigebiete/schneebericht/turracher-hoehe"
+    },
+    {
+      "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
+      "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
     }
   ],
-  "updated": "2026-10-30"
+  "updated": "2026-10-31",
+  "elevation": {
+    "base_m": 1400,
+    "top_m": 2205
+  }
 }

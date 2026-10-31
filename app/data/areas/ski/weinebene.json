@@ -4,7 +4,7 @@
   "name": "Weinebene",
   "region": "Koralpe",
   "center": [
-    15.0,
+    15,
     46.84
   ],
   "center_note": "ungefähr, per Hand gesetzt – bitte prüfen",
@@ -41,13 +41,22 @@
     "site_relation": null
   },
   "links": {
-    "info": "https://www.hdsports.org/skifahren/weinebene"
+    "info": "https://www.hdsports.org/skifahren/weinebene",
+    "website": "https://www.weinebene.at"
   },
   "sources": [
     {
       "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
       "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    },
+    {
+      "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
+      "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
     }
   ],
-  "updated": "2026-10-30"
+  "updated": "2026-10-31",
+  "elevation": {
+    "base_m": 1580,
+    "top_m": 1886
+  }
 }

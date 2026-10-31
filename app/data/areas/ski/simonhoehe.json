@@ -41,13 +41,28 @@
     "site_relation": null
   },
   "links": {
-    "info": "https://www.hdsports.org/skifahren/simonhoehe"
+    "info": "https://www.hdsports.org/skifahren/simonhoehe",
+    "snow_report": "https://www.schneehoehen.de/skigebiete/schneebericht/simonhoehe",
+    "webcam": "https://www.schneehoehen.de/skigebiete/webcams/simonhoehe",
+    "website": "https://www.simonhoehe.at"
   },
   "sources": [
     {
       "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
       "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    },
+    {
+      "label": "schneehoehen.de – Schneebericht und Webcams",
+      "url": "https://www.schneehoehen.de/skigebiete/schneebericht/simonhoehe"
+    },
+    {
+      "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
+      "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
     }
   ],
-  "updated": "2026-10-31"
+  "updated": "2026-10-31",
+  "elevation": {
+    "base_m": 1042,
+    "top_m": 1340
+  }
 }

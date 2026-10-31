@@ -32,7 +32,7 @@ export function renderList(areas, selectedId, { onlyFavs = false, distances = nu
   const list = onlyFavs ? areas.filter((a) => favs.includes(a.id) || all[a.id]?.stars) : areas;
   if (!list.length) return onlyFavs ? `<p class="empty">Noch nichts gemerkt. Im Detailblatt eines Gebiets auf ☆ tippen oder Sterne vergeben.</p>` : `<p class="empty">Nichts gefunden.</p>`;
   return list.map((a) => {
-    const s = a.type === "ski" ? seasonState(a) : null;
+    const s = a.status?.text ? { cls: "off", text: a.status.state === "closed" ? "Außer Betrieb" : a.status.text } : a.type === "ski" ? seasonState(a) : null;
     const n = all[a.id];
     return `<button class="item" role="listitem" data-area="${a.id}" aria-pressed="${a.id === selectedId}">
       <span class="nm">${favs.includes(a.id) ? '<span class="favmark" aria-label="gemerkt">★</span>' : ""}${esc(a.name)}</span><span class="kv">${keyFacts(a)}</span>
@@ -85,10 +85,14 @@ export function renderDetail(a, geo, { selectedFeature, hikeMode, sectors = [], 
   const prof = selectedFeature ? profileBlock(selectedFeature, a.type) : (feats.length ? `<section><h3><span>Profil</span></h3><p class="sub">Linie in der Liste oder auf der Karte antippen, dann erscheint hier ihr Gefälle-Profil.</p></section>` : "");
   return `
     <span class="tag">${esc(kindLabel)} · ${esc(a.region || "")}</span>
+    ${a.status?.text ? `<p class="sub status-${esc(a.status.state)}" style="font-weight:600">${esc(a.status.text)}</p>` : ""}
     <div class="headrow"><h2>${esc(a.name)}</h2><button class="favbtn" id="favBtn" aria-pressed="${fav}" title="${fav ? "Aus der Merkliste nehmen" : "Merken"}">${fav ? "★" : "☆"}</button></div>
     ${statsFor(a)}
     ${sectors.length ? `<section><h3><span>Sektoren</span><span>Kamerafahrt</span></h3><div class="chips" id="sectorChips">${sectors.map((s) => `<button data-sector="${s.id}" aria-pressed="${s.id === activeSector}" title="${s.count} Linien${s.top_m ? ` · bis ${s.top_m} m` : ""}">${esc(s.name)}</button>`).join("")}<button data-sector="tour" id="btnTour" aria-pressed="false" title="Langsame Drehung um den Ausschnitt; jede Berührung stoppt">⟳ Rundflug</button></div></section>` : ""}
     ${a.highlights?.length ? `<section><h3><span>Besonderheiten</span></h3><ul class="hl">${a.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul></section>` : ""}
+    ${a.type === "ski" ? `<section id="snow"><h3><span>Schneelage</span><span id="snowstate">lädt …</span></h3><div class="stats" id="snowgrid"></div>
+      <div class="links">${a.links?.snow_report ? `<a class="btn" href="${esc(a.links.snow_report)}" target="_blank" rel="noopener">Schneebericht ↗</a>` : ""}${a.links?.webcam ? `<a class="btn" href="${esc(a.links.webcam)}" target="_blank" rel="noopener">Webcams ↗</a>` : ""}${a.links?.lift_status ? `<a class="btn" href="${esc(a.links.lift_status)}" target="_blank" rel="noopener">Offene Lifte ↗</a>` : ""}</div>
+      <p class="wx-note">Schneedecke und Neuschnee aus dem Wettermodell (Open-Meteo), kein Pistenbericht – der Betreiber meldet, was wirklich offen ist.</p></section>` : ""}
     <section id="wx"><h3><span>Wetter${a.type === "ski" && a.elevation?.top_m ? ` am Berg (${a.elevation.top_m} m)` : ""}</span><span id="wxstate">lädt …</span></h3><div class="wx" id="wxgrid"></div><p class="wx-note">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener" style="color:inherit">Open-Meteo.com</a></p></section>
     ${prof}
     ${featureList(a, feats, selectedFeature, hikeMode)}
@@ -134,6 +138,7 @@ const liftLabel = (t) => LIFT[t] || t || "Lift";
 function featureList(a, feats, selected, hikeMode) {
   if (!feats.length) {
     const route = a.type === "bike" || a.type === "hike";
+    if (a.osm?.none) return `<section><h3><span>Linien aus OpenStreetMap</span></h3><p class="empty" style="padding:0">In OpenStreetMap ist der Verlauf dieser Route nicht als Route eingetragen. Die Kennzahlen oben stammen aus der verlinkten Tourenbeschreibung; die Karte zeigt den Startbereich.</p></section>`;
     return `<section><h3><span>Linien aus OpenStreetMap</span></h3><p class="empty" style="padding:0">${route
       ? "Der Verlauf dieser Route ist noch nicht geladen (oder in OpenStreetMap nicht als Route eingetragen). Kennzahlen oben stammen aus der verlinkten Tourenbeschreibung; die Karte zeigt den Startbereich."
       : "Noch keine Geodaten für dieses Gebiet."} Zum Nachladen am Mac „Daten laden.command“ doppelklicken (entspricht <code>npm run fetch -- ${esc(a.id)}</code> und <code>npm run elevation -- ${esc(a.id)}</code>).</p></section>`;
@@ -185,6 +190,12 @@ function featureList(a, feats, selected, hikeMode) {
     out.push("</section>");
   }
   return out.join("");
+}
+
+export function renderSnow(top, base, a) {
+  const cell = (k, v, sub) => `<div><small>${k}</small><b>${v}</b>${sub ? `<small>${sub}</small>` : ""}</div>`;
+  const cm = (v) => (v == null ? "–" : v + " cm");
+  return `${cell(`Berg ${a.elevation?.top_m ? a.elevation.top_m + " m" : ""}`, cm(top?.depth_cm), top?.temp != null ? Math.round(top.temp) + " °C" : "")}${base ? cell(`Tal ${a.elevation?.base_m ? a.elevation.base_m + " m" : ""}`, cm(base.depth_cm), base.temp != null ? Math.round(base.temp) + " °C" : "") : ""}${cell("Neuschnee 72 h", top ? fmtNum(top.new_72h_cm, top.new_72h_cm % 1 ? 1 : 0) + " cm" : "–")}`;
 }
 
 export function renderWeather(days) {

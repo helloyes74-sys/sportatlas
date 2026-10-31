@@ -38,3 +38,31 @@ export async function forecast([lon, lat], elevation) {
 }
 
 export const weekday = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("de-AT", { weekday: "short" });
+
+/**
+ * Schneelage aus dem Wettermodell: aktuelle Schneedecke (cm) an einem Punkt in gegebener Höhe sowie
+ * Neuschnee der letzten 72 h. Modellwerte, kein Pistenbericht – aber eine ehrliche Orientierung.
+ */
+export async function snowNow([lon, lat], elevation) {
+  const key = `snow:${lat.toFixed(2)},${lon.toFixed(2)},${elevation || ""}`;
+  if (mem.has(key)) return mem.get(key);
+  const u = new URL("https://api.open-meteo.com/v1/forecast");
+  u.searchParams.set("latitude", lat.toFixed(4));
+  u.searchParams.set("longitude", lon.toFixed(4));
+  if (elevation) u.searchParams.set("elevation", String(Math.round(elevation)));
+  u.searchParams.set("current", "snow_depth,temperature_2m");
+  u.searchParams.set("daily", "snowfall_sum");
+  u.searchParams.set("past_days", "3");
+  u.searchParams.set("forecast_days", "1");
+  u.searchParams.set("timezone", "Europe/Vienna");
+  const p = fetch(u).then((r) => { if (!r.ok) throw new Error(`Open-Meteo ${r.status}`); return r.json(); })
+    .then((j) => ({
+      depth_cm: Math.round((j.current?.snow_depth || 0) * 100),
+      temp: j.current?.temperature_2m,
+      new_72h_cm: Math.round((j.daily?.snowfall_sum || []).slice(0, 3).reduce((s, v) => s + (v || 0), 0) * 10) / 10,
+      time: j.current?.time,
+    }));
+  mem.set(key, p);
+  p.catch(() => mem.delete(key));
+  return p;
+}

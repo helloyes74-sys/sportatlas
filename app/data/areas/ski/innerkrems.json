@@ -41,13 +41,31 @@
     "site_relation": null
   },
   "links": {
-    "info": "https://www.hdsports.org/skifahren/innerkrems"
+    "info": "https://www.hdsports.org/skifahren/innerkrems",
+    "snow_report": "https://www.schneehoehen.de/skigebiete/schneebericht/innerkrems",
+    "webcam": "https://www.schneehoehen.de/skigebiete/webcams/innerkrems"
   },
   "sources": [
     {
       "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
       "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    },
+    {
+      "label": "schneehoehen.de – Schneebericht und Webcams",
+      "url": "https://www.schneehoehen.de/skigebiete/schneebericht/innerkrems"
+    },
+    {
+      "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
+      "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
     }
   ],
-  "updated": "2026-10-30"
+  "updated": "2026-10-31",
+  "elevation": {
+    "base_m": 1550,
+    "top_m": 2200
+  },
+  "status": {
+    "state": "closed",
+    "text": "Derzeit außer Betrieb (laut skiresort.de, Stand 31.10.2026)"
+  }
 }

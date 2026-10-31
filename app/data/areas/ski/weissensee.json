@@ -41,13 +41,27 @@
     "site_relation": null
   },
   "links": {
-    "info": "https://www.hdsports.org/skifahren/weissensee"
+    "info": "https://www.hdsports.org/skifahren/weissensee",
+    "snow_report": "https://www.schneehoehen.de/skigebiete/schneebericht/weissensee-bergbahn",
+    "webcam": "https://www.schneehoehen.de/skigebiete/webcams/weissensee-bergbahn"
   },
   "sources": [
     {
       "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
       "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    },
+    {
+      "label": "schneehoehen.de – Schneebericht und Webcams",
+      "url": "https://www.schneehoehen.de/skigebiete/schneebericht/weissensee-bergbahn"
+    },
+    {
+      "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
+      "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
     }
   ],
-  "updated": "2026-10-30"
+  "updated": "2026-10-31",
+  "elevation": {
+    "base_m": 930,
+    "top_m": 1324
+  }
 }

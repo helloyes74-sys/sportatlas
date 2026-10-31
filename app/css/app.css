@@ -107,6 +107,7 @@ body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-display
 .stats small { display: block; color: var(--muted); font-size: 10.5px; }
 .stats b { font: 500 14px var(--f-data); white-space: nowrap; }
 .route-ends { line-height: 1.5; }
+.status-closed { color: var(--accent); }
 .route-ends b { font: 500 10px var(--f-data); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-right: 6px; }
 .kmbar { display: flex; height: 6px; margin-top: 8px; }
 .kmbar i { display: block; }

@@ -41,13 +41,27 @@
     "site_relation": null
   },
   "links": {
-    "info": "https://www.hdsports.org/skifahren/dreilaendereck"
+    "info": "https://www.hdsports.org/skifahren/dreilaendereck",
+    "snow_report": "https://www.schneehoehen.de/skigebiete/schneebericht/dreilaendereck",
+    "webcam": "https://www.schneehoehen.de/skigebiete/webcams/dreilaendereck"
   },
   "sources": [
     {
       "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
       "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    },
+    {
+      "label": "schneehoehen.de – Schneebericht und Webcams",
+      "url": "https://www.schneehoehen.de/skigebiete/schneebericht/dreilaendereck"
+    },
+    {
+      "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
+      "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
     }
   ],
-  "updated": "2026-10-30"
+  "updated": "2026-10-31",
+  "elevation": {
+    "base_m": 680,
+    "top_m": 1552
+  }
 }

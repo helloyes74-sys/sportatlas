@@ -44,13 +44,28 @@
     "site_relation": null
   },
   "links": {
-    "info": "https://www.hdsports.org/skifahren/bad-kleinkirchheim"
+    "info": "https://www.hdsports.org/skifahren/bad-kleinkirchheim",
+    "snow_report": "https://www.schneehoehen.de/skigebiete/schneebericht/bad-kleinkircheim-st-oswald",
+    "webcam": "https://www.schneehoehen.de/skigebiete/webcams/bad-kleinkircheim-st-oswald",
+    "website": "https://www.badkleinkirchheim.com"
   },
   "sources": [
     {
       "label": "HDsports – Skigebiete Kärnten (Preis, Saison, Pistenkm)",
       "url": "https://www.hdsports.org/winter/skiurlaub-skifahren-in-kaernten-skigebiete"
+    },
+    {
+      "label": "schneehoehen.de – Schneebericht und Webcams",
+      "url": "https://www.schneehoehen.de/skigebiete/schneebericht/bad-kleinkircheim-st-oswald"
+    },
+    {
+      "label": "skiresort.de – Skigebiete Kärnten (Höhen)",
+      "url": "https://www.skiresort.de/skigebiete/kaernten/sortiert-nach/hoehendifferenz/"
     }
   ],
-  "updated": "2026-10-30"
+  "updated": "2026-10-31",
+  "elevation": {
+    "base_m": 1087,
+    "top_m": 2055
+  }
 }

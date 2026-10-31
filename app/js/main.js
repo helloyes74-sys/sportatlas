@@ -7,9 +7,9 @@ import { computeSectors } from "./sectors.js";
 import { favorites, notes } from "./favorites.js";
 import { filterGroups, applyFilters, renderFilters, distanceKm } from "./filters.js";
 import { toGPX, downloadText } from "./gpx.js";
-import { renderSports, renderList, renderLegend, renderDetail, renderWeather, sportLabel } from "./ui.js";
+import { renderSports, renderList, renderLegend, renderDetail, renderWeather, renderSnow, sportLabel } from "./ui.js";
 import { drawProfile } from "./profile.js";
-import { forecast } from "./weather.js";
+import { forecast, snowNow } from "./weather.js";
 import { bbox, flatCoords } from "./geo.js";
 
 const $ = (s) => document.querySelector(s);
@@ -144,6 +144,7 @@ async function openArea(area) {
   const focus = geoBbox(state.geo) || area.bbox;
   if (map && changed) { flyToBbox(map, focus, { pitch: area.type === "ski" ? 60 : 52 }); setFocus(map, focus); }
   loadWeather(area);
+  loadSnow(area);
 }
 /** Bounding-Box aller Linien eines Gebiets, um 10 % erweitert; null ohne Daten. */
 function geoBbox(geo) {
@@ -160,6 +161,7 @@ function closeArea() {
   if (map) { stopTour(map); setGeo(map, null); setSelection(map, null); setFocus(map, null); }
 }
 function renderDetailPanel() {
+  queueMicrotask(() => { if (state.area && snowCache.has(state.area.id)) { const [top, base] = snowCache.get(state.area.id); const g = $("#snowgrid"); if (g) { g.innerHTML = renderSnow(top, base, state.area); const st = $("#snowstate"); if (st) st.textContent = "Modell"; } } });
   const el = $("#detail");
   const scroll = el.scrollTop;
   el.innerHTML = renderDetail(state.area, state.geo, { selectedFeature: state.feature, hikeMode: state.hikeMode, sectors: state.sectors, activeSector: state.activeSector });
@@ -170,6 +172,17 @@ function renderDetailPanel() {
   if (weatherCache.has(state.area.id)) paintWeather(weatherCache.get(state.area.id));
 }
 const weatherCache = new Map();
+const snowCache = new Map();
+async function loadSnow(area) {
+  if (area.type !== "ski") return;
+  const paint = ([top, base]) => { const g = $("#snowgrid"), st = $("#snowstate"); if (!g || state.area?.id !== area.id) return; g.innerHTML = renderSnow(top, base, area); if (st) st.textContent = top?.time ? "Modell · " + top.time.slice(11, 16) + " Uhr" : "Modell"; };
+  if (snowCache.has(area.id)) return paint(snowCache.get(area.id));
+  try {
+    const top = area.elevation?.top_m, base = area.elevation?.base_m;
+    const res = await Promise.all([snowNow(area.center, top), base && top && top - base > 150 ? snowNow(area.center, base) : null]);
+    snowCache.set(area.id, res); paint(res);
+  } catch (e) { const st = $("#snowstate"); if (st && state.area?.id === area.id) st.textContent = "nicht erreichbar"; }
+}
 async function loadWeather(area) {
   if (weatherCache.has(area.id)) return paintWeather(weatherCache.get(area.id));
   try {
