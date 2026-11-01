@@ -145,7 +145,7 @@ tests/                 node:test
 
 - `wrangler.jsonc`: Worker „sportatlas“, nur statische Dateien aus `app/` (`app/.assetsignore` lässt `data/cache` weg).
 - `Online stellen.command` am Mac: Tests, dann `npx wrangler@4 deploy` (erstes Mal: Cloudflare-Anmeldung im Browser).
-  Adresse `https://sportatlas.<konto>.workers.dev`; Schutz wie beim London-Atlas über Cloudflare Access (Dashboard).
+  Adresse **https://sportatlas.probe1745.workers.dev** (Konto-Unteradresse seit 1.11.2026 `probe1745`, Wunsch Thomas: nie `thomashuditz74` in Adressen); Schutz wie beim London-Atlas über Cloudflare Access (Dashboard).
 - Reihenfolge nach Datenänderungen: `Daten laden.command` → `Online stellen.command`.
 
 ## Oberfläche

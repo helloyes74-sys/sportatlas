@@ -16,7 +16,7 @@ fi
 echo "Lade app/ zu Cloudflare hoch (wrangler) …"
 npx --yes wrangler@4 deploy
 echo
-echo "Fertig. Die App ist unter https://sportatlas.<dein-konto>.workers.dev erreichbar (Adresse siehe oben, Zeile „https://…workers.dev“)."
+echo "Fertig. Die App ist unter https://sportatlas.probe1745.workers.dev erreichbar."
 echo "Tipp: Unter dash.cloudflare.com → Workers & Pages → sportatlas → Settings → Domains & Routes lässt sich die Adresse ablesen,"
 echo "unter Zero Trust → Access → Applications kann sie wie der London-Atlas geschützt werden."
 read -r -p "Enter zum Schließen"
