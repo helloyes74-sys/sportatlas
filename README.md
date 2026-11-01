@@ -27,8 +27,8 @@ Danach Seite neu laden, Gerlitzen öffnen, Piste antippen. Für alle Gebiete auf
 
 Den Rechner und das Handy ins gleiche WLAN, `npm run dev` starten und am Handy `http://<IP-des-Rechners>:5173`
 öffnen. Über „Zum Startbildschirm“ wird die Seite als App installiert (PWA, funktioniert danach auch mit
-schlechtem Netz; Kartenkacheln brauchen weiterhin Internet). Dauerhafte Adresse: **https://helloyes74-sys.github.io/sportatlas-/** – GitHub Pages veröffentlicht den
-Ordner `app/` bei jedem Push auf `main` automatisch (`.github/workflows/pages.yml`).
+schlechtem Netz; Kartenkacheln brauchen weiterhin Internet). Online: **https://sportatlas.probe1745.workers.dev** – Cloudflare Workers veröffentlicht den
+Ordner `app/` bei jedem Push auf `main` automatisch (Workers Builds, `wrangler.jsonc`).
 
 ## Datenquellen
 

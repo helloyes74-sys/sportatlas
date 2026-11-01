@@ -138,14 +138,15 @@ tests/                 node:test
   (`area_sig`, enthält auch `center` und `SHAPE_VERSION`). Teilen sich zwei Gruppen eine Nummer, bekommt nur die mit
   passendem Namen den Pistenplan-Eintrag. `data.js` lässt `display_name` zusammengefasster Pisten (`merged_ways`) in Ruhe.
   Betreiber ohne brauchbare Liste: Goldeck (Zertifikatsfehler), Klippitz, Petzen (nur interaktiver Plan).
-- Datenläufe nur noch am Mac (`Daten laden.command`, Terminal hat Netz; die Claude-Shell am Mac nicht). Das GitHub-Repo
-  wurde am 1.11.2026 gelöscht; `.github/` ist nur noch Archiv.
+- Datenläufe am Mac (`Daten laden.command`, Terminal hat Netz; die Claude-Shell am Mac nicht), danach committen und pushen.
 
 ## Online (Cloudflare Worker)
 
 - `wrangler.jsonc`: Worker „sportatlas“, nur statische Dateien aus `app/` (`app/.assetsignore` lässt `data/cache` weg).
+- Öffentliches Repo `helloyes74-sys/sportatlas` (seit 1.11.2026). Jeder Push auf `main` deployt per Cloudflare Workers Builds
+  (Build-Befehl leer, Deploy-Befehl `npx wrangler deploy`). Ersatzweg ohne GitHub:
 - `Online stellen.command` am Mac: Tests, dann `npx wrangler@4 deploy` (erstes Mal: Cloudflare-Anmeldung im Browser).
-  Adresse **https://sportatlas.probe1745.workers.dev** (Konto-Unteradresse seit 1.11.2026 `probe1745`, Wunsch Thomas: nie `thomashuditz74` in Adressen); Schutz wie beim London-Atlas über Cloudflare Access (Dashboard).
+  Adresse **https://sportatlas.probe1745.workers.dev** (Konto-Unteradresse `probe1745`); öffentlich, ohne Zugangsschutz (Wunsch Thomas).
 - Reihenfolge nach Datenänderungen: `Daten laden.command` → `Online stellen.command`.
 
 ## Oberfläche
@@ -165,4 +166,4 @@ tests/                 node:test
 2. Am Mac testen: Anflug, Reiter, „Bild“, Schneeschattierung in 3D.
 3. Preise 2026/27 noch offen: Hochrindl, Weinebene, Weissensee, Simonhöhe, Dreiländereck, Bodental, Emberger Alm,
    Kötschach-Mauthen, Weißbriach (Betreiber haben noch nicht veröffentlicht; Stand 19.10.2026).
-4. Online seit 1.11.2026 (Wunsch Thomas) als Cloudflare Worker; GitHub Pages gibt es nicht mehr.
+4. Online seit 1.11.2026 als Cloudflare Worker, Code öffentlich auf GitHub; GitHub Pages gibt es nicht mehr.
