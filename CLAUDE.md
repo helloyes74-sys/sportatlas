@@ -138,8 +138,15 @@ tests/                 node:test
   (`area_sig`, enthält auch `center` und `SHAPE_VERSION`). Teilen sich zwei Gruppen eine Nummer, bekommt nur die mit
   passendem Namen den Pistenplan-Eintrag. `data.js` lässt `display_name` zusammengefasster Pisten (`merged_ways`) in Ruhe.
   Betreiber ohne brauchbare Liste: Goldeck (Zertifikatsfehler), Klippitz, Petzen (nur interaktiver Plan).
-- Datenläufe nur noch am Mac (`Daten laden.command`, Terminal hat Netz; die Claude-Shell am Mac nicht). GitHub-Repo ist privat
-  und dient als Sicherung; `data.yml`/`pages.yml` sind deaktiviert.
+- Datenläufe nur noch am Mac (`Daten laden.command`, Terminal hat Netz; die Claude-Shell am Mac nicht). Das GitHub-Repo
+  wurde am 1.11.2026 gelöscht; `.github/` ist nur noch Archiv.
+
+## Online (Cloudflare Worker)
+
+- `wrangler.jsonc`: Worker „sportatlas“, nur statische Dateien aus `app/` (`app/.assetsignore` lässt `data/cache` weg).
+- `Online stellen.command` am Mac: Tests, dann `npx wrangler@4 deploy` (erstes Mal: Cloudflare-Anmeldung im Browser).
+  Adresse `https://sportatlas.<konto>.workers.dev`; Schutz wie beim London-Atlas über Cloudflare Access (Dashboard).
+- Reihenfolge nach Datenänderungen: `Daten laden.command` → `Online stellen.command`.
 
 ## Oberfläche
 
@@ -158,5 +165,4 @@ tests/                 node:test
 2. Am Mac testen: Anflug, Reiter, „Bild“, Schneeschattierung in 3D.
 3. Preise 2026/27 noch offen: Hochrindl, Weinebene, Weissensee, Simonhöhe, Dreiländereck, Bodental, Emberger Alm,
    Kötschach-Mauthen, Weißbriach (Betreiber haben noch nicht veröffentlicht; Stand 19.10.2026).
-4. **Nicht öffentlich** (seit 31.10.2026): `pages.yml` veröffentlicht nur `offline/` (leere Seite, löscht alte SW-Caches).
-   Nicht ohne Rückfrage bei Thomas wieder auf `app` stellen. Die App läuft nur noch lokal am Mac.
+4. Online seit 1.11.2026 (Wunsch Thomas) als Cloudflare Worker; GitHub Pages gibt es nicht mehr.

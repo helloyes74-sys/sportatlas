@@ -1,0 +1,12 @@
+{
+  // Sportatlas online: Cloudflare Worker, der nur die statischen Dateien aus app/ ausliefert.
+  // Deploy per Doppelklick auf „Online stellen.command“ (npx wrangler deploy); kein Worker-Code nötig.
+  "name": "sportatlas",
+  "compatibility_date": "2026-10-31",
+  "assets": {
+    "directory": "./app",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "observability": { "enabled": false }
+}
